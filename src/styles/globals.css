@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Yekan';
+  src: url('/fonts/iranyekanwebmedium.2d4f96e5.woff');
+}
+
+.yekan_font{
+  font-family: 'Yekan';
+}
+
+:root {
+
+  --colBg: #e4e4e4;
+  --colCard: #f2f2f0;
+  --colTextA: #3A3878;
+  --colTextB: #838AAB;
+  --zoomControl: #3a3a3a;
+  --zoomControlText: #ffffff;
+  --textHover: #60a5fa;
+  --selecMarker: #99919d;
+  --textTitle: #3A3878;
+
+  --cardPeopleE: #E2F2FE;
+  --cardPeopleO: #fee2e2;
+
+}
+
+.dark {
+
+  --colBg: #1F2E35;
+  --colCard: #22343C;
+  --colTextA: #ececec;
+  --colTextB: #b7b7b7;
+  --zoomControl: rgb(64, 63, 60);
+  --zoomControlText: #ffffff;
+  --textHover: orange;
+  --selecMarker: #eae1e1;
+  --textTitle: orange;
+
+  --cardPeopleE: #5AB5BD;
+  --cardPeopleO: #bd5a5a;
+
+}
+
+
+
+
+/* Chart styles */
+
+.apexcharts-yaxis-label,
+.apexcharts-xaxis-label {
+  fill: var(--colTextB) !important;
+}
+
+.apexcharts-tooltip,
+.apexcharts-tooltip-title {
+  font-family: 'IranSans';
+  background-color: var(--colCard) !important;
+}
+
+
+
+.apexcharts-text {
+  font-family: inherit !important;
+}
+
+.apexcharts-legend-text {
+  color: inherit !important;
+}
+
+
+/* other */
+
+
+.linkHover {
+  transition: all 500ms ease-in-out;
+}
+
+.linkHover:hover {
+  transform: scale(1.03);
+}
+
+
+/* rtl */
+
+.rtl {
+  direction: rtl;
+}
+
+.ltr {
+  direction: ltr;
+}
+
+
+body {
+  background: var(--colBg);
+  transition: all ease-in-out 300ms;
+}
+
+
+.btnHover {
+  transition: all 500ms ease-in-out;
+}
+
+.btnHover:hover {
+  transform: scale(1.03);
+  border-color: var(--textHover);
+  color: var(--textHover);
+}
+
+
+.marker{
+  animation: blink 1s infinite;
+}
+
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
