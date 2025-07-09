@@ -1,7 +1,8 @@
+'use client'
 import React from "react";
 import dynamic from 'next/dynamic';
 import { useTranslation } from "react-i18next";
-import { toPersianDigits } from "@/utils/toPersianDigit";
+import { toPersianDigits } from "@/utils/toPersianDigits";
 const ApexChart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
 const CircularProgress = ({ title, value }) => {
@@ -25,7 +26,6 @@ const CircularProgress = ({ title, value }) => {
             type: "radialBar",
         },
 
-        series: [67],
         colors: ["#20E647"],
         plotOptions: {
             radialBar: {
@@ -45,7 +45,7 @@ const CircularProgress = ({ title, value }) => {
                     }
                 },
                 dataLabels: {
-             
+
                     name: {
                         offsetY: -10,
                         color: "var(--colTextA)",
@@ -54,8 +54,8 @@ const CircularProgress = ({ title, value }) => {
                     value: {
                         color: "var(--colTextA)",
                         fontSize: "30px",
-                        show: true ,
-                         formatter: function (val) {
+                        show: true,
+                        formatter: function (val) {
                             return `${toPersianDigits(val)}%`;
                         },
                     }

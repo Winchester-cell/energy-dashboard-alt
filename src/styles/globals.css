@@ -23,9 +23,6 @@
   --selecMarker: #99919d;
   --textTitle: #3A3878;
 
-  --cardPeopleE: #E2F2FE;
-  --cardPeopleO: #fee2e2;
-
 }
 
 .dark {
@@ -34,18 +31,38 @@
   --colCard: #22343C;
   --colTextA: #ececec;
   --colTextB: #b7b7b7;
-  --zoomControl: rgb(64, 63, 60);
+  --zoomControl: orange;
   --zoomControlText: #ffffff;
   --textHover: orange;
   --selecMarker: #eae1e1;
   --textTitle: orange;
 
-  --cardPeopleE: #5AB5BD;
-  --cardPeopleO: #bd5a5a;
-
 }
 
+.leaflet-control-attribution {
+  display: none !important;
+}
 
+.leaflet-control-zoom-out {
+  border-radius: 50% !important;
+  background-color: var(--colBg) !important;
+  color: var(--colTextA) !important;
+  border: 1px solid var(--colTextA) !important;
+}
+
+.leaflet-control-zoom-in {
+  border-radius: 50% !important;
+  background-color: var(--colBg) !important;
+  color: var(--colTextA) !important;
+  border: 1px solid var(--colTextA) !important;
+}
+
+.leaflet-touch .leaflet-bar {
+  border: none !important;
+  display: flex !important;
+  gap: 5px !important;
+  flex-direction: row-reverse !important;
+}
 
 
 /* Chart styles */
@@ -57,10 +74,118 @@
 
 .apexcharts-tooltip,
 .apexcharts-tooltip-title {
-  font-family: 'IranSans';
   background-color: var(--colCard) !important;
 }
 
+
+/* map markers */
+
+.blinking-circle-active {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #1ac11a;
+  animation: blink 1s infinite;
+  position: relative;
+  z-index: 9999999999;
+}
+
+.locMarker {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #1a76c1;
+}
+
+
+.blinking-circle-deactive {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ff0000;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+
+.selected-marker {
+  position: relative;
+  transform: scale(1.2);
+}
+
+
+
+.selected-marker.active::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #1ac11a;
+  filter: drop-shadow(0 0 2px #1ac11a) drop-shadow(0 0 4px #1ac11a);
+  animation: pulseNeon 1.0s ease-in-out infinite;
+  z-index: -1;
+}
+
+
+.selected-marker.inactive::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #ff0000;
+  filter: drop-shadow(0 0 2px #ff0000) drop-shadow(0 0 4px #ff0000);
+  animation: pulseNeon 1.0s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes pulseNeon {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(2.5);
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+
+
+input:focus {
+  outline: 2px solid var(--textHover);
+  border-radius: 2px;
+  border: none;
+}
 
 
 .apexcharts-text {
@@ -109,24 +234,4 @@ body {
   transform: scale(1.03);
   border-color: var(--textHover);
   color: var(--textHover);
-}
-
-
-.marker{
-  animation: blink 1s infinite;
-}
-
-
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0.4;
-  }
-
-  100% {
-    opacity: 1;
-  }
 }

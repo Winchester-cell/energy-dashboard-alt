@@ -1,7 +1,8 @@
+'use client'
 import React from "react";
 import dynamic from 'next/dynamic';
 import { useTranslation } from "react-i18next";
-import { toPersianDigits } from "@/utils/toPersianDigit";
+import { toPersianDigits } from "@/utils/toPersianDigits";
 const ApexChart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
 const hours = [

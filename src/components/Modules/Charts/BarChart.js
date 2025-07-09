@@ -1,12 +1,12 @@
 import React from "react";
 import dynamic from 'next/dynamic';
 import { useTranslation } from "react-i18next";
-import { toPersianDigits } from "@/utils/toPersianDigit";
+import { toPersianDigits } from "@/utils/toPersianDigits";
 const ApexChart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
 const BarChart = () => {
 
-    const { t , i18n } = useTranslation()
+    const { t, i18n } = useTranslation()
 
     const options = {
         chart: {
@@ -16,7 +16,7 @@ const BarChart = () => {
                 show: false,
             },
         },
-         tooltip: {
+        tooltip: {
             y: {
                 formatter: function (val) {
                     return toPersianDigits(val);
@@ -30,13 +30,13 @@ const BarChart = () => {
         },
         plotOptions: {
             bar: {
-                borderRadius: 10,
+                borderRadius: 7,
                 // borderRadiusApplication: 'end',
                 // borderRadiusWhenStacked: 'last',
             }
         },
         xaxis: {
-            categories: ["فروردین", "اردیبهشت", "خرداد", "تیر", "مرداد"],
+            categories: ["فروردین", "اردیبهشت", "خرداد", "تیر"],
             labels: {
                 style: {
                     fontSize: '8px',
@@ -71,12 +71,12 @@ const BarChart = () => {
     const series = [
         {
             name: '',
-            data: [30, 40, 35, 50, 49],
+            data: [30, 40, 35 , 25],
 
         },
         {
             name: '',
-            data: [25, 60, 28, 60, 70], // Data for the second line
+            data: [25, 40, 28 , 30], // Data for the second line
         }
     ];
 
