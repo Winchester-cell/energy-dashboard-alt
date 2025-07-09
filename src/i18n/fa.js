@@ -2,7 +2,7 @@ const fa = {
 
     // header
 
-    headerTitle: 'سامانه نظارت و مدیریت انرژی',
+    headerTitle: 'سامانه  جامع نظارت و مدیریت انرژی',
 
     sideBarSection: {
         username: 'نام کاربری',

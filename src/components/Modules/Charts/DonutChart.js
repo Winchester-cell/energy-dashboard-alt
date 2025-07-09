@@ -2,15 +2,15 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 import { useTranslation } from 'react-i18next';
-import { toPersianDigits } from '@/utils/toPersianDigit';
+import { toPersianDigits } from '@/utils/toPersianDigits';
 const ApexChart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
-const DonutChart = () => {
+const DonutChart = ({ title, data }) => {
 
     const { t, i18n } = useTranslation()
 
 
-    const data = [70, 30];
+    // const data = [70, 30];
 
     const labels = [
         t('areaChart.peopleIn'), t('areaChart.peopleOut')
@@ -43,7 +43,7 @@ const DonutChart = () => {
             colors: ['var(--colCard)'],
         },
         title: {
-            text: t('donutChart.title'),
+            text: title,
             align: 'center',
             style: {
                 color: 'var(--colTextA)',
@@ -71,7 +71,7 @@ const DonutChart = () => {
         },
         tooltip: {
             y: {
-                formatter: (val) => toPersianDigits(val) ,
+                formatter: (val) => toPersianDigits(val),
             },
             style: {
                 //   fontSize: '22px',
@@ -80,6 +80,7 @@ const DonutChart = () => {
             cssClass: i18n.language === 'fa' ? 'rtl' : ''
         },
         legend: {
+            show: false,
             position: 'bottom',
             fontFamily: 'Yekan',
         },
