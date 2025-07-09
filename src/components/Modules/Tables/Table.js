@@ -6,7 +6,7 @@ export default function Table() {
     return (
         <div className='w-full h-full text-[var(--colCardA)]'>
 
-            <h2 className='w-full text-center'>پر مصرف ترین مجموعه ها</h2>
+            <h2 className='w-full text-center font-bold'>پر مصرف ترین مجموعه ها</h2>
 
             <table className="w-full text-[14px] text-center mt-5">
 
