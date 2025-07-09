@@ -1,18 +1,19 @@
+'use client'
 import LangToggle from '@/components/Modules/SideBar/LangToggle'
 import ThemeToggle from '@/components/Modules/SideBar/ThemeToggle'
-import SideBarContent from '@/content/sideBarContent'
+import useSideBarStore from '@/stores/useSideBarStore'
 import React from 'react'
-import { useTranslation } from 'react-i18next'
-
 
 export default function SettingsSection() {
 
-    const { t } = useTranslation()
+    const { isSideBarCollapsed } = useSideBarStore()
 
     return (
         <div>
-            <h2 className='text-[var(--colTextB)] font-bold ps-4'>{t(SideBarContent.settings.textKey)}</h2>
-            <div className='mt-5 ps-5 gap-2 flex items-center'>
+            <div className='w-full px-5'>
+                <div className='h-[1px] w-full bg-[var(--colTextB)]'></div>
+            </div>
+            <div className={`mt-5 gap-2 flex items-center ${isSideBarCollapsed ? `flex-col` : `flex-row ps-5`}`}>
                 <ThemeToggle />
                 <LangToggle />
             </div>

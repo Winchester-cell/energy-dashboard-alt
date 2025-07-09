@@ -12,6 +12,7 @@ export default function SideBarToggleButton() {
     return (
         <button onClick={toggleSideBar} className={`
             ${isSideBarOpen ? '' : 'rotate-180'}
+            lg:hidden
             hover:text-[var(--textHover)]
             flex items-center justify-center p-2 text-lg text-[var(--colTextA)] bg-[var(--colCard)]
             rounded-full shadow-md transition-all ease-in-out duration-700 

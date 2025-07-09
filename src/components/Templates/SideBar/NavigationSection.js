@@ -1,20 +1,21 @@
 import SideBarLinkItems from '@/components/Modules/SideBar/SideBarLinkItems'
 import SideBarContent from '@/content/sideBarContent'
+import useSideBarStore from '@/stores/useSideBarStore'
 import React from 'react'
-import { useTranslation } from 'react-i18next'
-
 export default function NavigationSection() {
 
-    const { t } = useTranslation()
+    const { isSideBarCollapsed } = useSideBarStore()
 
     return (
         <div>
-            <h2 className='text-[var(--colTextB)] font-bold ps-4'>{t(SideBarContent.navigation.textKey)}</h2>
-            <ul className='mt-5 w-full flex flex-col gap-3 ps-5 text-[var(--colTextA)]'>
+            <div className='w-full px-5'>
+                <div className='h-[1px] w-full bg-[var(--colTextB)]'></div>
+            </div>
+            <ul className={`mt-5 w-full flex flex-col gap-7 ${isSideBarCollapsed ? `` : `ps-7` }  text-[var(--colTextA)]`}>
                 {SideBarContent.links.map((item, index) => {
                     return <SideBarLinkItems key={index} {...item} />
                 })}
             </ul>
-        </div>
+        </div >
     )
 }
