@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function Table() {
     return (
-        <div className='w-full h-full text-[var(--colCardA)]'>
+        <div className='w-full h-full text-[var(--colTextA)]'>
 
             <h2 className='w-full text-center font-bold'>پر مصرف ترین مجموعه ها</h2>
 
