@@ -7,5 +7,13 @@ const topConsumer = [
 ]
 
 
+const areas = [
+    { id: 1, name: 'area 1', lat: 37.24025, long: 49.53590, status: true },
+    { id: 2, name: 'area 1', lat: 37.23943, long: 49.54483, status: true },
+    { id: 3, name: 'area 1', lat: 37.23519, long: 49.55006, status: true },
+    { id: 4, name: 'area 1', lat: 37.23000, long: 49.54749, status: true },
+    { id: 5, name: 'area 1', lat: 37.23683, long: 49.56011, status: true },
+]
 
-export { topConsumer }
+
+export { topConsumer, areas }

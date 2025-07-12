@@ -12,7 +12,7 @@ export default function MapAndCharts() {
         <div className='px-5 flex gap-5'>
 
             <div className='w-full h-auto'>
-                <MapView />
+                <MapView type={'monitoring'} />
             </div>
 
             <div className='w-[300px] flex flex-col gap-5'>
@@ -24,7 +24,7 @@ export default function MapAndCharts() {
                 <div className='w-full h-[300px] bg-[var(--colCard)] shadow-lg rounded-xl p-3'>
                     <CircularProgress title={'افزایش مصرف'} value={55} />
                 </div>
-                
+
             </div>
 
 
