@@ -8,6 +8,7 @@ const fa = {
         username: 'نام کاربری',
         admin: 'ادمین',
         navigation: 'منوی ناوبری',
+        organization: 'سازمان ها',
         dashboard: 'داشبورد',
         devices: 'دستگاه ها',
         sites: 'سایت ها',

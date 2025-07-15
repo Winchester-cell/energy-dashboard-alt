@@ -1,7 +1,8 @@
 import { FaHome, FaUser } from "react-icons/fa";
 import { MdDevices } from "react-icons/md";
 import { TbReport } from "react-icons/tb";
-import { SiSitecore } from "react-icons/si";
+import { SlOrganization } from "react-icons/sl";
+
 
 
 const SideBarContent = {
@@ -14,9 +15,9 @@ const SideBarContent = {
     },
     links: [
         { textKey: 'sideBarSection.dashboard', href: '/', icon: <FaHome /> },
-        { textKey: 'sideBarSection.devices', href: '#', icon: <MdDevices /> },
-        { textKey: 'sideBarSection.sites', href: '#', icon: <SiSitecore /> },
-        { textKey: 'sideBarSection.users', href: '#', icon: <FaUser /> },
+        { textKey: 'sideBarSection.organization', href: '/organizations', icon: <SlOrganization /> },
+        { textKey: 'sideBarSection.users', href: '/users', icon: <FaUser /> },
+        { textKey: 'sideBarSection.devices', href: '/devices', icon: <MdDevices /> },
         { textKey: 'sideBarSection.reports', href: '#', icon: <TbReport /> },
     ],
     settings: {
