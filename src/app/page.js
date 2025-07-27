@@ -6,7 +6,6 @@ import MapAndCharts from "@/components/Templates/MainDashboard/MapAndCharts";
 export default function Home() {
   return (
     <>
-      <SideBar />
       <InfoCardsContainer />
       <MapAndCharts />
       <ChartsGrid />

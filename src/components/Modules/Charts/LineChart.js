@@ -12,11 +12,7 @@ const hours = [
 
 
 
-
 const LineChart = ({ color, title, data }) => {
-
-    const { t } = useTranslation()
-
 
     const options = {
         markers: {

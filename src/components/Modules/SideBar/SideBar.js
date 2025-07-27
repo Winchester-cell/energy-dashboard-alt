@@ -6,6 +6,8 @@ import NavigationSection from "@/components/Templates/SideBar/NavigationSection"
 import ProfileSection from "@/components/Templates/SideBar/ProfileSection";
 import useSideBarStore from "@/stores/useSideBarStore";
 import SideBarCollapseButton from "./SideBarCollapseButton";
+import LogOutButton from "@/components/Templates/SideBar/LogOutButton";
+import SimpleBar from "simplebar-react";
 
 
 export default function SideBar() {
@@ -16,31 +18,38 @@ export default function SideBar() {
 
   return (
     <>
-      <div className={`h-[100dvh] ${isSideBarCollapsed ? `w-[100px]` : ` w-[240px]`} bg-[var(--colCard)] shadow-lg transition-all duration-300 ease-in-out fixed z-[999999] top-0 start-0 ${isSideBarOpen ? 'translate-x-0' : translateClass}`}>
+      <div id="sidebar" className={`h-[100dvh] ${isSideBarCollapsed ? `w-[100px]` : ` w-[240px]`} bg-[var(--colCard)] overflow-y-auto shadow-lg transition-all duration-300 ease-in-out fixed z-[999999] top-0 start-0 ${isSideBarOpen ? 'translate-x-0' : translateClass}`}>
+        <SimpleBar style={{ maxHeight: '100vh' }} >
 
 
-        <div className={`flex w-full ${isSideBarCollapsed ? `justify-center` : `justify-end`}`}>
-          <SideBarCollapseButton />
-        </div>
+          <div className={`flex w-full ${isSideBarCollapsed ? `justify-center` : `justify-end`}`}>
+            <SideBarCollapseButton />
+          </div>
 
-        {/* Profile Section */}
+          {/* Profile Section */}
 
-        <div className="w-full ">
-          <ProfileSection />
-        </div>
+          <div className="w-full ">
+            <ProfileSection />
+          </div>
 
 
-        {/* Navigation Section */}
+          {/* Navigation Section */}
 
-        <div className="w-full">
-          <NavigationSection />
-        </div>
+          <div className="w-full">
+            <NavigationSection />
+          </div>
 
-        {/* Settings Section */}
-        <div className="w-full mt-7">
-          <SettingsSection />
-        </div>
+          {/* Settings Section */}
+          <div className="w-full mt-7">
+            <SettingsSection />
+          </div>
 
+          <div className="w-full px-5 mt-5">
+            <div className="w-full h-[0.5px] bg-[var(--colTextB)] mb-5" />
+            <LogOutButton />
+          </div>
+
+        </SimpleBar>
       </div>
 
       {/* mobile Overlay */}

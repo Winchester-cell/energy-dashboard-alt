@@ -1,29 +1,32 @@
 import React from 'react'
 import Profile from '@/asset/profile.svg'
-import SideBarContent from '@/content/sideBarContent'
-import { useTranslation } from 'react-i18next'
 import useSideBarStore from '@/stores/useSideBarStore'
+import { useAuthStore } from '@/stores/useAuthStore'
+import Link from 'next/link'
 
 export default function ProfileSection() {
 
-  const { t } = useTranslation()
   const { isSideBarCollapsed } = useSideBarStore()
+  const { user } = useAuthStore()
+
+  if(!user){
+    return null
+  }
 
   return (
-    <div className={`w-full flex ${isSideBarCollapsed ? 'justify-center' : ``} items-center gap p-5 gap-2`}>
+    <Link href={'/use-panel'} className={`w-full flex ${isSideBarCollapsed ? 'justify-center' : ``} items-center gap p-2 gap-2`}>
 
-      <Profile className={`w-[80px] text-[var(--colTextA)] scale-90`} />
+      <Profile className={`${isSideBarCollapsed ? `w-[60px]` : ``} w-[80px] text-[var(--colTextA)] scale-[0.8]`} />
 
       <div className={`${isSideBarCollapsed ? `hidden` : ``}`}>
 
-        <div className='text-[var(--colTextA)] font-bold mt-1'>{t(SideBarContent.profileSection.username.textKey)}</div>
+        <div className='text-[var(--colTextA)] font-bold mt-1'>{user?.userData.first_name ? `${user?.userData.first_name} ${user?.userData.last_name}` : user?.userData.username }</div>
 
-        <div className='text-[var(--colTextB)]'>{t(SideBarContent.profileSection.role.textKey)}</div>
+        <div className='text-[var(--colTextB)] text-[12px] mt-3'>{user?.userRole}</div>
 
       </div>
 
-
-    </div>
+    </Link>
   )
 
 

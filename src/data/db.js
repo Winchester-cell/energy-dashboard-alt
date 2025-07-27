@@ -11,4 +11,27 @@ const devices = [
     { id: 10, name: "Device 10", status: true, countedV: 15, serial_number: 3212 },
 ]
 
+
+const datasets = [
+    {
+        id: 'sales',
+        title: 'مصرف ماهانه',
+        data: [
+            10, 15, 20, 40, 25, 30,
+            35, 15, 10, 15, 35, 25
+        ]
+    },
+    {
+        id: 'users',
+        title: 'مصرف هفتگی',
+        data: [
+            10, 15, 20, 40, 25, 30,
+            35, 15, 10, 15, 35, 25
+        ]
+    }
+]
+
+
+export { datasets }
+
 export default devices

@@ -10,7 +10,7 @@ export default function LangToggle() {
     }
 
     return (
-        <button className='flex items-center justify-center w-10 h-10 border-2 border-[var(--colTextA)] rounded-full linkHover hover:border-[var(--textHover)] hover:text-[var(--textHover)]' onClick={toggleLang}>
+        <button className='flex items-center text-[var(--colTextA)] justify-center w-10 h-10 border-2 border-[var(--colTextA)] rounded-full linkHover hover:border-[var(--textHover)] hover:text-[var(--textHover)]' onClick={toggleLang}>
             <LuLanguages />
         </button>
     )

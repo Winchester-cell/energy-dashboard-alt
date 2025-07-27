@@ -9,6 +9,8 @@ const fa = {
         admin: 'ادمین',
         navigation: 'منوی ناوبری',
         organization: 'سازمان ها',
+        organizationDashboard: 'داشبورد سازمان',
+        dashboardManager: 'مدیریت داشبورد',
         dashboard: 'داشبورد',
         devices: 'دستگاه ها',
         sites: 'سایت ها',
@@ -45,6 +47,13 @@ const fa = {
         deviceName: 'نام دستگاه',
         deviceIP: 'آدرس آی پی',
         deviceLocation: 'موقعیت',
+    },
+
+    userInfoCard: {
+        name: 'نام',
+        lastName: 'نام خانوادگی',
+        email: 'ایمیل',
+        role: 'نقش کاربر',
     },
 
 

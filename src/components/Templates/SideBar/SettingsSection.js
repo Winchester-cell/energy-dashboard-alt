@@ -11,7 +11,7 @@ export default function SettingsSection() {
     return (
         <div>
             <div className='w-full px-5'>
-                <div className='h-[1px] w-full bg-[var(--colTextB)]'></div>
+                <div className='h-[0.5px] w-full bg-[var(--colTextB)]'></div>
             </div>
             <div className={`mt-5 gap-2 flex items-center ${isSideBarCollapsed ? `flex-col` : `flex-row ps-5`}`}>
                 <ThemeToggle />

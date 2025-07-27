@@ -1,4 +1,5 @@
 'use client'
+import { toPersianDigits } from '@/utils/toPersianDigits';
 import React from 'react'
 import { useTranslation } from 'react-i18next';
 import { IoChevronForward, IoChevronBack } from "react-icons/io5";
@@ -33,9 +34,9 @@ export default function PaginationControl(props) {
             <button onClick={nextPage} className='hover:text-[var(--textHover)]'><IoChevronForward /></button>
             <div className={`flex items-center gap-2 ${i18n.language === 'fa' ? 'rtl' : 'ltr' }`}>
                 <span>{t('page')}</span>
-                <span>{currentPage}</span>
+                <span>{toPersianDigits(currentPage)}</span>
                 <span>{t('from')}</span>
-                <span>{totalPages}</span>
+                <span>{toPersianDigits(totalPages)}</span>
             </div>
             <button onClick={prevPage} className='hover:text-[var(--textHover)]'><IoChevronBack /></button>
         </div>

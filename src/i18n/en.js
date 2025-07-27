@@ -7,6 +7,8 @@ const en = {
         admin: 'Admin',
         navigation: 'Navigation Menu',
         organization: 'Organizations',
+        organizationDashboard: 'Organization Dashboard',
+        dashboardManager: 'Dashboard Manager',
         dashboard: 'Dashboard',
         devices: 'Devices',
         sites: 'Sites',
@@ -42,6 +44,13 @@ const en = {
         deviceName: 'Device Name',
         deviceIP: 'Device IP',
         deviceLocation: 'Device Location',
+    },
+
+    userInfoCard:{
+        name:'Name',
+        lastName: 'Last Name',
+        email: 'Email',
+        role: 'Role',
     },
 
     common: {

@@ -13,7 +13,7 @@ export default function ThemeToggle() {
     }
 
     return (
-        <button className='flex items-center justify-center w-10 h-10 border-2 border-[var(--colTextA)] rounded-full linkHover hover:border-[var(--textHover)] hover:text-[var(--textHover)]' onClick={themeToggleHandler}>
+        <button className='flex text-[var(--colTextA)] items-center justify-center w-10 h-10 border-2 border-[var(--colTextA)] rounded-full linkHover hover:border-[var(--textHover)] hover:text-[var(--textHover)]' onClick={themeToggleHandler}>
             <BsMoonStarsFill />
         </button>
     )
