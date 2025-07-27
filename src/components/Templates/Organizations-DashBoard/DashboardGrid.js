@@ -29,7 +29,7 @@ export default function DashboardGrid() {
 
     const deleteWidget = (e, widgetsID) => {
         e.stopPropagation()
-        const newWidgets = widgets.filter(widget => widget.i !== widgetsID)
+        const newWidgets = widgets.filter(widget => widget.widget_id !== widgetsID)
         setWidgets(newWidgets)
     }
 
@@ -51,7 +51,7 @@ export default function DashboardGrid() {
                     {
                         widgets?.map(w => {
                             return (
-                                <div key={w.i} className="bg-[var(--colCard)] drag-handle rounded-xl shadow-lg relative" dir="rtl">
+                                <div key={w.widget_id} className="bg-[var(--colCard)] drag-handle rounded-xl shadow-lg relative" dir="rtl">
                                     {
                                         isEditing &&
                                         <IoClose
@@ -59,11 +59,11 @@ export default function DashboardGrid() {
                                                 e.stopPropagation();
                                                 e.preventDefault()
                                             }}
-                                            onClick={(e) => deleteWidget(e, w.i)}
+                                            onClick={(e) => deleteWidget(e, w.widget_id)}
                                             className="absolute top-2 left-2 w-5 h-5 cursor-pointer"
                                         />
                                     }
-                                    {createWidgetElem(w.type, w.config)}
+                                    {createWidgetElem(w.widget_type, w.config)}
                                 </div>
                             )
                         })

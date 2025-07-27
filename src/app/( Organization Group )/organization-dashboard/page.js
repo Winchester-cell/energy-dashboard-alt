@@ -7,7 +7,6 @@ import DashboardHead from '@/components/Templates/Organizations-DashBoard/Dashbo
 export default function page() {
   return (
     <>
-      <SideBar />
       <DashboardHead />
       <DashboardGrid />
     </>
