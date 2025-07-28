@@ -15,8 +15,9 @@ export default function DashboardGrid() {
 
     const breakpoints = { lg: 1200, md: 996, sm: 768, xs: 480, xxs: 0 };
     const cols = { lg: 12, md: 10, sm: 6, xs: 4, xxs: 2 };
-    const { isEditing, setIsEditing, widgets, setWidgets } = useDynamicDashboardStore()
+    const { isEditing, widgets, setWidgets } = useDynamicDashboardStore()
     const [layouts, setLayouts] = useState()
+
 
     const handleLayoutChange = (currentLayout, allLayouts) => {
         setLayouts(allLayouts);
@@ -43,8 +44,8 @@ export default function DashboardGrid() {
                     breakpoints={breakpoints}
                     cols={cols}
                     rowHeight={30}
-                    isResizable
-                    isDraggable
+                    isResizable={isEditing}
+                    isDraggable={isEditing}
                     draggableHandle=".drag-handle"
                     onLayoutChange={handleLayoutChange}
                 >

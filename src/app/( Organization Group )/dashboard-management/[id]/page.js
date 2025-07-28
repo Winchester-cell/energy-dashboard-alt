@@ -28,7 +28,7 @@ export default function DashboardEditor() {
 
     return (
         <>
-            <DashboardHead />
+            <DashboardHead dashboardID={id} />
             <DashboardGrid />
         </>
     )

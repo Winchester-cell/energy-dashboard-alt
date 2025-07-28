@@ -16,7 +16,6 @@ const SideBarContent = {
     links: [
         { textKey: 'sideBarSection.dashboard', href: '/', icon: <FaHome /> },
         { textKey: 'sideBarSection.organization', href: '/organizations', icon: <SlOrganization /> },
-        { textKey: 'sideBarSection.organizationDashboard', href: '/organization-dashboard', icon: <SlOrganization /> },
         { textKey: 'sideBarSection.dashboardManager', href: '/dashboard-management', icon: <SlOrganization /> },
         { textKey: 'sideBarSection.users', href: '/users', icon: <FaUser /> },
         { textKey: 'sideBarSection.devices', href: '/devices', icon: <MdDevices /> },

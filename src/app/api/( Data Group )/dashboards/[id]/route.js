@@ -19,12 +19,44 @@ export async function GET(req, { params }) {
 
     } catch (err) {
 
-        console.log('Error =>', err);
+        console.log('Error =>', err)
 
         return new Response(JSON.stringify({ message: 'ServerError' }))
 
     }
 
 
+}
+
+export async function PATCH(req, context) {
+
+    try {
+
+        const { widgets } = await req.json()
+        const { params } = await context
+        const id = params.id
+        const cookieStore = await cookies()
+        const token = cookieStore.get('token')?.value
+
+        const res = await apiRequest.patch(`/dashboards/${id}/`, { widgets }, {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        })
+
+        if (res.status === 200) {
+            return new Response('Updated', {
+                status: 200
+            })
+        }
+
+
+    } catch (err) {
+
+        console.log('Error =>', err.response);
+
+        return new Response(JSON.stringify({ message: 'ServerError' }))
+
+    }
 
 }

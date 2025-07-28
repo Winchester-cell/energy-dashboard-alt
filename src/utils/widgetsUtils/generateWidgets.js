@@ -8,7 +8,7 @@ const createLineChartWidget = (widgets, setWidgets, config) => {
         widget_id: iValue,
         title: config.title,
         config: config,
-        widget_type: 'lineChart',
+        widget_type: 'line_chart',
         layout: {
             lg: [{ i: iValue, x: 0, y: 0, w: 6, h: 5 }],
             md: [{ i: iValue, x: 0, y: 0, w: 7, h: 6 }],

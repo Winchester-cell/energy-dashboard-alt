@@ -15,7 +15,7 @@ export default function DashboardsGrid({ dashboards }) {
 
         <div className='grid grid-cols-2 gap-5 px-5'>
             {
-                data?.results.map(dashboard => (
+                data?.results?.map(dashboard => (
                     <Link href={`/dashboard-management/${dashboard.id}`} key={dashboard.id} className='py-5 bg-[var(--colCard)] text-center rounded-xl shadow-lg'>{dashboard.name}</Link>
                 ))
             }
