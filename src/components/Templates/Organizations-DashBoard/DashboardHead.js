@@ -17,7 +17,7 @@ export default function DashboardHead({ dashboardID }) {
     const saveButtonHandler = async () => {
         const result = await patchDashboard(dashboardID, widgets)
         showToast(result)
-        setIsEditing(true)
+        setIsEditing(false)
     }
 
     return (
