@@ -1,4 +1,4 @@
-import { useLineChartConfigStore } from '@/stores/useLineChartConfigStore'
+import { useLineChartConfigStore } from '@/stores/useChartConfigStore'
 import React, { useState } from 'react'
 
 export default function ColorGrid() {

@@ -5,7 +5,28 @@ export const useLineChartConfigStore = create((set) => ({
   config: {
     color: '#2196f3',
     data: [],
-    title: '',
+    title: 'سسس',
+  },
+  setColor: (color) => set((state) => ({
+    config: { ...state.config, color }
+  })),
+  setData: (data) => set((state) => ({
+    config: { ...state.config, data }
+  })),
+  setTitle: (title) => set((state) => ({
+    config: { ...state.config, title }
+  })),
+  reset: () => set({
+    config: { color: '#2196f3', data: [], title: '' }
+  }),
+}))
+
+
+export const useBarChartConfigStore = create((set) => ({
+  config: {
+    color: '#2196f3',
+    data: [],
+    title: 'سسس',
   },
   setColor: (color) => set((state) => ({
     config: { ...state.config, color }

@@ -3,7 +3,7 @@ import { IoClose } from "react-icons/io5";
 import useDynamicDashboardStore from "@/stores/useDynamicDashboardStore";
 import applyUpdatedLayouts from "@/utils/applyUpdatedLayouts";
 import getLayouts from "@/utils/getLayouts";
-import React, { useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import { Responsive, WidthProvider } from "react-grid-layout";
 import "react-grid-layout/css/styles.css";
 import "react-resizable/css/styles.css";
@@ -34,10 +34,16 @@ export default function DashboardGrid() {
         setWidgets(newWidgets)
     }
 
+    useEffect(()=>{
+        console.log(widgets);
+        
+    },[widgets])
+
     return (
-        <div className="p-4 min-h-screen">
+        <div className="min-h-screen">
 
             <div style={{ direction: "ltr" }} className={`${isEditing ? `bg-gray-400` : ``}`}>
+
                 <ResponsiveGridLayout
                     className="layout"
                     layouts={getLayouts(widgets)}
@@ -69,7 +75,9 @@ export default function DashboardGrid() {
                             )
                         })
                     }
+
                 </ResponsiveGridLayout>
+
             </div>
         </div>
     );

@@ -1,6 +1,8 @@
 import useDynamicDashboardStore from "@/stores/useDynamicDashboardStore"
-import ChartConfigModal from "./LineChartOptions/LineChartConfigModal"
 import { useState } from "react"
+import LineChartConfigModal from "./LineChartOptions/LineChartConfigModal"
+import TableSetting from "./CardOptions/TableSetting"
+import BarChartConfig from "./BarChartOptions/BarChartConfig"
 
 export default function WidgetModal({ isOpen, setIsOpen }) {
 
@@ -9,7 +11,19 @@ export default function WidgetModal({ isOpen, setIsOpen }) {
     const { setIsEditing } = useDynamicDashboardStore()
 
     const lineChartBtnClickHandler = () => {
-        setWidgetTypeConfig('lineChart')
+        setWidgetTypeConfig('line_chart')
+        setIsButtonClicked(true)
+        setIsEditing(true)
+    }
+
+    const cardBtnClickHandler = () => {
+        setWidgetTypeConfig('card')
+        setIsButtonClicked(true)
+        setIsEditing(true)
+    }
+
+    const barChartBtnClickHandler = () => {
+        setWidgetTypeConfig('bar_chart')
         setIsButtonClicked(true)
         setIsEditing(true)
     }
@@ -24,15 +38,24 @@ export default function WidgetModal({ isOpen, setIsOpen }) {
                     !isButtonClicked &&
                     <div className="grid grid-cols-2 gap-2">
                         <button className="bg-[var(--colCard)] py-2 px-5 rounded-full" onClick={lineChartBtnClickHandler}>افزودن نمودار خطی</button>
-                        <button className="bg-[var(--colCard)] py-2 px-5 rounded-full" onClick={lineChartBtnClickHandler}>افزودن کارت</button>
+                        <button className="bg-[var(--colCard)] py-2 px-5 rounded-full" onClick={barChartBtnClickHandler}>افزودن نمودار میله ای</button>
+                        <button className="bg-[var(--colCard)] py-2 px-5 rounded-full" onClick={cardBtnClickHandler}>افزودن کارت</button>
                     </div>
                 }
                 {
                     isButtonClicked &&
                     <>
                         {
-                            widgetTypeConfig === 'lineChart' &&
-                            < ChartConfigModal setIsButtonClicked={setIsButtonClicked} />
+                            widgetTypeConfig === 'line_chart' &&
+                            <LineChartConfigModal setIsButtonClicked={setIsButtonClicked} />
+                        }
+                        {
+                            widgetTypeConfig === 'bar_chart' &&
+                            <BarChartConfig setIsButtonClicked={setIsButtonClicked} />
+                        }
+                        {
+                            widgetTypeConfig === 'card' &&
+                            <TableSetting setIsButtonClicked={setIsButtonClicked} />
                         }
                     </>
                 }

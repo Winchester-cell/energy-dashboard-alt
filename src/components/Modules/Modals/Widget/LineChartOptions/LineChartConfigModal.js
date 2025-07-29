@@ -1,4 +1,4 @@
-import { useLineChartConfigStore } from '@/stores/useLineChartConfigStore'
+import { useLineChartConfigStore } from '@/stores/useChartConfigStore'
 import React, { useState } from 'react'
 import LineChart from '@/components/Modules/Charts/LineChart'
 import DropDown from './DropDown'
@@ -6,7 +6,7 @@ import ColorGrid from './ColorGrid'
 import { createLineChartWidget } from '@/utils/widgetsUtils/generateWidgets'
 import useDynamicDashboardStore from '@/stores/useDynamicDashboardStore'
 
-export default function ChartConfigModal({ setIsButtonClicked }) {
+export default function LineChartConfigModal({ setIsButtonClicked }) {
 
     const { config, reset } = useLineChartConfigStore()
     const { widgets, setWidgets } = useDynamicDashboardStore()
