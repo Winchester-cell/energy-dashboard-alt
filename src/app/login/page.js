@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import CetecLogo from "@/asset/CetecLogo.svg"
 import { useTranslation } from 'react-i18next'
 import { useForm } from 'react-hook-form'
@@ -10,6 +10,7 @@ import { redirect } from 'next/navigation'
 import { useToast } from '@/context/ToastContext'
 import { useAuthStore } from '@/stores/useAuthStore'
 import getUser from '@/axios/requests/auth/getUser'
+import Loading from '@/components/Modules/Loadings/Loading'
 
 export default function Login() {
 
@@ -17,13 +18,16 @@ export default function Login() {
   const { register, handleSubmit } = useForm()
   const { setUser } = useAuthStore()
   const { showToast } = useToast()
+  const [isLoading, setIsLoading] = useState(false)
 
   const formSubmit = async (data) => {
+    setIsLoading(true)
     const user = data
     const loginResult = await loginUser(user)
     if (loginResult.isOk) {
       const user = await getUser()
       setUser(user)
+      setIsLoading(false)
       showToast(loginResult.result, "success")
       redirect('/')
     } else {
@@ -46,7 +50,15 @@ export default function Login() {
 
           <PasswordInput place={'کلمه عبور ...'} register={register} registerKey={'password'} />
 
-          <button type='submit' className='bg-[var(--colBg)] py-4 rounded-full'>ورود</button>
+          <button disabled={isLoading} type='submit' className='flex items-center gap-2 justify-center bg-[var(--colBg)] py-4 rounded-full'>
+            {
+              isLoading ? (
+                <Loading size={20} />
+              ) : (
+                'ورود'
+              )
+            }
+          </button>
 
         </form>
 

@@ -13,10 +13,10 @@ export default function UserInfoCard(props) {
         >
             <div className="flex items-center gap-2">
                 <span className="font-bold text-lg text-[var(--colTextA)]">
-                    {user_details?.first_name}
+                    {user_details.first_name ? user_details.first_name : '---'  }
                 </span>
                 <span className="font-bold text-lg text-[var(--colTextA)]">
-                    {user_details?.last_name}
+                    {user_details.last_name ? user_details.last_name : '---' }
                 </span>
             </div>
             <div className="text-[var(--colTextB)] text-sm">

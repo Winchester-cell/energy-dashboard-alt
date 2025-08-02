@@ -1,5 +1,6 @@
 import { useLineChartConfigStore } from '@/stores/useChartConfigStore'
-import React, { useState } from 'react'
+import React from 'react'
+import { IoClose } from "react-icons/io5";
 import LineChart from '@/components/Modules/Charts/LineChart'
 import DropDown from './DropDown'
 import ColorGrid from './ColorGrid'
@@ -29,7 +30,9 @@ export default function LineChartConfigModal({ setIsButtonClicked }) {
 
                 <div className='flex items-center gap-2'>
                     <button onClick={addLineChart} className='w-fit rounded-full px-5 py-2 bg-[var(--colBg)]'>تایید</button>
-                    <button onClick={() => setIsButtonClicked(false)} className='w-5 h-5 flex items-center justify-center p-5 rounded-full bg-[var(--colBg)]'>X</button>
+                    <button onClick={() => setIsButtonClicked(false)} className='flex items-center justify-center rounded-full p-2 bg-[var(--colBg)]'>
+                        <IoClose className='text-[var(--colTextA)] w-6 h-6' />
+                    </button>
                 </div>
 
 

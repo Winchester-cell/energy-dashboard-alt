@@ -21,7 +21,7 @@ export const ToastProvider = ({ children }) => {
                 {toasts.map((toast) => (
                     <div
                         key={toast.id}
-                        className={`px-4 py-2 rounded shadow text-white animate-fade-in-down ${toast.type === "error"
+                        className={`px-4 py-3 text-center rounded shadow text-white animate-fade-in-down ${toast.type === "error"
                             ? "bg-red-500"
                             : toast.type === "warning"
                                 ? "bg-yellow-500"

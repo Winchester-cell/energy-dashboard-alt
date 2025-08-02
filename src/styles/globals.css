@@ -213,6 +213,7 @@
 
 
 body {
+  color: var(--colTextA);
   background: var(--colBg);
   transition: all ease-in-out 300ms;
 }
@@ -251,4 +252,8 @@ input {
 
 .simplebar-track.simplebar-vertical {
   width: 8px;
+}
+
+.react-resizable-handle.react-resizable-handle-se {
+  opacity: 0;
 }

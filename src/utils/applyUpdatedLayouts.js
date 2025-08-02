@@ -1,5 +1,5 @@
 export default function applyUpdatedLayouts(widgets, allLayouts) {
-  return widgets.map((widget) => {
+  return widgets?.map((widget) => {
 
     const newLayoutConfig = {};
     console.log(allLayouts);

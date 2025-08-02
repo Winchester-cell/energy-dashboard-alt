@@ -1,15 +1,24 @@
 'use client'
 import fetchDashboards from '@/axios/requests/dashboards/fetchDashboards'
+import Loading from '@/components/Modules/Loadings/Loading'
 import { useQuery } from '@tanstack/react-query'
 import Link from 'next/link'
-import React, { useEffect } from 'react'
+import React from 'react'
 
 export default function DashboardsGrid({ dashboards }) {
 
-    const { data } = useQuery({
+    const { data, isLoading } = useQuery({
         queryKey: ['dashboards'],
         queryFn: fetchDashboards
     })
+
+    if (isLoading) {
+        return (
+            <div className='w-full h-[60dvh] flex justify-center items-center'>
+                <Loading />
+            </div>
+        )
+    }
 
     return (
 

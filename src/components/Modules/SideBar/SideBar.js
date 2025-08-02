@@ -8,6 +8,8 @@ import useSideBarStore from "@/stores/useSideBarStore";
 import SideBarCollapseButton from "./SideBarCollapseButton";
 import LogOutButton from "@/components/Templates/SideBar/LogOutButton";
 import SimpleBar from "simplebar-react";
+import sideBarLinksContent from "@/content/sideBarLinksContent";
+import SideBarField from "./SideBarField";
 
 
 export default function SideBar() {
@@ -21,7 +23,6 @@ export default function SideBar() {
       <div id="sidebar" className={`h-[100dvh] ${isSideBarCollapsed ? `w-[100px]` : ` w-[240px]`} bg-[var(--colCard)] overflow-y-auto shadow-lg transition-all duration-300 ease-in-out fixed z-[999999] top-0 start-0 ${isSideBarOpen ? 'translate-x-0' : translateClass}`}>
         <SimpleBar style={{ maxHeight: '100vh' }} >
 
-
           <div className={`flex w-full ${isSideBarCollapsed ? `justify-center` : `justify-end`}`}>
             <SideBarCollapseButton />
           </div>
@@ -33,13 +34,23 @@ export default function SideBar() {
           </div>
 
 
-          {/* Navigation Section */}
-
-          <div className="w-full">
-            <NavigationSection />
+          <div className="w-full flex flex-col gap-3 px-3">
+            {
+              sideBarLinksContent.fields.map((item, index) => {
+                return <SideBarField key={index} {...item} />
+              })
+            }
           </div>
 
+
+          {/* Navigation Section */}
+
+          {/* <div className="w-full">
+            <NavigationSection />
+          </div> */}
+
           {/* Settings Section */}
+
           <div className="w-full mt-7">
             <SettingsSection />
           </div>

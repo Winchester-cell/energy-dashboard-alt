@@ -1,4 +1,5 @@
 'use client'
+import { IoIosArrowForward } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
 import useDynamicDashboardStore from "@/stores/useDynamicDashboardStore";
 import applyUpdatedLayouts from "@/utils/applyUpdatedLayouts";
@@ -34,10 +35,10 @@ export default function DashboardGrid() {
         setWidgets(newWidgets)
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         console.log(widgets);
-        
-    },[widgets])
+
+    }, [widgets])
 
     return (
         <div className="min-h-screen">
@@ -71,6 +72,10 @@ export default function DashboardGrid() {
                                         />
                                     }
                                     {createWidgetElem(w.widget_type, w.config)}
+                                    {
+                                        isEditing &&
+                                        <IoIosArrowForward className="w-5 h-5 text-[var(--colTextA)] absolute bottom-0 right-0 rotate-45" />
+                                    }
                                 </div>
                             )
                         })

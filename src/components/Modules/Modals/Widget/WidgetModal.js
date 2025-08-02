@@ -1,32 +1,13 @@
 import useDynamicDashboardStore from "@/stores/useDynamicDashboardStore"
 import { useState } from "react"
-import LineChartConfigModal from "./LineChartOptions/LineChartConfigModal"
-import TableSetting from "./CardOptions/TableSetting"
-import BarChartConfig from "./BarChartOptions/BarChartConfig"
+import widgetModalContent from "@/content/widgetModalContent"
+import WidgetOptionRender from "./WidgetOptionRender"
 
 export default function WidgetModal({ isOpen, setIsOpen }) {
 
     const [isButtonClicked, setIsButtonClicked] = useState(false)
     const [widgetTypeConfig, setWidgetTypeConfig] = useState('')
     const { setIsEditing } = useDynamicDashboardStore()
-
-    const lineChartBtnClickHandler = () => {
-        setWidgetTypeConfig('line_chart')
-        setIsButtonClicked(true)
-        setIsEditing(true)
-    }
-
-    const cardBtnClickHandler = () => {
-        setWidgetTypeConfig('card')
-        setIsButtonClicked(true)
-        setIsEditing(true)
-    }
-
-    const barChartBtnClickHandler = () => {
-        setWidgetTypeConfig('bar_chart')
-        setIsButtonClicked(true)
-        setIsEditing(true)
-    }
 
     return (
         <div className={`${isOpen ? 'opacity-100 z-[999999]' : 'opacity-0 -z-[999999]'} transition-all duration-500 flex fixed items-center justify-center w-screen h-screen left-0 top-0 bg-black/50 backdrop-blur-md`}>
@@ -37,27 +18,29 @@ export default function WidgetModal({ isOpen, setIsOpen }) {
                 {
                     !isButtonClicked &&
                     <div className="grid grid-cols-2 gap-2">
-                        <button className="bg-[var(--colCard)] py-2 px-5 rounded-full" onClick={lineChartBtnClickHandler}>افزودن نمودار خطی</button>
-                        <button className="bg-[var(--colCard)] py-2 px-5 rounded-full" onClick={barChartBtnClickHandler}>افزودن نمودار میله ای</button>
-                        <button className="bg-[var(--colCard)] py-2 px-5 rounded-full" onClick={cardBtnClickHandler}>افزودن کارت</button>
+                        {
+                            widgetModalContent.buttons.map(button => {
+                                return (
+                                    <button
+                                        key={button.id}
+                                        className="bg-[var(--colCard)] py-2 px-5 rounded-full"
+                                        onClick={() => {
+                                            setWidgetTypeConfig(button.type)
+                                            setIsButtonClicked(true)
+                                            setIsEditing(true)
+                                        }}
+                                    >
+                                        {button.name}
+                                    </button>
+                                )
+                            })
+                        }
+
                     </div>
                 }
                 {
                     isButtonClicked &&
-                    <>
-                        {
-                            widgetTypeConfig === 'line_chart' &&
-                            <LineChartConfigModal setIsButtonClicked={setIsButtonClicked} />
-                        }
-                        {
-                            widgetTypeConfig === 'bar_chart' &&
-                            <BarChartConfig setIsButtonClicked={setIsButtonClicked} />
-                        }
-                        {
-                            widgetTypeConfig === 'card' &&
-                            <TableSetting setIsButtonClicked={setIsButtonClicked} />
-                        }
-                    </>
+                    <WidgetOptionRender setIsButtonClicked={setIsButtonClicked} widgetTypeConfig={widgetTypeConfig} />
                 }
 
 

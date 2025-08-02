@@ -1,0 +1,191 @@
+import {
+    MdDashboard, MdFactory, MdEventAvailable, MdInventory,
+    MdBuild, MdChecklistRtl, MdWarning, MdSettings, MdGroup,
+    MdAccountTree, MdSecurity, MdDevices, MdStorage, MdSettingsPower,
+} from "react-icons/md"
+import {
+    FaRocketchat, FaClipboardList, FaChartLine, FaBoxes, FaExchangeAlt,
+    FaWarehouse, FaBuilding, FaUserFriends, FaShoppingCart, FaShippingFast,
+    FaCartPlus, FaHandshake, FaCalculator, FaFolderOpen, FaFileAlt, FaCogs,
+    FaBolt, FaTachometerAlt, FaRecycle, FaLeaf, FaStore, FaChartBar, FaRegCalendarAlt,
+    FaListAlt, FaProjectDiagram, FaDatabase, FaLightbulb
+} from "react-icons/fa";
+import { IoChatbubbles } from "react-icons/io5";
+import { AiFillProduct } from "react-icons/ai";
+import { GiBrain } from 'react-icons/gi';
+
+
+
+const sideBarLinksContent = {
+    fields: [
+        {
+            title: 'داشبورد',
+            icon: <MdDashboard />,
+            links: [
+                { type: 'item', text: 'داشبورد', href: '/', icon: <MdDashboard /> },
+            ]
+        },
+        {
+            title: 'همکاری و ارتباط',
+            icon: <FaRocketchat />,
+            links: [
+                { type: 'item', text: 'رویداد ها', href: '#', icon: <MdEventAvailable /> },
+                { type: 'item', text: 'گفتگو ها', href: '#', icon: <IoChatbubbles /> },
+            ]
+        },
+        {
+            title: 'عملیات',
+            icon: <MdFactory />,
+            links: [
+                {
+                    type: 'dropdown',
+                    text: 'تولید',
+                    icon: <MdFactory />,
+                    options: [
+                        { type: 'item', text: 'داشبورد تولید', href: '#', icon: <AiFillProduct /> },
+                        { type: 'item', text: 'سفارشات کار', href: '#', icon: <FaClipboardList /> },
+                        { type: 'item', text: 'گزارش تولید', href: '#', icon: <FaChartLine /> },
+                    ]
+                },
+                {
+                    type: 'dropdown',
+                    text: 'انبارداری',
+                    icon: <FaBoxes />,
+                    options: [
+                        { type: 'item', text: 'داشبورد انبار', href: '#', icon: <FaWarehouse /> },
+                        { type: 'item', text: 'موجودی کالا', href: '#', icon: <MdInventory /> },
+                        { type: 'item', text: 'تراکنش های انبار', href: '#', icon: <FaExchangeAlt /> },
+                    ]
+                },
+                {
+                    type: 'dropdown',
+                    text: 'نگهداری و تعمیرات',
+                    icon: <MdBuild />,
+                    options: [
+                        { type: 'item', text: 'داشبورد نت', href: '#', icon: <AiFillProduct /> },
+                        { type: 'item', text: 'دستورکار های نت', href: '#', icon: <MdChecklistRtl /> },
+                    ]
+                },
+            ]
+        },
+        {
+            title: 'کسب و کار',
+            icon: <FaBuilding />,
+            links: [
+                {
+                    type: 'dropdown',
+                    text: 'مشتریان',
+                    icon: <FaUserFriends />,
+                    options: [
+                        { type: 'item', text: 'مشتریان و مخاطبین', href: '#', icon: <FaUserFriends /> },
+                        { type: 'item', text: 'سفارشات فروش', href: '#', icon: <FaShoppingCart /> },
+                    ]
+                },
+                {
+                    type: 'dropdown',
+                    text: 'تدارکات',
+                    icon: <FaShippingFast />,
+                    options: [
+                        { type: 'item', text: 'تامین کنندگان', href: '#', icon: <FaHandshake /> },
+                        { type: 'item', text: 'سفارشات خرید', href: '#', icon: <FaCartPlus /> },
+                    ]
+                },
+                {
+                    type: 'dropdown',
+                    text: 'امور مالی',
+                    icon: <FaCalculator />,
+                    options: [
+                        { type: 'item', text: 'داشبورد مالی', href: '#', icon: <AiFillProduct /> },
+                        { type: 'item', text: 'سرفصل های حسابداری', href: '#', icon: <FaFolderOpen /> },
+                        { type: 'item', text: 'اسناد حسابداری', href: '#', icon: <FaFileAlt /> },
+                    ]
+                },
+            ]
+        },
+        {
+            title: 'راهکار های تخصصی',
+            icon: <FaCogs />,
+            links: [
+                {
+                    type: 'dropdown',
+                    text: 'مدیریت انرژی',
+                    icon: <FaBolt />,
+                    options: [
+                        { type: 'item', text: 'داشبورد انرژی', href: '#', icon: <AiFillProduct /> },
+                        { type: 'item', text: 'مدیریت دیماند', href: '#', icon: <FaTachometerAlt /> },
+                        { type: 'item', text: 'آب و محیط زیست', href: '#', icon: <FaRecycle /> },
+                    ]
+                },
+                {
+                    type: 'dropdown',
+                    text: 'نوغانداری',
+                    icon: <FaLeaf />,
+                    options: [
+                        { type: 'item', text: 'داشبورد نوغانداری', href: '#', icon: <AiFillProduct /> },
+                        { type: 'item', text: 'بازارچه پیله', href: '#', icon: <FaStore /> },
+                    ]
+                },
+            ]
+        },
+        {
+            title: 'تحلیل و گزارشات',
+            icon: <FaChartBar />,
+            links: [
+                {
+                    type: 'dropdown',
+                    text: 'مرکز هوش منصوعی',
+                    icon: <GiBrain />,
+                    options: [
+                        { type: 'item', text: 'پیشبینی ها', href: '#', icon: <FaRegCalendarAlt /> },
+                        { type: 'item', text: 'ناهنجاری ها', href: '#', icon: <MdWarning /> },
+                    ]
+                },
+                {
+                    type: 'dropdown',
+                    text: 'داشبورد های من',
+                    icon: <MdDashboard />,
+                    options: [
+                        { type: 'item', text: 'لیست داشبورد ها', href: '#', icon: <FaListAlt /> },
+                    ]
+                },
+            ]
+        },
+        {
+            title: 'تنظیمات',
+            icon: <MdSettings />,
+            links: [
+                {
+                    type: 'dropdown',
+                    text: 'سازمان و تیم',
+                    icon: <MdGroup />,
+                    options: [
+                        { type: 'item', text: 'ساختار سازمانی', href: '#', icon: <MdAccountTree /> },
+                        { type: 'item', text: 'تیم و دسترسی ها', href: '#', icon: <MdSecurity /> },
+                    ]
+                },
+                {
+                    type: 'dropdown',
+                    text: 'زیرساخت پلتفرم',
+                    icon: <MdStorage />,
+                    options: [
+                        { type: 'item', text: 'دستگاه ها و دارایی ها', href: '#', icon: <MdDevices /> },
+                        { type: 'item', text: 'فرایند ساز', href: '#', icon: <FaProjectDiagram /> },
+                        { type: 'item', text: 'مدل ساز داده', href: '#', icon: <FaDatabase /> },
+                    ]
+                },
+                {
+                    type: 'dropdown',
+                    text: 'راهکار ها',
+                    icon: <FaLightbulb />,
+                    options: [
+                        { type: 'item', text: 'تنظیمات انرژی', href: '#', icon: <MdSettingsPower /> },
+                        { type: 'item', text: 'تنظیمات تولید', href: '#', icon: <MdFactory  /> },
+                    ]
+                },
+            ]
+        },
+    ]
+}
+
+
+export default sideBarLinksContent
