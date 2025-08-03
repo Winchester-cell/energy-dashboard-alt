@@ -121,7 +121,7 @@ const sideBarLinksContent = {
                     text: 'نوغانداری',
                     icon: <FaLeaf />,
                     options: [
-                        { type: 'item', text: 'داشبورد نوغانداری', href: '#', icon: <AiFillProduct /> },
+                        { type: 'item', text: 'داشبورد نوغانداری', href: '/noghan-dashboard', icon: <AiFillProduct /> },
                         { type: 'item', text: 'بازارچه پیله', href: '#', icon: <FaStore /> },
                     ]
                 },
@@ -145,7 +145,7 @@ const sideBarLinksContent = {
                     text: 'داشبورد های من',
                     icon: <MdDashboard />,
                     options: [
-                        { type: 'item', text: 'لیست داشبورد ها', href: '#', icon: <FaListAlt /> },
+                        { type: 'item', text: 'لیست داشبورد ها', href: '/dashboard-management', icon: <FaListAlt /> },
                     ]
                 },
             ]

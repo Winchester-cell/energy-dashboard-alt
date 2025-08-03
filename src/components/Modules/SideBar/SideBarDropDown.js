@@ -21,7 +21,7 @@ export default function SideBarDropDown({ text, icon, options }) {
             <ul className={`transition-all overflow-hidden duration-500 flex flex-col gap-3 ${isOpen ? `max-h-[999px] my-3` : `max-h-0`}`}>
                 {
                     options.map((item, index) => {
-                        return <SubmenuItems key={index} {...item} />
+                        return <SubmenuItems setIsOpen={setIsOpen} key={index} {...item} />
                     })
                 }
             </ul>
