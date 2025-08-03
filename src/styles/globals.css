@@ -257,3 +257,9 @@ input {
 .react-resizable-handle.react-resizable-handle-se {
   opacity: 0;
 }
+
+
+.textJust{
+  text-align: justify;
+  text-justify: inter-word;
+}

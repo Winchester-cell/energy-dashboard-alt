@@ -121,8 +121,8 @@ const sideBarLinksContent = {
                     text: 'نوغانداری',
                     icon: <FaLeaf />,
                     options: [
-                        { type: 'item', text: 'داشبورد نوغانداری', href: '/noghan-dashboard', icon: <AiFillProduct /> },
-                        { type: 'item', text: 'بازارچه پیله', href: '#', icon: <FaStore /> },
+                        { type: 'item', text: 'داشبورد نوغانداری', href: '/sericulture-dashboard', icon: <AiFillProduct /> },
+                        { type: 'item', text: 'بازارچه پیله', href: '/cocon-shop', icon: <FaStore /> },
                     ]
                 },
             ]
@@ -179,7 +179,7 @@ const sideBarLinksContent = {
                     icon: <FaLightbulb />,
                     options: [
                         { type: 'item', text: 'تنظیمات انرژی', href: '#', icon: <MdSettingsPower /> },
-                        { type: 'item', text: 'تنظیمات تولید', href: '#', icon: <MdFactory  /> },
+                        { type: 'item', text: 'تنظیمات تولید', href: '#', icon: <MdFactory /> },
                     ]
                 },
             ]
