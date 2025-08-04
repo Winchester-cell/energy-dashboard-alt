@@ -3,8 +3,6 @@ import React from 'react'
 
 export default function CoconProductCard({ img, name, price, desc }) {
 
-    console.log('typeof price:', typeof price, 'value:', price);
-
     return (
         <div className='w-full h-[350px] bg-[var(--colCard)] rounded-xl overflow-hidden'>
             <div className='h-1/2 w-full'>
