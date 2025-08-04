@@ -2,6 +2,7 @@
 import { toPersianDigits } from '@/utils/toPersianDigits';
 import React from 'react'
 import { FaLongArrowAltLeft } from "react-icons/fa";
+//
 
 export default function InfoCard({ title, icon, value , height }) {
     return (
