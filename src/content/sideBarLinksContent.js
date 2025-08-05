@@ -37,6 +37,7 @@ const sideBarLinksContent = {
             title: 'عملیات',
             icon: <MdFactory />,
             links: [
+                { type: 'item', text: 'مرکز کنترل تجهیزات', href: '/control-center', icon: <MdDashboard /> }, ,
                 {
                     type: 'dropdown',
                     text: 'تولید',
@@ -159,7 +160,7 @@ const sideBarLinksContent = {
                     text: 'سازمان و تیم',
                     icon: <MdGroup />,
                     options: [
-                        { type: 'item', text: 'ساختار سازمانی', href: '#', icon: <MdAccountTree /> },
+                        { type: 'item', text: 'ساختار سازمانی', href: '/organizations', icon: <MdAccountTree /> },
                         { type: 'item', text: 'تیم و دسترسی ها', href: '#', icon: <MdSecurity /> },
                     ]
                 },

@@ -72,5 +72,18 @@ const productList = [
     }
 ];
 
+const devices = [
+    { id: 1, name: "دستگاه شمارش افراد", serial: "SN001", isActive: true },
+    { id: 2, name: "دستگاه کنترل دما", serial: "SN002", isActive: false },
+    { id: 3, name: "دستگاه تشخیص پلاک خودرو", serial: "SN003", isActive: true },
+    { id: 4, name: "دستگاه کنترل تردد", serial: "SN004", isActive: false },
+    { id: 5, name: "دستگاه سنجش رطوبت", serial: "SN005", isActive: true },
+    { id: 6, name: "دستگاه ثبت زمان ورود", serial: "SN006", isActive: true },
+    { id: 7, name: "دستگاه کنترل درب", serial: "SN007", isActive: false },
+    { id: 8, name: "دستگاه نظارت تصویری", serial: "SN008", isActive: true },
+    { id: 9, name: "دستگاه هشدار آتش‌سوزی", serial: "SN009", isActive: false }
+]
 
-export { topConsumer, areas, noganData, summaryData, productList }
+
+
+export { topConsumer, areas, noganData, summaryData, productList, devices }

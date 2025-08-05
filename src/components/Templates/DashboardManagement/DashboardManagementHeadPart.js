@@ -3,7 +3,7 @@ import AddDashboardModal from '@/components/Modules/Modals/AddDashboard/AddDashb
 import React, { useState } from 'react'
 import { FaPlus } from 'react-icons/fa'
 
-export default function HeadPart() {
+export default function DashboardManagementHeadPart() {
     const [isOpen, setIsOpen] = useState(false)
 
     return (

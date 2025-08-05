@@ -25,13 +25,13 @@ const generateMap = (mapRef, theme, darkmap, lightmap) => {
     //     .bindPopup("محدوده شهرک صنعتی رشت");
 
 
-    L.circle([37.23562, 49.54586], {
-        radius: 1500, // شعاع به متر (مثلاً 1000 متر = 1 کیلومتر)
-        color: '#86efac',
-        fillColor: '#86efac',
-        fillOpacity: 0.2,
-    }).addTo(mapRef.current)
-        .bindPopup("شعاع تقریبی اطراف شهرک صنعتی رشت");
+    // L.circle([37.23562, 49.54586], {
+    //     radius: 1500, // شعاع به متر (مثلاً 1000 متر = 1 کیلومتر)
+    //     color: '#86efac',
+    //     fillColor: '#86efac',
+    //     fillOpacity: 0.2,
+    // }).addTo(mapRef.current)
+    //     .bindPopup("شعاع تقریبی اطراف شهرک صنعتی رشت");
 
 
 };

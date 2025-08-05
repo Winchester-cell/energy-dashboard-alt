@@ -18,11 +18,13 @@ export default function CoconShop() {
                 <span>
                     لیست محصولات
                 </span>
-                <button onClick={() => setIsOpen(!isOpen)} className='bg-[var(--colCard)] shadow-lg px-7 py-2 rounded-full relative'>
+                <div className='bg-[var(--colCard)] shadow-lg px-7 py-2 rounded-full flex items-center justify-center relative'>
+                    <button onClick={() => setIsOpen(!isOpen)}>
+                        <FaShoppingCart />
+                    </button>
                     <div className='w-6 h-6 rounded-full bg-[var(--textHover)] absolute top-[-10px] start-0 flex items-center justify-center text-[12px]'>{toPersianDigits(2)}</div>
-                    <FaShoppingCart />
                     <Cart isOpen={isOpen} />
-                </button>
+                </div>
 
             </div>
 
