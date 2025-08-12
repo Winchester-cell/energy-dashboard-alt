@@ -1,12 +1,11 @@
-'use client'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 
 export default function DeviceInfoCard(props) {
 
-    const { id, name, serial_number, status } = props
+    const { id, uid, ip, metadata } = props
     const { t } = useTranslation()
-
+    const status = true
 
     return (
         <div
@@ -14,7 +13,7 @@ export default function DeviceInfoCard(props) {
         >
             <div className="flex items-center justify-between">
                 <span className="font-bold text-lg text-[var(--colTextA)]">
-                    {name} <span className=" text-sm">({id})</span>
+                    {uid} <span className=" text-sm">({id})</span>
                 </span>
                 <span
                     className={`px-2 py-1 rounded text-xs font-semibold ${status
@@ -26,10 +25,10 @@ export default function DeviceInfoCard(props) {
                 </span>
             </div>
             <div className="text-[var(--colTextB)] font-medium">
-                {t('deviceInfoCard.deviceIP')} : {'151.159.5.1'}
+                {t('deviceInfoCard.deviceIP')} : {ip}
             </div>
             <div className="text-[var(--colTextB)] font-medium">
-                {t('deviceInfoCard.deviceLocation')} : {serial_number}
+                {t('deviceInfoCard.deviceLocation')} : {metadata.location ? metadata.location : '---'}
             </div>
         </div>
     )

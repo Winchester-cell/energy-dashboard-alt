@@ -56,7 +56,7 @@ const BarChart = () => {
             }
         },
         title: {
-            // text: t(deviceDataCardContent.countedVehicleChart.chartTitle.textKey),
+            text: 'پیشبنی فروش',
             align: "center",
             style: {
                 fontSize: '14px',
@@ -70,12 +70,12 @@ const BarChart = () => {
 
     const series = [
         {
-            name: '',
-            data: [30, 40, 35 , 25],
+            name: 'آمار تردد',
+            data: [30, 45, 35 , 25],
 
         },
         {
-            name: '',
+            name: 'پیشبینی فروش',
             data: [25, 40, 28 , 30], // Data for the second line
         }
     ];

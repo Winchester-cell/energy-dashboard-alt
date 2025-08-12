@@ -86,4 +86,112 @@ const devices = [
 
 
 
-export { topConsumer, areas, noganData, summaryData, productList, devices }
+const factories = [
+    {
+        id: 111,
+        name: "شهرک صنعتی کاسپین",
+        manager: "مهندس علی رضایی",
+        children: [
+            {
+                id: 1,
+                name: "صنایع مادر ایرانیان",
+                manager: "مهندس محمد احمدی",
+                children: [
+                    {
+                        id: 2,
+                        name: "کارخانه فولاد البرز",
+                        manager: "مهندس ناصر قادری",
+                        children: [
+                            {
+                                id: 5,
+                                name: "زیرمجموعه نورد گرم",
+                                manager: "لیلا امینی",
+                                children: []
+                            },
+                            {
+                                id: 6,
+                                name: "زیرمجموعه نورد سرد",
+                                manager: "حسین نجفی",
+                                children: []
+                            },
+                            {
+                                id: 7,
+                                name: "زیرمجموعه بسته‌بندی فلزات",
+                                manager: "مریم کریمی",
+                                children: []
+                            }
+                        ]
+                    },
+                    {
+                        id: 3,
+                        name: "کارخانه داروسازی پویان",
+                        manager: "دکتر سمیه شریفی",
+                        children: [
+                            {
+                                id: 8,
+                                name: "زیرمجموعه تولید قرص",
+                                manager: "فرشاد رمضانی",
+                                children: []
+                            },
+                            {
+                                id: 9,
+                                name: "زیرمجموعه تولید شربت",
+                                manager: "نگار صفوی",
+                                children: []
+                            }
+                        ]
+                    },
+                    {
+                        id: 4,
+                        name: "کارخانه نساجی خزر",
+                        manager: "مهندس یوسف کاظمی",
+                        children: [
+                            {
+                                id: 10,
+                                name: "زیرمجموعه رنگرزی",
+                                manager: "شیما نادری",
+                                children: []
+                            },
+                            {
+                                id: 11,
+                                name: "زیرمجموعه بافندگی",
+                                manager: "رضا محسنی",
+                                children: [
+                                    {
+                                        id: 12,
+                                        name: "کارگاه بافندگی شماره 1",
+                                        manager: "زهرا تقوی",
+                                        children: []
+                                    },
+                                    {
+                                        id: 13,
+                                        name: "کارگاه بافندگی شماره 2",
+                                        manager: "حامد جوادی",
+                                        children: []
+                                    }
+                                ]
+                            },
+                            {
+                                id: 14,
+                                name: "زیرمجموعه بسته‌بندی پارچه",
+                                manager: "نسرین شفیعی",
+                                children: []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                id: 15,
+                name: "کارخانه مستقل آراد پلاست",
+                manager: "مهندس رضا حاجی‌پور",
+                children: []
+            }
+        ]
+    },
+];
+
+
+
+
+export { topConsumer, areas, noganData, summaryData, productList, devices, factories }

@@ -213,6 +213,7 @@
 
 
 body {
+  font-size: 14px;
   color: var(--colTextA);
   background: var(--colBg);
   transition: all ease-in-out 300ms;
@@ -262,4 +263,15 @@ input {
 .textJust{
   text-align: justify;
   text-justify: inter-word;
+}
+
+
+
+
+
+
+.tree-node > .tree-node__children {
+  display: flex;
+  gap: 60px; /* فاصله افقی بین نودهای هم‌سطح */
+  justify-content: center;
 }

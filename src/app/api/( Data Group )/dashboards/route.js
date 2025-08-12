@@ -55,7 +55,7 @@ export async function GET() {
 
         if (dashboardsResponse.status === 200) {
             return new Response(JSON.stringify(dashboardsResponse.data, null, 2), {
-                status: 201,
+                status: 200,
                 headers: {
                     "Content-Type": "application/json",
                 },

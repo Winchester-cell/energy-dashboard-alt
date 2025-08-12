@@ -1,32 +1,43 @@
 'use client';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import { useTranslation } from 'react-i18next';
 import { toPersianDigits } from '@/utils/toPersianDigits';
 const ApexChart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
-const DonutChart = ({ title, data }) => {
+const DonutChartss = () => {
+    const { t, i18n } = useTranslation();
 
-    const { t, i18n } = useTranslation()
+    // عنوان ثابت "آمار تردد"
+    const title = 'آمار تردد';
 
-
-    // const data = [70, 30];
-
+    // لیبل‌ها برای مرد، زن، بچه، سالمند
     const labels = [
-        t('areaChart.peopleIn'), t('areaChart.peopleOut')
-    ]
+        'مرد',
+        'زن',
+        'بچه',
+        'سالمند',
+    ];
 
-    const colors = ["#008ffb", "#00e396"]
+    const colors = ["#008ffb", "#00e396", "#feb019", "#ff4560"];
+
+    // مقدار رندوم برای هر دسته بین 10 تا 100
+    const [data, setData] = useState([0, 0, 0, 0]);
+
+    useEffect(() => {
+        const randomData = Array(4)
+            .fill(0)
+            .map(() => Math.floor(Math.random() * 91) + 10);
+        setData(randomData);
+    }, []); // فقط یکبار هنگام لود
 
     const options = {
-
         chart: {
             fontFamily: 'Yekan',
             type: 'donut',
         },
         colors,
         labels,
-
         plotOptions: {
             pie: {
                 donut: {
@@ -54,8 +65,8 @@ const DonutChart = ({ title, data }) => {
             enabled: true,
             formatter: function (val) {
                 const percent = val.toFixed(1) + '%';
-                const persianValue = toPersianDigits(percent)
-                return persianValue
+                const persianValue = toPersianDigits(percent);
+                return persianValue;
             },
             style: {
                 fontFamily: 'Yekan',
@@ -74,7 +85,6 @@ const DonutChart = ({ title, data }) => {
                 formatter: (val) => toPersianDigits(val),
             },
             style: {
-                //   fontSize: '22px',
                 fontFamily: 'Yekan',
             },
             cssClass: i18n.language === 'fa' ? 'rtl' : ''
@@ -86,7 +96,6 @@ const DonutChart = ({ title, data }) => {
         },
     };
 
-
     return (
         <div className="w-full h-full">
             <ApexChart key={i18n.language} options={options} series={data} type="donut" height={'100%'} />
@@ -94,4 +103,4 @@ const DonutChart = ({ title, data }) => {
     );
 };
 
-export default DonutChart;
+export default DonutChartss;

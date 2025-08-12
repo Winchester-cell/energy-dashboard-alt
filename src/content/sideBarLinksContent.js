@@ -2,9 +2,10 @@ import {
     MdDashboard, MdFactory, MdEventAvailable, MdInventory,
     MdBuild, MdChecklistRtl, MdWarning, MdSettings, MdGroup,
     MdAccountTree, MdSecurity, MdDevices, MdStorage, MdSettingsPower,
+    MdLocationOn,
 } from "react-icons/md"
 import {
-    FaRocketchat, FaClipboardList, FaChartLine, FaBoxes, FaExchangeAlt,
+    FaRocketchat, FaClipboardList, FaChartLine, FaBoxes, FaExchangeAlt, FaUsers,
     FaWarehouse, FaBuilding, FaUserFriends, FaShoppingCart, FaShippingFast,
     FaCartPlus, FaHandshake, FaCalculator, FaFolderOpen, FaFileAlt, FaCogs,
     FaBolt, FaTachometerAlt, FaRecycle, FaLeaf, FaStore, FaChartBar, FaRegCalendarAlt,
@@ -117,13 +118,23 @@ const sideBarLinksContent = {
                         { type: 'item', text: 'آب و محیط زیست', href: '#', icon: <FaRecycle /> },
                     ]
                 },
+                // {
+                //     type: 'dropdown',
+                //     text: 'نوغانداری',
+                //     icon: <FaLeaf />,
+                //     options: [
+                //         { type: 'item', text: 'داشبورد نوغانداری', href: '/sericulture-dashboard', icon: <AiFillProduct /> },
+                //         { type: 'item', text: 'بازارچه پیله', href: '/cocon-shop', icon: <FaStore /> },
+                //     ]
+                // },
                 {
                     type: 'dropdown',
-                    text: 'نوغانداری',
-                    icon: <FaLeaf />,
+                    text: 'پنل شمارش افراد',
+                    icon: <FaUsers />,
                     options: [
-                        { type: 'item', text: 'داشبورد نوغانداری', href: '/sericulture-dashboard', icon: <AiFillProduct /> },
-                        { type: 'item', text: 'بازارچه پیله', href: '/cocon-shop', icon: <FaStore /> },
+                        { type: 'item', text: 'داشبورد شمارش افراد', href: '/people-count-dashboard', icon: <AiFillProduct /> },
+                        { type: 'item', text: 'لیست دستگاه ها', href: '#', icon: <MdDevices /> },
+                        { type: 'item', text: 'سایت ها', href: '#', icon: <MdLocationOn /> },
                     ]
                 },
             ]
