@@ -10,9 +10,6 @@ const AreaChart = ({ shadow, labelSize, categories, series, title }) => {
 
     const { t } = useTranslation()
 
-    console.log(categories);
-
-
     const options = {
         title: {
             text: title,
@@ -42,8 +39,12 @@ const AreaChart = ({ shadow, labelSize, categories, series, title }) => {
         },
         yaxis: {
             min: 0,
+            labels: {
+                formatter: function (value) {
+                    return toPersianDigits(value);
+                }
+            },
             title: {
-                // text: t('totalCount'),
                 style: {
                     color: ["var(--colTextA)"],
                     fontSize: `${labelSize}px`,
@@ -64,7 +65,7 @@ const AreaChart = ({ shadow, labelSize, categories, series, title }) => {
         grid: {
             yaxis: {
                 lines: {
-                    show: false,
+                    show: true,
                 },
             },
         },

@@ -43,6 +43,13 @@ const BarChart = () => {
                 }
             }
         },
+        yaxis: {
+            labels: {
+                formatter: function (value) {
+                    return toPersianDigits(value);
+                }
+            },
+        },
 
         dataLabels: {
             formatter: function (val) {
@@ -71,12 +78,12 @@ const BarChart = () => {
     const series = [
         {
             name: 'آمار تردد',
-            data: [30, 45, 35 , 25],
+            data: [30, 45, 35, 25],
 
         },
         {
             name: 'پیشبینی فروش',
-            data: [25, 40, 28 , 30], // Data for the second line
+            data: [25, 40, 28, 30], // Data for the second line
         }
     ];
 

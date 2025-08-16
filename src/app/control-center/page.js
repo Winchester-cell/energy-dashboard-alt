@@ -1,3 +1,4 @@
+import DevicesControlCenterCard from '@/components/Modules/Cards/DevicesControlCenterCard'
 import DeviceStatusCard from '@/components/Modules/Cards/DeviceStatusCard'
 import ControlCenterHeadPart from '@/components/Templates/ControlCenter/ControlCenterHeadPart'
 import { devices } from '@/data/fakeData'
@@ -10,7 +11,7 @@ export default function ControlCenter() {
             <div className='w-full grid grid-cols-3 gap-5 mt-5'>
                 {
                     devices.map(device => {
-                        return <DeviceStatusCard key={device.id} {...device} />
+                        return <DevicesControlCenterCard key={device.id} {...device} />
                     })
                 }
             </div>

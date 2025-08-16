@@ -1,20 +1,13 @@
 'use client';
-import React from 'react';
-import dynamic from 'next/dynamic';
-import { useTranslation } from 'react-i18next';
+import React, { useEffect, useRef } from 'react';
 import { toPersianDigits } from '@/utils/toPersianDigits';
+import { useTranslation } from 'react-i18next';
+import dynamic from 'next/dynamic';
 const ApexChart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
-const DonutChart = ({ title, data }) => {
+const DonutChart = ({ title, data, labels }) => {
 
-    const { t, i18n } = useTranslation()
-
-
-    // const data = [70, 30];
-
-    const labels = [
-        t('areaChart.peopleIn'), t('areaChart.peopleOut')
-    ]
+    const { i18n } = useTranslation()
 
     const colors = ["#008ffb", "#00e396"]
 
@@ -74,7 +67,7 @@ const DonutChart = ({ title, data }) => {
                 formatter: (val) => toPersianDigits(val),
             },
             style: {
-                //   fontSize: '22px',
+                //fontSize: '22px',
                 fontFamily: 'Yekan',
             },
             cssClass: i18n.language === 'fa' ? 'rtl' : ''
@@ -86,12 +79,13 @@ const DonutChart = ({ title, data }) => {
         },
     };
 
-
     return (
         <div className="w-full h-full">
-            <ApexChart key={i18n.language} options={options} series={data} type="donut" height={'100%'} />
+            <ApexChart key={JSON.stringify(data)} options={options} series={data} type="donut" width={'90%'} height={'100%'} />
         </div>
     );
 };
 
 export default DonutChart;
+
+

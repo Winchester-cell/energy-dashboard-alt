@@ -2,7 +2,7 @@ export function processTimeSeriesData(data) {
   // ابتدا لیست ساعت‌ها رو یکتا و مرتب می‌کنیم
   const uniquePeriods = Array.from(
     
-    new Set(data.map(item => {
+    new Set(data?.map(item => {
       // استخراج ساعت از period (مثلا "2025-08-11T14:00:00+03:30" -> "14:00")
       return new Date(item.period).toLocaleTimeString('fa-IR', { hour: '2-digit', minute: '2-digit' });
     }))

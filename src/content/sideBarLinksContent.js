@@ -129,11 +129,11 @@ const sideBarLinksContent = {
                 // },
                 {
                     type: 'dropdown',
-                    text: 'پنل شمارش افراد',
+                    text: 'شمارش افراد',
                     icon: <FaUsers />,
                     options: [
-                        { type: 'item', text: 'داشبورد شمارش افراد', href: '/people-count-dashboard', icon: <AiFillProduct /> },
-                        { type: 'item', text: 'لیست دستگاه ها', href: '#', icon: <MdDevices /> },
+                        { type: 'item', text: 'داشبورد', href: '/people-count-dashboard', icon: <AiFillProduct /> },
+                        { type: 'item', text: 'پیکر بندی شمارش', href: '#', icon: <MdDevices /> },
                         { type: 'item', text: 'سایت ها', href: '#', icon: <MdLocationOn /> },
                     ]
                 },

@@ -20,6 +20,7 @@ export default function ChartsSection() {
 
     useEffect(() => {
         if (data) {
+            console.log(data);
             const newData = processTimeSeriesData(data)
             setChartData(newData)
         }

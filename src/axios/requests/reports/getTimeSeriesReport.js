@@ -10,8 +10,8 @@ export const getTimeSeriesReport = async (id) => {
                 metric_keys: ['count_in', 'count_out'],
                 interval: 'hour',
                 agg_func: 'sum',
-                start: '2025-08-12T00:00:00Z',
-                end: '2025-08-12T23:59:59Z'
+                start: '2025-08-16T00:00:00Z',
+                end: '2025-08-16T23:59:59Z'
             },
             paramsSerializer: params => qs.stringify(params, { arrayFormat: 'repeat' })
         })

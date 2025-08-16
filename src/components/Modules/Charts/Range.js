@@ -5,20 +5,9 @@ import { useTranslation } from 'react-i18next';
 import { toPersianDigits } from '@/utils/toPersianDigits';
 const ApexChart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
-const RangeChart = () => {
+const RangeChart = ({ series, categories }) => {
 
     const { t } = useTranslation()
-
-    const series = [
-        {
-            name: '',
-            data: [60, 87],
-        },
-        {
-            name: '',
-            data: [40, 13],
-        },
-    ];
 
     const options = {
         title: {
@@ -46,19 +35,34 @@ const RangeChart = () => {
         },
         dataLabels: {
             enabled: true,
-            enabledOnSeries: [0], // فقط روی مقدار اصلی نمایش بده
-            formatter: (val) => `${toPersianDigits(val)}%`,
+            enabledOnSeries: [0],
+            formatter: (val) => `${toPersianDigits(val)}`,
             style: {
                 colors: ['#fff'],
             },
         },
         xaxis: {
-            categories: [t('common.daily'), t('common.week')],
+            categories: categories,
+            labels: {
+                formatter: function (value) {
+                    return toPersianDigits(value);
+                },
+                style: {
+                    colors: 'var(--colTextA)',
+                    fontFamily: 'Yekan',
+                },
+            },
+
+        },
+        yaxis: {
+            labels: {
+                formatter: function (value) {
+                    return toPersianDigits(value);
+                }
+            },
         },
         colors: [
-
-            ({ dataPointIndex }) => ['#008ffb', '#00e396'][dataPointIndex],
-            ({ dataPointIndex }) => ['#9fd6ff', '#a6f5ce'][dataPointIndex],
+            ({ dataPointIndex }) => ['#008ffb', '#00e396', '#b91c1c'][dataPointIndex],
         ],
         legend: {
             show: false,
@@ -68,7 +72,7 @@ const RangeChart = () => {
         },
         tooltip: {
             y: {
-                formatter: (val) => `${toPersianDigits(val)}%`,
+                formatter: (val) => `${toPersianDigits(val)}`,
             },
         },
     };

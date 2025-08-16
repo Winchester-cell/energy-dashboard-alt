@@ -6,13 +6,13 @@ import { useTranslation } from 'react-i18next'
 export default function DeviceStatusItems({ id, name }) {
 
     const { t } = useTranslation()
-    const { setCurrentDevice } = useDevicesStore()
+    const { setCurrentDevice , currentDevice } = useDevicesStore()
     const clickHandler = () => {
         setCurrentDevice(id)
     }
 
     return (
-        <div onClick={() => clickHandler()} className={`w-full flex justify-between bg-[var(--colBg)] rounded-lg px-3 py-5 cursor-pointer`}>
+        <div onClick={() => clickHandler()} className={`${currentDevice === id ? `border-2` : ``} w-full flex justify-between bg-[var(--colBg)] rounded-lg px-3 py-5 cursor-pointer`}>
 
             <div className='flex flex-col gap-2'>
                 <div className='font-semibold'>{name}</div>

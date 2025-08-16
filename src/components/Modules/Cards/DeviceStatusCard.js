@@ -27,7 +27,7 @@ export default function DeviceStatusCard() {
     return (
         <div className='w-full lg:w-1/2 h-full px-3 py-5 bg-[var(--colCard)] shadow-md rounded-xl text-[var(--colTextA)] flex flex-col gap-2'>
 
-            <h2 className='font-bold'>{t('deviceStatusCard.deviceStatus')}</h2>
+            <h2 className='font-bold ps-5'>{t('deviceStatusCard.deviceStatus')}</h2>
             <SimpleBar style={{ maxHeight: '90%' }} >
                 <div className='flex flex-col gap-2 p-2'>
                     {

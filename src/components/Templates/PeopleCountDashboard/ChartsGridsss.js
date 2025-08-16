@@ -7,6 +7,7 @@ import { processTimeSeriesDataCumulative } from '@/utils/processTimeSeriesDataCu
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useQuery } from '@tanstack/react-query'
+import { processAgeCountData } from '@/utils/processAgeGenderData'
 
 export default function ChartsGridsss() {
 
@@ -14,25 +15,34 @@ export default function ChartsGridsss() {
 
 
   const { currentDevice } = useDevicesStore()
-  const [chartData, setChartData] = useState(null)
+  const [areaChartData, setAreaChartData] = useState(null)
+  const [rangeChartData, setRangeChartData] = useState(null)
 
-  const { data } = useQuery({
+  const { data: timeSeriesData } = useQuery({
     queryKey: ['timeSeriesReport', currentDevice],
     queryFn: () => getTimeSeriesReport(currentDevice),
     enabled: currentDevice != null,
   })
 
-  useEffect(() => {
-    if (data) {
-      const newData = processTimeSeriesDataCumulative(data)
-      setChartData(newData)
-    }
-  }, [data])
+  const { data: deviceCountData } = useQuery({
+    queryKey: ['deviceCount', currentDevice],
+    queryFn: () => getDeviceCount(currentDevice),
+    enabled: currentDevice != null,
+    refetchInterval: 3000
+  })
 
-  const data01 = [
-    10, 15, 20, 40, 25, 30,
-    35, 15, 10, 15, 35, 25
-  ]
+  useEffect(() => {
+    if (timeSeriesData) {
+      const newData = processTimeSeriesDataCumulative(timeSeriesData)
+      setAreaChartData(newData)
+    }
+  }, [timeSeriesData])
+  useEffect(() => {
+    if (deviceCountData) {
+      const newData = processAgeCountData(deviceCountData?.available_analytics?.age_group?.data)
+      setRangeChartData(newData)
+    }
+  }, [deviceCountData])
 
   const data02 = [
     10, 15, 20, 30, 25, 10,
@@ -44,16 +54,21 @@ export default function ChartsGridsss() {
 
       <div className='h-[clamp(300px,19dvw,600px)] p-5 bg-[var(--colCard)] rounded-xl shadow-lg'>
         {
-          chartData !== null &&
-          <AreaChart title={'آمار تجمیعی'} {...chartData} />
+          areaChartData !== null &&
+          <AreaChart title={'آمار تجمیعی'} {...areaChartData} />
         }
       </div>
       <div className='h-[clamp(300px,19dvw,600px)] p-5 bg-[var(--colCard)] rounded-xl shadow-lg'>
         <LineChart color={"#00e396"} title={t('common.week')} data={data02} />
       </div>
+
       <div className='h-[clamp(300px,19dvw,600px)] p-5 bg-[var(--colCard)] rounded-xl shadow-lg'>
-        <RangeChart />
+        {
+          rangeChartData !== null &&
+          <RangeChart {...rangeChartData} />
+        }
       </div>
+
       <div className='flex flex-col  lg:flex-row flex-grow items-center gap-5 pe-5 w-full'>
         <div className='h-[clamp(300px,19dvw,600px)] p-5 bg-[var(--colCard)] rounded-xl shadow-lg w-full lg:w-1/2'>
           <CircularProgress title={t('common.increasePredictNextYear')} value={75} />
