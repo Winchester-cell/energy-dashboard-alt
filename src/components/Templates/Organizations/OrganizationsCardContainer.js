@@ -1,3 +1,4 @@
+'use client'
 import OrganizationCard from '@/components/Modules/Cards/OrganizationCard'
 import { factories } from '@/data/fakeData'
 import React from 'react'

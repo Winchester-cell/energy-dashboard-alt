@@ -1,16 +1,21 @@
 import DeviceCard from '@/components/Modules/Cards/DeviceCard'
+import Loading from '@/components/Modules/Loadings/Loading'
 import useDevices from '@/hooks/useDevices'
 import React from 'react'
 import SimpleBar from 'simplebar-react'
 
 export default function DevicesTab() {
 
-    const { data: devicesData } = useDevices()
+    const { data: devicesData, isFetching } = useDevices()
 
     return (
         <div className='w-full px-5'>
             <div className='w-full h-[75dvh] bg-[var(--colCard)] rounded-xl p-2 flex flex-col'>
                 <div className='flex-grow overflow-hidden'>
+                    {
+                        isFetching && !devicesData &&
+                        <div className='w-full h-full flex items-center justify-center'><Loading /></div>
+                    }
                     <SimpleBar className='rounded-xl bg-[var(--colBg)] inner-shadow' style={{ height: '100%' }}>
                         <div className='w-full flex-grow grid grid-cols-5 gap-5 p-3'>
                             {devicesData?.results?.map(device => {
