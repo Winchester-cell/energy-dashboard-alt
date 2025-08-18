@@ -9,7 +9,7 @@ import { useTranslation } from 'react-i18next'
 import { useQuery } from '@tanstack/react-query'
 import { processAgeCountData } from '@/utils/processAgeGenderData'
 
-export default function ChartsGridsss() {
+export default function ChartsGrids() {
 
   const { t } = useTranslation()
 

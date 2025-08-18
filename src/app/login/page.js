@@ -39,7 +39,7 @@ export default function Login() {
   return (
     <div className='w-full h-[100dvh] flex items-center justify-center yekan_font text-[var(--colTextA)]'>
 
-      <div className='bg-[var(--colCard)] flex flex-col items-center p-16 rounded-xl shadow-lg'>
+      <div className='bg-[var(--colCard)] flex flex-col items-center p-16 rounded-xl shadow-lg cardborder'>
 
         <CetecLogo className="text-[var(--colTextA)] block" />
 

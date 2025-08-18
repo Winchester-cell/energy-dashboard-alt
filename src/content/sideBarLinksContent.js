@@ -180,7 +180,7 @@ const sideBarLinksContent = {
                     text: 'زیرساخت پلتفرم',
                     icon: <MdStorage />,
                     options: [
-                        { type: 'item', text: 'دستگاه ها و دارایی ها', href: '#', icon: <MdDevices /> },
+                        { type: 'item', text: 'دستگاه ها و دارایی ها', href: '/devices-hub', icon: <MdDevices /> },
                         { type: 'item', text: 'فرایند ساز', href: '#', icon: <FaProjectDiagram /> },
                         { type: 'item', text: 'مدل ساز داده', href: '#', icon: <FaDatabase /> },
                     ]

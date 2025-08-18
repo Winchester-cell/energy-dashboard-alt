@@ -2,7 +2,6 @@
 import React from "react";
 import i18n from "@/i18n";
 import SettingsSection from "@/components/Templates/SideBar/SettingsSection";
-import NavigationSection from "@/components/Templates/SideBar/NavigationSection";
 import ProfileSection from "@/components/Templates/SideBar/ProfileSection";
 import useSideBarStore from "@/stores/useSideBarStore";
 import SideBarCollapseButton from "./SideBarCollapseButton";
@@ -33,6 +32,7 @@ export default function SideBar() {
             <ProfileSection />
           </div>
 
+          {/* Fields Section */}
 
           <div className="w-full flex flex-col gap-3 px-3">
             {
@@ -41,13 +41,6 @@ export default function SideBar() {
               })
             }
           </div>
-
-
-          {/* Navigation Section */}
-
-          {/* <div className="w-full">
-            <NavigationSection />
-          </div> */}
 
           {/* Settings Section */}
 

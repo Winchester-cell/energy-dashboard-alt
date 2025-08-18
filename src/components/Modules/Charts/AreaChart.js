@@ -83,17 +83,6 @@ const AreaChart = ({ shadow, labelSize, categories, series, title }) => {
         }
     };
 
-    // const series = [
-    //     {
-    //         name: t('areaChart.peopleIn'),
-    //         data: [45, 80, 48, 80, 90], // Data for the first line
-    //     },
-    //     {
-    //         name: t('areaChart.peopleOut'),
-    //         data: [25, 60, 28, 60, 70], // Data for the second line
-    //     },
-    // ];
-
     return (
         <div
             className={`w-[100%] h-full p-2 bg-[var(--colCard)] rounded-2xl  ${shadow ? "shadow-lg" : ""

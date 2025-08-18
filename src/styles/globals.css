@@ -260,18 +260,89 @@ input {
 }
 
 
-.textJust{
+.textJust {
   text-align: justify;
   text-justify: inter-word;
 }
 
 
 
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.cardborder,
+.activeBorder {
+  box-sizing: border-box;
+  position: relative;
+}
+
+.cardborder::after,
+.cardborder::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  box-sizing: content-box;
+  background-image: conic-gradient(from var(--angle), var(--textHover), transparent, transparent, transparent, var(--textHover));
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 15px;
+  animation: 3s spinborder linear infinite;
+}
+
+.cardborder::before {
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+
+
+.activeBorder::after,
+.activeBorder::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  box-sizing: content-box;
+  background-image: conic-gradient(from var(--angle), #67b967, transparent, transparent , #67b967);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 15px;
+  animation: 3s spinborder linear infinite;
+}
+
+.activeBorder::before {
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
 
 
 
-.tree-node > .tree-node__children {
-  display: flex;
-  gap: 60px; /* فاصله افقی بین نودهای هم‌سطح */
-  justify-content: center;
+@keyframes spinborder {
+  from {
+    --angle: 0deg;
+  }
+
+  to {
+    --angle: 360deg;
+  }
+}
+
+.inner-shadow {
+  box-shadow: inset 0 8px 8px -10px rgba(0, 0, 0, 0.3),
+    /* بالا */
+    inset 0 -8px 8px -10px rgba(0, 0, 0, 0.3),
+    /* پایین */
+    inset 8px 0 8px -10px rgba(0, 0, 0, 0.3),
+    /* راست */
+    inset -8px 0 8px -10px rgba(0, 0, 0, 0.3);
+  /* چپ */
 }

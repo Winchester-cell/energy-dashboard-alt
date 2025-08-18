@@ -3,7 +3,7 @@ import React from 'react'
 import ChartsSection from '@/components/Templates/PeopleCountDashboard/ChartsSection';
 import MapAndStatusCard from '@/components/Templates/PeopleCountDashboard/MapAndStatusCard';
 import PeopleCountSection from '@/components/Templates/PeopleCountDashboard/PeopleCountSection';
-import ChartsGridsss from '@/components/Templates/PeopleCountDashboard/ChartsGridsss';
+import ChartsGrids from '@/components/Templates/PeopleCountDashboard/ChartsGrids';
 
 export default function PeopleCountDashboard() {
 
@@ -18,7 +18,7 @@ export default function PeopleCountDashboard() {
                     <MapAndStatusCard />
                 </div>
             </div>
-            <ChartsGridsss />
+            <ChartsGrids />
         </>
     )
 }

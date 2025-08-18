@@ -1,6 +1,5 @@
 import useSideBarStore from '@/stores/useSideBarStore'
 import React from 'react'
-import SideBar from './SideBar'
 import SideBarLinkItems from './SideBarLinkItems'
 
 export default function SideBarField({ title, links, icon }) {
