@@ -12,7 +12,7 @@ export function Providers({ children }) {
     const [isMounted, setIsMounted] = useState(false);
 
     const { i18n } = useTranslation()
-    const queryClient = new QueryClient()
+    const [queryClient] = useState(() => new QueryClient()) 
 
     useEffect(() => {
         setIsMounted(true);

@@ -5,5 +5,6 @@ export default function useDevicesProfiles() {
     return useQuery({
         queryKey: ['devices-profiles'],
         queryFn: getDevicesProfiles,
+        staleTime: 1000 * 60 * 5,
     })
 }
