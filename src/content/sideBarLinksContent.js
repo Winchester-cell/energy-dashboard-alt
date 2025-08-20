@@ -2,18 +2,18 @@ import {
     MdDashboard, MdFactory, MdEventAvailable, MdInventory,
     MdBuild, MdChecklistRtl, MdWarning, MdSettings, MdGroup,
     MdAccountTree, MdSecurity, MdDevices, MdStorage, MdSettingsPower,
-    MdLocationOn,
+    MdLocationOn, MdBusiness, MdInsights
 } from "react-icons/md"
 import {
     FaRocketchat, FaClipboardList, FaChartLine, FaBoxes, FaExchangeAlt, FaUsers,
     FaWarehouse, FaBuilding, FaUserFriends, FaShoppingCart, FaShippingFast,
     FaCartPlus, FaHandshake, FaCalculator, FaFolderOpen, FaFileAlt, FaCogs,
     FaBolt, FaTachometerAlt, FaRecycle, FaLeaf, FaStore, FaChartBar, FaRegCalendarAlt,
-    FaListAlt, FaProjectDiagram, FaDatabase, FaLightbulb
+    FaListAlt, FaProjectDiagram, FaDatabase, FaLightbulb, FaServer
 } from "react-icons/fa";
 import { IoChatbubbles } from "react-icons/io5";
 import { AiFillProduct } from "react-icons/ai";
-import { GiBrain } from 'react-icons/gi';
+import { GiBrain, GiCircuitry } from 'react-icons/gi';
 
 
 
@@ -181,6 +181,8 @@ const sideBarLinksContent = {
                     icon: <MdStorage />,
                     options: [
                         { type: 'item', text: 'دستگاه ها و دارایی ها', href: '/devices-hub', icon: <MdDevices /> },
+                        { type: 'item', text: 'پروفایل های دستگاه', href: '/devices-profiles', icon: <FaServer /> },
+                        { type: 'item', text: 'متریک ها', href: '#', icon: <MdInsights /> },
                         { type: 'item', text: 'فرایند ساز', href: '#', icon: <FaProjectDiagram /> },
                         { type: 'item', text: 'مدل ساز داده', href: '#', icon: <FaDatabase /> },
                     ]

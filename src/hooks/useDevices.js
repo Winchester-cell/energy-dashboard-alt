@@ -8,6 +8,6 @@ export default function useDevices() {
         staleTime: 10 * 60 * 1000,
         refetchOnWindowFocus: false,
         refetchOnMount: false,
-        refetchOnReconnect: false,
+        refetchOnReconnect: false,    
     })
 }

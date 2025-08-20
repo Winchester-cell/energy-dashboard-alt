@@ -2,6 +2,7 @@ import DeviceCard from '@/components/Modules/Cards/DeviceCard'
 import Loading from '@/components/Modules/Loadings/Loading'
 import useDevices from '@/hooks/useDevices'
 import React from 'react'
+import { FaSearch } from 'react-icons/fa'
 import SimpleBar from 'simplebar-react'
 
 export default function DevicesTab() {
@@ -11,6 +12,14 @@ export default function DevicesTab() {
     return (
         <div className='w-full px-5'>
             <div className='w-full h-[75dvh] bg-[var(--colCard)] rounded-xl p-2 flex flex-col'>
+                <div className='py-5 px-3 flex items-center gap-2'>
+                    <button className='bg-[var(--colBg)] w-[150px] py-2 px-5 rounded-full'>افزودن دستگاه</button>
+                    <button className='bg-[var(--colBg)] w-[150px] py-2 px-5 rounded-full'>فلیتر</button>
+                    <div className='flex items-center bg-[var(--colBg)] px-5 py-2 gap-3 rounded-full'>
+                        <FaSearch />
+                        <input type="text" placeholder='جستوجو ...' />
+                    </div>
+                </div>
                 <div className='flex-grow overflow-hidden'>
                     {
                         isFetching && !devicesData &&

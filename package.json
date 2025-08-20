@@ -34,6 +34,7 @@
     "react-leaflet": "^5.0.0",
     "react-organizational-chart": "^2.2.1",
     "react-resizable": "^3.0.5",
+    "react-select": "^5.10.2",
     "simplebar-react": "^3.3.2",
     "swiper": "^11.2.10",
     "zustand": "^5.0.6"
