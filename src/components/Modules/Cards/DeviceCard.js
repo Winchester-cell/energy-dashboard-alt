@@ -1,5 +1,5 @@
-import { makeDate } from '@/utils/dateMaker'
-import { toPersianDigits } from '@/utils/toPersianDigits'
+import { makeDate } from '@/utils/timeAndDate/dateMaker'
+import { toPersianDigits } from '@/utils/formaters/toPersianDigits'
 import { useTheme } from 'next-themes'
 import React from 'react'
 

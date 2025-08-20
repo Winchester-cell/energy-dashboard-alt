@@ -1,6 +1,6 @@
 import LineChart from "@/components/Modules/Charts/LineChart"
 import { topConsumer } from "@/data/fakeData"
-import { toPersianDigits } from "../toPersianDigits"
+import { toPersianDigits } from "../formaters/toPersianDigits"
 import BarChart from "@/components/Modules/Charts/BarChart"
 
 const createWidgetElem = (type, config) => {

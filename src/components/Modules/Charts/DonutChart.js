@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useRef } from 'react';
-import { toPersianDigits } from '@/utils/toPersianDigits';
+import { toPersianDigits } from '@/utils/formaters/toPersianDigits';
 import { useTranslation } from 'react-i18next';
 import dynamic from 'next/dynamic';
 const ApexChart = dynamic(() => import('react-apexcharts'), { ssr: false });

@@ -2,8 +2,6 @@ export default function applyUpdatedLayouts(widgets, allLayouts) {
   return widgets?.map((widget) => {
 
     const newLayoutConfig = {};
-    console.log(allLayouts);
-
 
     for (const breakpoint in allLayouts) {
       const layoutList = allLayouts[breakpoint];

@@ -2,8 +2,8 @@
 import { IoIosArrowForward } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
 import useDynamicDashboardStore from "@/stores/useDynamicDashboardStore";
-import applyUpdatedLayouts from "@/utils/applyUpdatedLayouts";
-import getLayouts from "@/utils/getLayouts";
+import applyUpdatedLayouts from "@/utils/gridLayOutUtils/applyUpdatedLayouts";
+import getLayouts from "@/utils/gridLayOutUtils/getLayouts";
 import React, { use, useEffect, useState } from "react";
 import { Responsive, WidthProvider } from "react-grid-layout";
 import "react-grid-layout/css/styles.css";

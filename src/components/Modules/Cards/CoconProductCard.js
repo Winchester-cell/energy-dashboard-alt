@@ -1,4 +1,4 @@
-import { toPersianDigits } from '@/utils/toPersianDigits'
+import { toPersianDigits } from '@/utils/formaters/toPersianDigits'
 import React from 'react'
 
 export default function CoconProductCard({ img, name, price, desc }) {

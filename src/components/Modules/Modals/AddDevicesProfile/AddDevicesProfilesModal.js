@@ -4,13 +4,16 @@ import { addDevicesProfileFormFields } from '@/content/formsContents'
 import FormItems from '../../Form/FormItems'
 import { useForm } from 'react-hook-form'
 import SubmitInput from '../../Inputs/SubmitInput'
-import { data } from 'autoprefixer'
+import { getValidProfileID } from '@/utils/formaters/getValidProfileID'
+import useAddDeviceProfile from '@/hooks/useAddDeviceProfile'
 
 export default function AddDevicesProfilesModal({ isOpen, setIsOpen }) {
 
-    const { register , control , handleSubmit } = useForm()
+    const { register, control, handleSubmit } = useForm()
+    const addProfileMutation = useAddDeviceProfile()
     const profileSubmit = async (data) => {
-        console.log(data); 
+        const finalData = { ...data, payload_decoder: '', config_schema: {}, supported_metrics: getValidProfileID(data.supported_metrics) }
+        addProfileMutation.mutate(finalData)
     }
 
     return (

@@ -1,5 +1,5 @@
 'use client'
-import { toPersianDigits } from '@/utils/toPersianDigits';
+import { toPersianDigits } from '@/utils/formaters/toPersianDigits';
 import React from 'react'
 import { useTranslation } from 'react-i18next';
 import { IoChevronForward, IoChevronBack } from "react-icons/io5";

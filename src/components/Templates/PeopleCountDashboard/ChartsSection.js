@@ -2,7 +2,7 @@ import { getTimeSeriesReport } from '@/axios/requests/reports/getTimeSeriesRepor
 import AreaChart from '@/components/Modules/Charts/AreaChart'
 import BarChart from '@/components/Modules/Charts/BarChart'
 import { useDevicesStore } from '@/stores/useDevicesStore'
-import { processTimeSeriesData } from '@/utils/processTimeSeriesData'
+import { processTimeSeriesData } from '@/utils/formaters/processTimeSeriesData'
 import { useQuery } from '@tanstack/react-query'
 import React, { useEffect, useState } from 'react'
 

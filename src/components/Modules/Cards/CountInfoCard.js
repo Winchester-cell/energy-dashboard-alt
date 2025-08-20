@@ -1,4 +1,4 @@
-import { toPersianDigits } from "@/utils/toPersianDigits";
+import { toPersianDigits } from "@/utils/formaters/toPersianDigits";
 import { useTranslation } from 'react-i18next';
 import { FaUserFriends } from "react-icons/fa";
 import Loading from "../Loadings/Loading";

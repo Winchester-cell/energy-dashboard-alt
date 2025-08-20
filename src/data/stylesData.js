@@ -55,4 +55,9 @@ export const selectBoxStyle = {
         },
         borderRadius: 99999
     }),
+     menuList: (baseStyles) => ({
+      ...baseStyles,
+      maxHeight: 200,
+      overflowY: "auto", 
+    }),
 }

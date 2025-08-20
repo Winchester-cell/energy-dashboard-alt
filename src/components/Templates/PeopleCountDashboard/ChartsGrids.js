@@ -3,11 +3,11 @@ import CircularProgress from '@/components/Modules/Charts/RadialChart'
 import RangeChart from '@/components/Modules/Charts/Range'
 import AreaChart from '@/components/Modules/Charts/AreaChart'
 import { useDevicesStore } from '@/stores/useDevicesStore'
-import { processTimeSeriesDataCumulative } from '@/utils/processTimeSeriesDataCumulative'
+import { processTimeSeriesDataCumulative } from '@/utils/formaters/processTimeSeriesDataCumulative'
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useQuery } from '@tanstack/react-query'
-import { processAgeCountData } from '@/utils/processAgeGenderData'
+import { processAgeCountData } from '@/utils/formaters/processAgeGenderData'
 
 export default function ChartsGrids() {
 

@@ -1,5 +1,5 @@
 import { useDeviceMetricStore } from '@/stores/useDeviceMetricStore'
-import { formatForDeviceMetricOptions } from '@/utils/formating/formatForDeviceMetricOptions'
+import { formatForDeviceMetricOptions } from '@/utils/formaters/formatForDeviceMetricOptions'
 import React, { useEffect, useState } from 'react'
 
 export default function useOptionSelector(optionKey) {

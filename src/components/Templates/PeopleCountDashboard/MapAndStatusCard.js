@@ -4,7 +4,7 @@ import DonutChart from '@/components/Modules/Charts/DonutChart'
 import Loading from '@/components/Modules/Loadings/Loading'
 import LocalMap from '@/components/Modules/Maps/LocalMap'
 import { useDevicesStore } from '@/stores/useDevicesStore'
-import { processGenderCountData } from '@/utils/processGenderCountData'
+import { processGenderCountData } from '@/utils/formaters/processGenderCountData'
 import { useQuery } from '@tanstack/react-query'
 import React, { useEffect, useState } from 'react'
 

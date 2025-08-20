@@ -12,16 +12,15 @@ import SimpleBar from 'simplebar-react'
 export default function DevicesProfiles() {
 
     const { data: profilesData, isFetching } = useDevicesProfiles()
-    const { setDevicesMetrics , devicesMetrics } = useDeviceMetricStore()
+    const { setDevicesMetrics, devicesMetrics } = useDeviceMetricStore()
     const { data: metricsData } = useMetrics()
     const [isOpen, setIsOpen] = useState(false)
 
     useEffect(() => {
-        if(metricsData){
+        if (metricsData) {
             setDevicesMetrics(metricsData.results)
-            console.log(devicesMetrics);
         }
-    }, [metricsData , devicesMetrics])
+    }, [metricsData, devicesMetrics])
 
     return (
         <div className='w-full p-5'>
@@ -37,7 +36,7 @@ export default function DevicesProfiles() {
                 </div>
                 <div className='flex-grow overflow-hidden'>
                     {
-                        isFetching && !profilesData &&
+                        !profilesData &&
                         <div className='w-full h-full flex items-center justify-center'><Loading /></div>
                     }
                     <SimpleBar className='rounded-xl bg-[var(--colBg)] inner-shadow' style={{ height: '100%' }}>

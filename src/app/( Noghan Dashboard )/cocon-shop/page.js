@@ -2,7 +2,7 @@
 import CoconProductCard from '@/components/Modules/Cards/CoconProductCard'
 import Cart from '@/components/Modules/Cart/Cart';
 import { productList } from '@/data/fakeData'
-import { toPersianDigits } from '@/utils/toPersianDigits';
+import { toPersianDigits } from '@/utils/formaters/toPersianDigits';
 import React, { useState } from 'react'
 import { FaShoppingCart } from "react-icons/fa";
 

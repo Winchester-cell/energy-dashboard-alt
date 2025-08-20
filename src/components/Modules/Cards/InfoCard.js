@@ -1,5 +1,5 @@
 'use client'
-import { toPersianDigits } from '@/utils/toPersianDigits';
+import { toPersianDigits } from '@/utils/formaters/toPersianDigits';
 import React from 'react'
 import { FaLongArrowAltLeft } from "react-icons/fa";
 //

@@ -5,9 +5,5 @@ export default function useDevicesProfiles() {
     return useQuery({
         queryKey: ['devices-profiles'],
         queryFn: getDevicesProfiles,
-        staleTime: 10 * 60 * 1000,
-        refetchOnWindowFocus: false,
-        refetchOnMount: false,
-        refetchOnReconnect: false,
     })
 }
