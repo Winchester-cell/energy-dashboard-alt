@@ -5,13 +5,13 @@ export const getTimeSeriesReport = async (id) => {
     try {
         const res = await apiProxy.get('/reports', {
             params: {
-                organization_id: 1,
+                organization_id: 5,
                 device_ids: id,
                 metric_keys: ['count_in', 'count_out'],
                 interval: 'hour',
                 agg_func: 'sum',
-                start: '2025-08-16T00:00:00Z',
-                end: '2025-08-16T23:59:59Z'
+                start: '2025-08-26T00:00:00Z',
+                end: '2025-08-26T23:59:59Z'
             },
             paramsSerializer: params => qs.stringify(params, { arrayFormat: 'repeat' })
         })

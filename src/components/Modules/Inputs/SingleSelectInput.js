@@ -6,7 +6,7 @@ import useOptionSelector from '@/hooks/useOptionSelector';
 
 const animatedComponents = makeAnimated();
 
-export default function SelectInput({ optionKey, value, onChange, place }) {
+export default function SingleSelectInput({ optionKey, value, onChange, place }) {
 
     const { options } = useOptionSelector(optionKey)
 
@@ -15,7 +15,7 @@ export default function SelectInput({ optionKey, value, onChange, place }) {
             closeMenuOnSelect={false}
             components={animatedComponents}
             options={options ? options : []}
-            isMulti
+            isMulti={false}
             placeholder={place}
             styles={selectBoxStyle}
             value={value}

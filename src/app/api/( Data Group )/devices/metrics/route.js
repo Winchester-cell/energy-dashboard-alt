@@ -36,3 +36,42 @@ export async function GET() {
 
 
 }
+
+
+export async function POST(req) {
+
+    try {
+
+        const cookieStore = await cookies()
+        const token = cookieStore.get('token')?.value
+
+        const metric = await req.json()
+
+        const metricsResponse = await apiRequest.post('/devices/metrics/', metric, {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        })
+
+        if (metricsResponse.status === 201) {
+            return new Response(JSON.stringify({ message: 'Metric added successfuly' }, null, 2), {
+                status: 201,
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            })
+        }
+
+
+    } catch (err) {
+        console.log('Error =>', err);
+        return new Response(JSON.stringify({ message: 'Server Error' }, null, 2), {
+            status: 500,
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+    }
+
+
+}

@@ -14,6 +14,10 @@ export default function useOptionSelector(optionKey) {
             setOptions(formatForDeviceMetricOptions(devicesMetrics))
         }
 
+        if(optionKey === 'profile'){
+            
+        }
+
     }, [devicesMetrics])
 
     return {options}

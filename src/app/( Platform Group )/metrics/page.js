@@ -2,6 +2,7 @@
 import MetricInfoCard from '@/components/Modules/Cards/MetricInfoCard'
 import Loading from '@/components/Modules/Loadings/Loading'
 import AddMetricsModal from '@/components/Modules/Modals/AddMetrics/AddMetricsModal'
+import { useToast } from '@/context/ToastContext'
 import useMetrics from '@/hooks/useMetrics'
 import React, { useRef, useState } from 'react'
 import { FaSearch } from 'react-icons/fa'
@@ -12,10 +13,12 @@ export default function MetricsPage() {
     const scrollableNodeRef = React.createRef()
     const { data: metricsData } = useMetrics()
     const [isOpen, setIsOpen] = useState(false)
+    const { showToast } = useToast()
     const handleScroll = (e) => {
         const target = e.target
-        console.log(target.scrollTop);
-        
+        if (target.scrollHeight - target.scrollTop === target.clientHeight) {
+            showToast('پایان اسکرول')
+        }
     }
 
 
