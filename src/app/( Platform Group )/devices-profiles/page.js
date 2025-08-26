@@ -26,26 +26,32 @@ export default function DevicesProfiles() {
         <div className='w-full p-5'>
             <AddDevicesProfilesModal isOpen={isOpen} setIsOpen={setIsOpen} />
             <div className='w-full flex-grow bg-[var(--colCard)] h-[83dvh] rounded-xl shadow-lg flex flex-col p-2'>
-                <div className='py-5 px-3 flex items-center gap-2'>
-                    <button onClick={() => setIsOpen(true)} className='bg-[var(--colBg)] w-[150px] py-2 px-5 rounded-full'>افزودن پروفایل</button>
-                    <button className='bg-[var(--colBg)] w-[150px] py-2 px-5 rounded-full'>فلیتر</button>
-                    <div className='flex items-center bg-[var(--colBg)] px-5 py-2 gap-3 rounded-full'>
-                        <FaSearch />
-                        <input type="text" placeholder='جستوجو ...' />
+                {
+                    (profilesData && metricsData) &&
+                    <div className='py-5 px-3 flex items-center gap-2'>
+                        <button onClick={() => setIsOpen(true)} className='bg-[var(--colBg)] w-[150px] py-2 px-5 rounded-full'>افزودن پروفایل</button>
+                        <button className='bg-[var(--colBg)] w-[150px] py-2 px-5 rounded-full'>فلیتر</button>
+                        <div className='flex items-center bg-[var(--colBg)] px-5 py-2 gap-3 rounded-full'>
+                            <FaSearch />
+                            <input type="text" placeholder='جستوجو ...' />
+                        </div>
                     </div>
-                </div>
+                }
                 <div className='flex-grow overflow-hidden'>
                     {
-                        !profilesData &&
+                        (!profilesData || !metricsData) &&
                         <div className='w-full h-full flex items-center justify-center'><Loading /></div>
                     }
-                    <SimpleBar className='rounded-xl bg-[var(--colBg)] inner-shadow' style={{ height: '100%' }}>
-                        <div className='w-full flex-grow grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 p-3'>
-                            {profilesData?.results?.map(profile => {
-                                return <DevicesProfileCard key={profile.id} {...profile} />
-                            })}
-                        </div>
-                    </SimpleBar>
+                    {
+                        (profilesData && metricsData) &&
+                        <SimpleBar className='rounded-xl bg-[var(--colBg)] inner-shadow' style={{ height: '100%' }}>
+                            <div className='w-full flex-grow grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 p-3'>
+                                {profilesData?.results?.map(profile => {
+                                    return <DevicesProfileCard key={profile.id} {...profile} />
+                                })}
+                            </div>
+                        </SimpleBar>
+                    }
                 </div>
             </div>
         </div>
