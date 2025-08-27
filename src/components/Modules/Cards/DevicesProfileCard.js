@@ -1,5 +1,5 @@
 import { deleteDeviceProfile } from '@/axios/requests/devices/deleteDeviceProfile';
-import useDeleteDeviceProfile from '@/hooks/useDeleteDeviceProfile';
+import useDeleteDeviceProfile from '@/hooks/queryHooks/devices/useDeleteDeviceProfile';
 import { useQueryClient } from '@tanstack/react-query';
 import React from 'react'
 import { MdDelete } from "react-icons/md";

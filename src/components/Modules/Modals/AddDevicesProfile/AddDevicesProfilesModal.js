@@ -5,7 +5,7 @@ import FormItems from '../../Form/FormItems'
 import { useForm } from 'react-hook-form'
 import SubmitInput from '../../Inputs/SubmitInput'
 import { getValidProfileID } from '@/utils/formaters/getValidProfileID'
-import useAddDeviceProfile from '@/hooks/useAddDeviceProfile'
+import useAddDeviceProfile from '@/hooks/queryHooks/devices/useAddDeviceProfile'
 
 export default function AddDevicesProfilesModal({ isOpen, setIsOpen }) {
 

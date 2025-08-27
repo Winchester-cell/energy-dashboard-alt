@@ -1,15 +1,17 @@
 import apiRequest from "@/axios/instacne/mainApi";
+import { cookies } from "next/headers";
 
 
 export async function GET() {
 
     try {
 
-        const authResponse = await apiRequest.post('/auth/token/', { username: 'cetec', password: 'Peopless123@#' })
+        const cookieStore = cookies();
+        const token = cookieStore.get('token')?.value;
 
         const organizationResponse = await apiRequest.get('/accounts/organizations/', {
             headers: {
-                'Authorization': `Bearer ${authResponse.data.access}`
+                'Authorization': `Bearer ${token}`
             }
         })
 

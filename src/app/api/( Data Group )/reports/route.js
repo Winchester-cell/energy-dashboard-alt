@@ -8,15 +8,12 @@ export async function GET(req) {
     const token = cookieStore.get('token')?.value;
     const { searchParams } = new URL(req.url);
 
-    // گرفتن آرایه metric_keys
     const metric_keys = searchParams.getAll('metric_keys');
 
-    // بقیه پارامترها به صورت کلید-مقدار، بدون metric_keys
     const params = Object.fromEntries(
       Array.from(searchParams.entries()).filter(([key]) => key !== 'metric_keys')
     );
 
-    // افزودن metric_keys به params به صورت آرایه
     params.metric_keys = metric_keys;
 
     const reportResponse = await apiRequest.get('/reports/timeseries/', {

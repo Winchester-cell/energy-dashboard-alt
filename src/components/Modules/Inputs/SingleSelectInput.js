@@ -12,7 +12,7 @@ export default function SingleSelectInput({ optionKey, value, onChange, place })
 
     return (
         <Select
-            closeMenuOnSelect={false}
+            closeMenuOnSelect={true}
             components={animatedComponents}
             options={options ? options : []}
             isMulti={false}

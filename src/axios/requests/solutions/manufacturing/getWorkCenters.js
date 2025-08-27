@@ -1,8 +1,8 @@
 import apiProxy from "@/axios/instacne/proxy"
 
-export const getDeviceCount = async (id) => {
+export const getWorkCenters = async () => {
     try {
-        const res = await apiProxy.get(`/solutions/counting/analysis/${id}/`)
+        const res = await apiProxy.get('/solutions/manufacturing/work-centers')
         return res.data
     } catch (err) {
         return 'Error'

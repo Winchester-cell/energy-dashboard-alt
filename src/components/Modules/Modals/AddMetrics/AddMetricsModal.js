@@ -4,7 +4,7 @@ import FormItems from '../../Form/FormItems'
 import SubmitInput from '../../Inputs/SubmitInput'
 import { useForm } from 'react-hook-form'
 import ModalBase from '../ModalBase'
-import useAddMetric from '@/hooks/useAddMetric'
+import useAddMetric from '@/hooks/queryHooks/devices/useAddMetric'
 
 export default function AddMetricsModal({ isOpen, setIsOpen }) {
 

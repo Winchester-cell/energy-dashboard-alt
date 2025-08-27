@@ -36,3 +36,40 @@ export async function GET() {
 
 
 }
+
+export async function POST(req) {
+    
+    try {
+
+        const cookieStore = await cookies()
+        const token = cookieStore.get('token')?.value
+
+        const device = await req.json()
+
+        const devicesResponse = await apiRequest.post('/devices/instances/', device , {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        })
+
+        if (devicesResponse.status === 201) {
+            return new Response(JSON.stringify(devicesResponse.data, null, 2), {
+                status: 201,
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            })
+        }
+
+
+    } catch (err) {
+        console.log('Error =>', err);
+        return new Response(JSON.stringify({ message: 'Server Error' }, null, 2), {
+            status: 500,
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+    }
+
+}

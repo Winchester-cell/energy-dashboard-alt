@@ -9,6 +9,10 @@ export const selectBoxStyle = {
         outline: 'none',
         boxShadow: 'none',
     }),
+    singleValue: (baseStyles) => ({
+        ...baseStyles,
+        color: 'var(--colTextA)' ,
+    }),
     placeholder: (baseStyles) => ({
         ...baseStyles,
         color: 'var(--colTextB)',
@@ -30,7 +34,7 @@ export const selectBoxStyle = {
     }),
     option: (baseStyles, state) => ({
         ...baseStyles,
-        borderRadius:10,
+        borderRadius: 10,
         backgroundColor: state.isFocused
             ? 'var(--textHover)'
             : 'var(--colBg)',
@@ -55,9 +59,9 @@ export const selectBoxStyle = {
         },
         borderRadius: 99999
     }),
-     menuList: (baseStyles) => ({
-      ...baseStyles,
-      maxHeight: 200,
-      overflowY: "auto", 
+    menuList: (baseStyles) => ({
+        ...baseStyles,
+        maxHeight: 200,
+        overflowY: "auto",
     }),
 }
