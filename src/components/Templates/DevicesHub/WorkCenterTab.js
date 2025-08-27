@@ -1,4 +1,5 @@
 import WorkCenterCard from '@/components/Modules/Cards/WorkCenterCard'
+import Loading from '@/components/Modules/Loadings/Loading'
 import useWorkCenters from '@/hooks/queryHooks/solutions/useWorkCenters'
 import React from 'react'
 import { FaSearch } from 'react-icons/fa'
