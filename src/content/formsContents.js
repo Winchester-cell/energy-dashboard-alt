@@ -14,6 +14,15 @@ export const addMetricsFormFields = [
 export const addDeviceFormFields = [
     { fieldName: 'نام دستگاه', registerKey: 'name', inputType: 'normalText' },
     { fieldName: 'آیدی دستگاه', registerKey: 'unique_id', inputType: 'normalText' },
-    { fieldName: 'انتخاب سازمان', registerKey: 'organization', inputType: 'select' , optionKey: 'organization' },
-    { fieldName: 'انتخاب پروفایل', registerKey: 'profile', inputType: 'select' ,  optionKey: 'profile' },
+    { fieldName: 'انتخاب سازمان', registerKey: 'organization', inputType: 'select', optionKey: 'organization' },
+    { fieldName: 'انتخاب پروفایل', registerKey: 'profile', inputType: 'select', optionKey: 'profile' },
+]
+
+
+export const addWorkCenterFormFields = [
+    { fieldName: 'انتخاب دستگاه منیتورینگ', registerKey: 'monitoring_devices', inputType: 'multiSelect', optionKey: 'devices' },
+    { fieldName: 'نام مرکز کاری', registerKey: 'name', inputType: 'normalText' },
+    { fieldName: 'کد مرکز', registerKey: 'code', inputType: 'normalText' },
+    { fieldName: 'نرخ استاندارد ساعتی', registerKey: 'standard_rate_units_per_hour', inputType: 'normalText' },
+    { fieldName: 'ظرفیت روزانه', registerKey: 'capacity_hours_per_day', inputType: 'normalText' },
 ]

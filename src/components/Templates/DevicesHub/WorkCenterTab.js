@@ -1,27 +1,22 @@
 import WorkCenterCard from '@/components/Modules/Cards/WorkCenterCard'
 import Loading from '@/components/Modules/Loadings/Loading'
+import AddWorkCenterModal from '@/components/Modules/Modals/AddWorkCenter/AddWorkCenterModal'
+import PlatFormsHeadPart from '@/components/Modules/PlatformsHeadPart/PlatFormsHeadPart'
 import useWorkCenters from '@/hooks/queryHooks/solutions/useWorkCenters'
-import React from 'react'
-import { FaSearch } from 'react-icons/fa'
+import React, { useState } from 'react'
 import SimpleBar from 'simplebar-react'
 
 export default function WorkCenterTab() {
 
-    const { data: workCenterData , isFetching } = useWorkCenters()
+    const { data: workCenterData, isFetching } = useWorkCenters()
+    const [isOpen , setIsOpen] = useState(false)
 
     return (
         <div className='w-full px-5'>
-            {/* <AddDeviceModal isOpen={isOpen} setIsOpen={setIsOpen} /> */}
+            <AddWorkCenterModal isOpen={isOpen} setIsOpen={setIsOpen} />
             <div className='w-full h-[75dvh] bg-[var(--colCard)] rounded-xl p-2 flex flex-col'>
                 {
-                    <div className='py-5 px-3 flex items-center gap-2'>
-                        <button onClick={() => setIsOpen(true)} className='bg-[var(--colBg)] w-[150px] py-2 px-5 rounded-full'>افزودن</button>
-                        <button className='bg-[var(--colBg)] w-[150px] py-2 px-5 rounded-full'>فلیتر</button>
-                        <div className='flex items-center bg-[var(--colBg)] px-5 py-2 gap-3 rounded-full'>
-                            <FaSearch />
-                            <input type="text" placeholder='جستوجو ...' />
-                        </div>
-                    </div>
+                    <PlatFormsHeadPart setIsOpen={setIsOpen} btnName={'افزودن مرکز'}/>
                 }
                 <div className='flex-grow overflow-hidden'>
                     {

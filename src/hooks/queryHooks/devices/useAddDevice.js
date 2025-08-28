@@ -9,10 +9,6 @@ export default function useAddDevice() {
         mutationFn: (device) => postDevice(device),
         onSuccess: async () => {
             await queryClient.invalidateQueries(['devices'])
-            alert('added')
         },
-        onError: () => {
-            alert('failed')
-        }
     })
 }

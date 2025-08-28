@@ -41,7 +41,7 @@ export default function MainLayout({ children }) {
     }
 
     return (
-        <div className={layoutClass}>
+        <div className={`${layoutClass} transition-all duration-500`}>
             <div className="w-full flex items-center px-3 pt-5 gap-3">
                 <SideBarToggleButton />
                 <Header />

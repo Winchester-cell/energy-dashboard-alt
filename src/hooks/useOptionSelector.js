@@ -3,6 +3,7 @@ import { formatForDeviceMetricOptions, formatForProfileOptions } from '@/utils/f
 import { useEffect, useState } from 'react'
 import useDevicesProfiles from './queryHooks/devices/useDevicesProfiles'
 import useOrganizations from './queryHooks/organization/useOrganization'
+import useDevices from './queryHooks/devices/useDevices'
 
 export default function useOptionSelector(optionKey) {
 
@@ -11,7 +12,7 @@ export default function useOptionSelector(optionKey) {
     const { devicesMetrics } = useDeviceMetricStore()
     const { data: profilesData } = useDevicesProfiles()
     const { data: organizationsData } = useOrganizations()
-
+    const { data: devicesData } = useDevices()
 
     useEffect(() => {
 
@@ -23,11 +24,15 @@ export default function useOptionSelector(optionKey) {
             setOptions(formatForProfileOptions(profilesData?.results))
         }
 
-        if (optionKey === 'organization' && organizationsData) {    
+        if (optionKey === 'organization' && organizationsData) {
             setOptions(formatForProfileOptions(organizationsData?.results))
         }
 
-    }, [devicesMetrics, profilesData , organizationsData])
+        if (optionKey === 'devices' && devicesData) {
+            setOptions(formatForProfileOptions(devicesData?.results))
+        }
+
+    }, [devicesMetrics, profilesData, organizationsData , devicesData])
 
     return { options }
 

@@ -291,7 +291,7 @@ input {
   left: 50%;
   translate: -50% -50%;
   z-index: -1;
-  padding: 3px;
+  padding: 2px;
   border-radius: 15px;
   animation: 3s spinborder linear infinite;
 }

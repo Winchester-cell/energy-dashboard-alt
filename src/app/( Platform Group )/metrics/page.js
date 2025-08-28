@@ -2,6 +2,7 @@
 import MetricInfoCard from '@/components/Modules/Cards/MetricInfoCard'
 import Loading from '@/components/Modules/Loadings/Loading'
 import AddMetricsModal from '@/components/Modules/Modals/AddMetrics/AddMetricsModal'
+import PlatFormsHeadPart from '@/components/Modules/PlatformsHeadPart/PlatFormsHeadPart'
 import { useToast } from '@/context/ToastContext'
 import useMetrics from '@/hooks/queryHooks/devices/useMetrics'
 import React, { useRef, useState } from 'react'
@@ -26,14 +27,7 @@ export default function MetricsPage() {
         <div className='w-full p-5'>
             <AddMetricsModal isOpen={isOpen} setIsOpen={setIsOpen} />
             <div className='w-full flex-grow bg-[var(--colCard)] h-[83dvh] rounded-xl shadow-lg flex flex-col p-2'>
-                <div className='py-5 px-3 flex items-center gap-2'>
-                    <button onClick={() => setIsOpen(true)} className='bg-[var(--colBg)] w-[150px] py-2 px-5 rounded-full'>افزودن متریک</button>
-                    <button className='bg-[var(--colBg)] w-[150px] py-2 px-5 rounded-full'>فلیتر</button>
-                    <div className='flex items-center bg-[var(--colBg)] px-5 py-2 gap-3 rounded-full'>
-                        <FaSearch />
-                        <input type="text" placeholder='جستوجو ...' />
-                    </div>
-                </div>
+                <PlatFormsHeadPart setIsOpen={setIsOpen} btnName={'افزودن متریک'} />
                 <div className='flex-grow overflow-hidden'>
                     {
                         !metricsData &&
