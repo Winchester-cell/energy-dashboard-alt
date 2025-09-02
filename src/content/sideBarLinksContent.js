@@ -2,18 +2,27 @@ import {
     MdDashboard, MdFactory, MdEventAvailable, MdInventory,
     MdBuild, MdChecklistRtl, MdWarning, MdSettings, MdGroup,
     MdAccountTree, MdSecurity, MdDevices, MdStorage, MdSettingsPower,
-    MdLocationOn, MdBusiness, MdInsights
+    MdLocationOn, MdBusiness, MdInsights, MdLocalHospital
+
 } from "react-icons/md"
+
 import {
     FaRocketchat, FaClipboardList, FaChartLine, FaBoxes, FaExchangeAlt, FaUsers,
     FaWarehouse, FaBuilding, FaUserFriends, FaShoppingCart, FaShippingFast,
     FaCartPlus, FaHandshake, FaCalculator, FaFolderOpen, FaFileAlt, FaCogs,
     FaBolt, FaTachometerAlt, FaRecycle, FaLeaf, FaStore, FaChartBar, FaRegCalendarAlt,
-    FaListAlt, FaProjectDiagram, FaDatabase, FaLightbulb, FaServer
+    FaListAlt, FaProjectDiagram, FaDatabase, FaLightbulb, FaServer, FaChartArea 
 } from "react-icons/fa";
+
 import { IoChatbubbles } from "react-icons/io5";
 import { AiFillProduct } from "react-icons/ai";
 import { GiBrain, GiCircuitry } from 'react-icons/gi';
+import { FaUserDoctor , FaBedPulse  } from "react-icons/fa6";
+import { ImLab } from "react-icons/im";
+import { PiJarLabelFill } from "react-icons/pi";
+
+
+
 
 
 
@@ -135,6 +144,14 @@ const sideBarLinksContent = {
                         { type: 'item', text: 'داشبورد', href: '/people-count-dashboard', icon: <AiFillProduct /> },
                         { type: 'item', text: 'پیکر بندی شمارش', href: '#', icon: <MdDevices /> },
                         { type: 'item', text: 'سایت ها', href: '#', icon: <MdLocationOn /> },
+                    ]
+                },
+                {
+                    type: 'dropdown',
+                    text: 'بیمارستان',
+                    icon: <MdLocalHospital />,
+                    options: [
+                        { type: 'item', text: 'مرکز فرماندهی', href: '/hospital/command-center', icon: <FaChartArea   /> },
                     ]
                 },
             ]

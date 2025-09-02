@@ -85,7 +85,6 @@ const devices = [
 ]
 
 
-
 const factories = [
     {
         id: 111,
@@ -191,7 +190,57 @@ const factories = [
     },
 ];
 
+const beds = [
+  { id: 1, number: "B01", ward: "ICU", occupied: true, patient: { id: 101, name: "علی رضایی", age: 45, gender: "مرد", medicalRecord: "پرونده ۱۰۰۱" } },
+  { id: 2, number: "B02", ward: "عمومی", occupied: false, patient: null },
+  { id: 3, number: "B03", ward: "ICU", occupied: true, patient: { id: 102, name: "سارا محمدی", age: 32, gender: "زن", medicalRecord: "پرونده ۱۰۰۲" } },
+  { id: 4, number: "B04", ward: "عمومی", occupied: false, patient: null },
+  { id: 5, number: "B05", ward: "ICU", occupied: true, patient: { id: 103, name: "رضا احمدی", age: 56, gender: "مرد", medicalRecord: "پرونده ۱۰۰۳" } },
+  { id: 6, number: "B06", ward: "عمومی", occupied: false, patient: null },
+  { id: 7, number: "B07", ward: "ICU", occupied: true, patient: { id: 104, name: "ندا کریمی", age: 28, gender: "زن", medicalRecord: "پرونده ۱۰۰۴" } },
+  { id: 8, number: "B08", ward: "عمومی", occupied: false, patient: null },
+  { id: 9, number: "B09", ward: "ICU", occupied: true, patient: { id: 105, name: "حسن قربانی", age: 60, gender: "مرد", medicalRecord: "پرونده ۱۰۰۵" } },
+  { id: 10, number: "B10", ward: "عمومی", occupied: false, patient: null },
+  { id: 11, number: "B11", ward: "ICU", occupied: true, patient: { id: 106, name: "لیلا صادقی", age: 34, gender: "زن", medicalRecord: "پرونده ۱۰۰۶" } },
+  { id: 12, number: "B12", ward: "عمومی", occupied: false, patient: null },
+  { id: 13, number: "B13", ward: "ICU", occupied: true, patient: { id: 107, name: "مهدی جعفری", age: 50, gender: "مرد", medicalRecord: "پرونده ۱۰۰۷" } },
+  { id: 14, number: "B14", ward: "عمومی", occupied: false, patient: null },
+  { id: 15, number: "B15", ward: "ICU", occupied: true, patient: { id: 108, name: "فاطمه حسینی", age: 40, gender: "زن", medicalRecord: "پرونده ۱۰۰۸" } },
+  { id: 16, number: "B16", ward: "عمومی", occupied: false, patient: null },
+  { id: 17, number: "B17", ward: "ICU", occupied: true, patient: { id: 109, name: "سعید کیانی", age: 37, gender: "مرد", medicalRecord: "پرونده ۱۰۰۹" } },
+  { id: 18, number: "B18", ward: "عمومی", occupied: false, patient: null },
+  { id: 19, number: "B19", ward: "ICU", occupied: true, patient: { id: 110, name: "نیلوفر شیری", age: 29, gender: "زن", medicalRecord: "پرونده ۱۰۱۰" } },
+  { id: 20, number: "B20", ward: "عمومی", occupied: false, patient: null }
+];
+
+const hospitalSections = [
+  { id: 1, secName: 'جراحی قلب', totalBed: 45, occupaidBed: 12 },
+  { id: 2, secName: 'جراحی مغز و اعصاب', totalBed: 38, occupaidBed: 21 },
+  { id: 3, secName: 'جراحی عمومی', totalBed: 52, occupaidBed: 40 },
+  { id: 4, secName: 'ارتوپدی', totalBed: 30, occupaidBed: 18 },
+  { id: 5, secName: 'ICU', totalBed: 20, occupaidBed: 15 },
+  { id: 6, secName: 'CCU', totalBed: 25, occupaidBed: 9 },
+  { id: 7, secName: 'داخلی', totalBed: 48, occupaidBed: 17 },
+  { id: 8, secName: 'زنان و زایمان', totalBed: 34, occupaidBed: 22 },
+  { id: 9, secName: 'اطفال', totalBed: 28, occupaidBed: 17 },
+  { id: 10, secName: 'اورژانس', totalBed: 40, occupaidBed: 35 },
+  { id: 11, secName: 'رادیولوژی', totalBed: 15, occupaidBed: 9 }
+];
+
+const hospitalDevices = [
+  { name: "MRI Scanner", status: "فعال", idleHours: 0 },
+  { name: "CT Scanner", status: "در حال تعمیر", idleHours: 4 },
+  { name: "X-Ray Machine", status: "فعال", idleHours: 1 },
+  { name: "Ultrasound", status: "غیرفعال", idleHours: 6 },
+  { name: "ECG Machine", status: "فعال", idleHours: 0 },
+  { name: "Ventilator", status: "فعال", idleHours: 0 },
+  { name: "Defibrillator", status: "در حال تعمیر", idleHours: 3 },
+  { name: "Infusion Pump", status: "غیرفعال", idleHours: 5 },
+  { name: "Dialysis Machine", status: "فعال", idleHours: 2 },
+  { name: "Patient Monitor", status: "فعال", idleHours: 1 },
+];
 
 
 
-export { topConsumer, areas, noganData, summaryData, productList, devices, factories }
+
+export { topConsumer, areas, noganData, summaryData, productList, devices, factories , beds , hospitalSections , hospitalDevices}
