@@ -9,17 +9,20 @@ import LogOutButton from "@/components/Templates/SideBar/LogOutButton";
 import SimpleBar from "simplebar-react";
 import sideBarLinksContent from "@/content/sideBarLinksContent";
 import SideBarField from "./SideBarField";
+import { usePathname } from "next/navigation";
+import { colorVariantSelector } from "@/data/themeVariants";
 
 
 export default function SideBar() {
 
   const { isSideBarCollapsed, isSideBarOpen, toggleSideBar } = useSideBarStore()
   const translateClass = i18n.language === 'en' ? `-translate-x-full` : `translate-x-full`
-
+  const pathname = usePathname()
+  const style = colorVariantSelector(pathname)
 
   return (
     <>
-      <div id="sidebar" className={`h-[100dvh] ${isSideBarCollapsed ? `w-[100px]` : ` w-[240px]`} bg-[var(--colCard)] overflow-y-auto shadow-lg transition-all duration-300 ease-in-out fixed z-[999999] top-0 start-0 ${isSideBarOpen ? 'translate-x-0' : translateClass}`}>
+      <div id="sidebar" className={`h-[100dvh] ${style.textStyleA} ${style.sidebarStyle} ${isSideBarCollapsed ? `w-[100px]` : ` w-[240px]`}  overflow-y-auto shadow-lg transition-all duration-300 ease-in-out fixed z-[999999] top-0 start-0 ${isSideBarOpen ? 'translate-x-0' : translateClass}`}>
         <SimpleBar style={{ maxHeight: '100vh' }} >
 
           <div className={`flex w-full ${isSideBarCollapsed ? `justify-center` : `justify-end`}`}>
@@ -49,7 +52,7 @@ export default function SideBar() {
           </div>
 
           <div className="w-full px-5 mt-5">
-            <div className="w-full h-[0.5px] bg-[var(--colTextB)] mb-5" />
+            <div className={`w-full h-[0.5px] ${style.bgStyleA} mb-5`} />
             <LogOutButton />
           </div>
 

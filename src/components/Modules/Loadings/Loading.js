@@ -1,6 +1,13 @@
+import { colorVariantSelector } from "@/data/themeVariants";
+import { usePathname } from "next/navigation";
+
 const Loading = ({ size = "20px", color = "border-[var(--colTextA)]", isSideBarCollapsed }) => {
+
+    const pathname = usePathname()
+    const style = colorVariantSelector(pathname)
+
     return (
-        <div className="flex items-center gap-3 text-[var(--colTextA)]">
+        <div className={`flex items-center gap-3 ${style.textStyleA}`}>
             <span className={`${isSideBarCollapsed ? 'hidden' : ''}`}>
                 درحال بارگذاری
             </span>

@@ -29,7 +29,7 @@ export default function ReAreaChart() {
     ];
 
     return (
-        <div className="w-full h-96 rounded-2xl shadow-md p-5 my-5 bg-[var(--colCard)]">
+        <div className="w-full h-96 rounded-2xl shadow-md p-5 my-5 glass-card">
             <h2 className="text-xl font-semibold mb-4">تعداد بیماران (۲۴ ساعت گذشته و آینده)</h2>
             <ResponsiveContainer width="100%" height="100%" style={{padding:40}}>
                 <AreaChart data={data}>
@@ -44,8 +44,8 @@ export default function ReAreaChart() {
                         type="monotone"
                         dataKey="actual"
                         name="واقعی"
-                        stroke="#4ade80"
-                        fill="#4ade80"
+                        stroke="#94d66e"
+                        fill="#94d66e"
                         fillOpacity={0.3}
                     />
 
@@ -54,8 +54,8 @@ export default function ReAreaChart() {
                         type="monotone"
                         dataKey="predicted"
                         name="پیش‌بینی"
-                        stroke="#fbbf24"
-                        fill="#fbbf24"
+                        stroke="#60a5fa"
+                        fill="#60a5fa"
                         fillOpacity={0.3}
                     />
                 </AreaChart>

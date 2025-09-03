@@ -6,11 +6,13 @@ import React from 'react'
 import SubmenuItems from './SubmenuItems'
 import { IoIosArrowUp } from "react-icons/io";
 import SideBarDropDown from './SideBarDropDown'
+import { colorVariantSelector } from '@/data/themeVariants'
 
 export default function SideBarLinkItems({ type, text, href, icon, options }) {
 
   const path = usePathname()
   const { isSideBarCollapsed } = useSideBarStore()
+  const style = colorVariantSelector(path)
 
   if (type === 'dropdown') {
 
@@ -21,7 +23,7 @@ export default function SideBarLinkItems({ type, text, href, icon, options }) {
   }
 
   return (
-    <li className={`${path === href ? `font-bold text-[var(--textHover)]` : ``} py-2 list-none`} >
+    <li className={`${path === href ? `font-bold ${style.SelectedSideBarMenuStyle}` : ``} py-2 list-none`} >
       <Link className={`flex items-center gap-2 transition-all duration-500 hover:text-[var(--textHover)] ${isSideBarCollapsed ? `justify-center` : ` ps-4`}`} href={href} >
         <span className='text-2xl'>{icon}</span>
         <span className={`${isSideBarCollapsed ? `hidden` : `text-[14px]`}`}>{text}</span>

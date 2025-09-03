@@ -6,14 +6,14 @@ export default function WardCard(props) {
     const bedPercent = Math.floor(occupaidBed / totalBed * 100)
     let barColor = "";
     if (bedPercent <= 40) {
-        barColor = "bg-green-600";
+        barColor = "bg-blue-300";
     } else if (bedPercent <= 80) {
-        barColor = "bg-yellow-600";
+        barColor = "bg-orange-300";
     } else {
-        barColor = "bg-red-600";
+        barColor = "bg-red-300";
     }
     return (
-        <div className='w-full bg-[var(--colCard)] p-5 rounded-xl flex flex-col gap-2'>
+        <div className='w-full bg-[var(--colCard)] glass-card p-5 rounded-2xl flex flex-col gap-2'>
             <div>
                 نام بخش : {secName}
             </div>
@@ -23,7 +23,7 @@ export default function WardCard(props) {
             <div className='flex items-center gap-2'>
                 <span>{toPersianDigits(bedPercent)}%</span>
                 <div className='w-full h-3 rounded-full bg-gray-700'>
-                    <div style={{ width: `${bedPercent}%` }} className={`h-full rounded-full ${barColor}`} />
+                    <div style={{ width: `${bedPercent}%` }} className={`h-full rounded-full transition-all duration-500 ${barColor}`} />
                 </div>
             </div>
         </div>

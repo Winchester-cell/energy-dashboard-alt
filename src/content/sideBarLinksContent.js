@@ -148,7 +148,7 @@ const sideBarLinksContent = {
                 },
                 {
                     type: 'dropdown',
-                    text: 'بیمارستان',
+                    text: 'بیمارستان هوشمند',
                     icon: <MdLocalHospital />,
                     options: [
                         { type: 'item', text: 'مرکز فرماندهی', href: '/hospital/command-center', icon: <FaChartArea   /> },

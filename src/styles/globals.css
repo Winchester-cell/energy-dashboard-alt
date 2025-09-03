@@ -247,7 +247,7 @@ input {
 
 
 .simplebar-scrollbar:before {
-  background: var(--colTextA);
+  background: var(--colTextB);
   border-radius: 10px;
 }
 
@@ -309,7 +309,7 @@ input {
   height: 100%;
   width: 100%;
   box-sizing: content-box;
-  background-image: conic-gradient(from var(--angle), #67b967, transparent, transparent , #67b967);
+  background-image: conic-gradient(from var(--angle), #67b967, transparent, transparent, #67b967);
   top: 50%;
   left: 50%;
   translate: -50% -50%;
@@ -347,3 +347,40 @@ input {
   /* چپ */
 }
 
+.glass-card {
+  background: #ffffff0d;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.glass-card-b {
+  background: #ffffff1f;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.glass-card-no-bg {
+  background: none;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+
+.glass-sidebar {
+  background: #ffffff0d;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  color: white;
+}

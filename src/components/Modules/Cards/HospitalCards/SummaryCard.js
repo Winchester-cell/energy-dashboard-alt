@@ -5,7 +5,7 @@ import React from 'react'
 export default function SummryCard({ icon, cardTitle, metricA, valA, metricB, valB, extraText, extraVal }) {
 
     return (
-        <div className='w-full backdrop-blur-sm bg-[var(--colCard)] rounded-xl p-10 flex flex-col gap-5 text-[var(--colTextA)] shadow-lg'> 
+        <div className='w-full glass-card p-10 flex flex-col gap-5 rounded-3xl shadow-lg'> 
             <div className='w-full flex items-center justify-between'>
                 {icon}
                 <div>
