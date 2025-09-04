@@ -6,7 +6,6 @@ const topConsumer = [
     { id: 5, name: 'کمپانی فرضی', totalPowerConsume: 155, totalGasConsume: 125, cost: 1600000, },
 ]
 
-
 const areas = [
     { id: 1, name: 'area 1', lat: 37.24025, long: 49.53590, status: true },
     { id: 2, name: 'area 1', lat: 37.23943, long: 49.54483, status: true },
@@ -14,63 +13,6 @@ const areas = [
     { id: 4, name: 'area 1', lat: 37.23000, long: 49.54749, status: true },
     { id: 5, name: 'area 1', lat: 37.23683, long: 49.56011, status: true },
 ]
-
-
-const noganData = [
-    { id: 1, img: '/images/tokhm.jpg', name: 'تخم نوغان', desc: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.' },
-    { id: 2, img: '/images/pileh.jpg', name: 'پیله ابریشم', desc: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.' },
-]
-
-const summaryData = [
-    { id: 1, img: '/images/pileh.jpg', name: 'اخرین سفارشات', desc: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.' },
-    { id: 2, img: '/images/tokhm.jpg', name: 'کرم‌های ابریشم در حال پرورش', desc: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.' },
-    { id: 3, img: '/images/pileh.jpg', name: 'مزارع فعال', desc: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.' },
-]
-
-const productList = [
-    {
-        id: 1,
-        img: '/images/pileh.jpg',
-        name: 'پیله خشک ممتاز',
-        desc: 'پیله‌ی خشک با کیفیت بالا برای تولید ابریشم طبیعی، مناسب کارگاه‌های نخ‌ریسی.',
-        price: 350_000
-    },
-    {
-        id: 2,
-        img: '/images/tokhm.jpg',
-        name: 'تخم نوغان اصلاح‌شده',
-        desc: 'بسته‌ی ۱۰۰ عددی تخم کرم ابریشم با قدرت بازدهی بالا و مقاومت مناسب.',
-        price: 120_000
-    },
-    {
-        id: 3,
-        img: '/images/pileh.jpg',
-        name: 'پیله تازه خیس',
-        desc: 'پیله تازه مناسب برای استخراج مستقیم نخ ابریشم. ارسال سریع با بسته‌بندی بهداشتی.',
-        price: 280_000
-    },
-    {
-        id: 4,
-        img: '/images/tokhm.jpg',
-        name: 'تخم نوغان ارگانیک',
-        desc: 'تخم نوغان پرورشی بدون استفاده از مواد شیمیایی، مناسب مزارع ارگانیک.',
-        price: 150_000
-    },
-    {
-        id: 5,
-        img: '/images/pileh.jpg',
-        name: 'پیله رنگ‌شده طبیعی',
-        desc: 'پیله‌های رنگ‌شده با رنگ‌های طبیعی برای تولید پارچه‌های هنری یا تزئینی.',
-        price: 390_000
-    },
-    {
-        id: 6,
-        img: '/images/tokhm.jpg',
-        name: 'تخم نوغان صادراتی',
-        desc: 'تخم نوغان با کیفیت صادراتی ویژه‌ی پرورش‌دهندگان حرفه‌ای و عمده‌فروشی.',
-        price: 200_000
-    }
-];
 
 const devices = [
     { id: 1, name: "دستگاه شمارش افراد", serial: "SN001", isActive: true },
@@ -191,56 +133,261 @@ const factories = [
 ];
 
 const beds = [
-  { id: 1, number: "B01", ward: "ICU", occupied: true, patient: { id: 101, name: "علی رضایی", age: 45, gender: "مرد", medicalRecord: "پرونده ۱۰۰۱" } },
-  { id: 2, number: "B02", ward: "عمومی", occupied: false, patient: null },
-  { id: 3, number: "B03", ward: "ICU", occupied: true, patient: { id: 102, name: "سارا محمدی", age: 32, gender: "زن", medicalRecord: "پرونده ۱۰۰۲" } },
-  { id: 4, number: "B04", ward: "عمومی", occupied: false, patient: null },
-  { id: 5, number: "B05", ward: "ICU", occupied: true, patient: { id: 103, name: "رضا احمدی", age: 56, gender: "مرد", medicalRecord: "پرونده ۱۰۰۳" } },
-  { id: 6, number: "B06", ward: "عمومی", occupied: false, patient: null },
-  { id: 7, number: "B07", ward: "ICU", occupied: true, patient: { id: 104, name: "ندا کریمی", age: 28, gender: "زن", medicalRecord: "پرونده ۱۰۰۴" } },
-  { id: 8, number: "B08", ward: "عمومی", occupied: false, patient: null },
-  { id: 9, number: "B09", ward: "ICU", occupied: true, patient: { id: 105, name: "حسن قربانی", age: 60, gender: "مرد", medicalRecord: "پرونده ۱۰۰۵" } },
-  { id: 10, number: "B10", ward: "عمومی", occupied: false, patient: null },
-  { id: 11, number: "B11", ward: "ICU", occupied: true, patient: { id: 106, name: "لیلا صادقی", age: 34, gender: "زن", medicalRecord: "پرونده ۱۰۰۶" } },
-  { id: 12, number: "B12", ward: "عمومی", occupied: false, patient: null },
-  { id: 13, number: "B13", ward: "ICU", occupied: true, patient: { id: 107, name: "مهدی جعفری", age: 50, gender: "مرد", medicalRecord: "پرونده ۱۰۰۷" } },
-  { id: 14, number: "B14", ward: "عمومی", occupied: false, patient: null },
-  { id: 15, number: "B15", ward: "ICU", occupied: true, patient: { id: 108, name: "فاطمه حسینی", age: 40, gender: "زن", medicalRecord: "پرونده ۱۰۰۸" } },
-  { id: 16, number: "B16", ward: "عمومی", occupied: false, patient: null },
-  { id: 17, number: "B17", ward: "ICU", occupied: true, patient: { id: 109, name: "سعید کیانی", age: 37, gender: "مرد", medicalRecord: "پرونده ۱۰۰۹" } },
-  { id: 18, number: "B18", ward: "عمومی", occupied: false, patient: null },
-  { id: 19, number: "B19", ward: "ICU", occupied: true, patient: { id: 110, name: "نیلوفر شیری", age: 29, gender: "زن", medicalRecord: "پرونده ۱۰۱۰" } },
-  { id: 20, number: "B20", ward: "عمومی", occupied: false, patient: null }
+    { id: 1, number: "B01", ward: "ICU", occupied: true, patient: { id: 101, name: "علی رضایی", age: 45, gender: "مرد", medicalRecord: "پرونده ۱۰۰۱" } },
+    { id: 2, number: "B02", ward: "عمومی", occupied: false, patient: null },
+    { id: 3, number: "B03", ward: "ICU", occupied: true, patient: { id: 102, name: "سارا محمدی", age: 32, gender: "زن", medicalRecord: "پرونده ۱۰۰۲" } },
+    { id: 4, number: "B04", ward: "عمومی", occupied: false, patient: null },
+    { id: 5, number: "B05", ward: "ICU", occupied: true, patient: { id: 103, name: "رضا احمدی", age: 56, gender: "مرد", medicalRecord: "پرونده ۱۰۰۳" } },
+    { id: 6, number: "B06", ward: "عمومی", occupied: false, patient: null },
+    { id: 7, number: "B07", ward: "ICU", occupied: true, patient: { id: 104, name: "ندا کریمی", age: 28, gender: "زن", medicalRecord: "پرونده ۱۰۰۴" } },
+    { id: 8, number: "B08", ward: "عمومی", occupied: false, patient: null },
+    { id: 9, number: "B09", ward: "ICU", occupied: true, patient: { id: 105, name: "حسن قربانی", age: 60, gender: "مرد", medicalRecord: "پرونده ۱۰۰۵" } },
+    { id: 10, number: "B10", ward: "عمومی", occupied: false, patient: null },
+    { id: 11, number: "B11", ward: "ICU", occupied: true, patient: { id: 106, name: "لیلا صادقی", age: 34, gender: "زن", medicalRecord: "پرونده ۱۰۰۶" } },
+    { id: 12, number: "B12", ward: "عمومی", occupied: false, patient: null },
+    { id: 13, number: "B13", ward: "ICU", occupied: true, patient: { id: 107, name: "مهدی جعفری", age: 50, gender: "مرد", medicalRecord: "پرونده ۱۰۰۷" } },
+    { id: 14, number: "B14", ward: "عمومی", occupied: false, patient: null },
+    { id: 15, number: "B15", ward: "ICU", occupied: true, patient: { id: 108, name: "فاطمه حسینی", age: 40, gender: "زن", medicalRecord: "پرونده ۱۰۰۸" } },
+    { id: 16, number: "B16", ward: "عمومی", occupied: false, patient: null },
+    { id: 17, number: "B17", ward: "ICU", occupied: true, patient: { id: 109, name: "سعید کیانی", age: 37, gender: "مرد", medicalRecord: "پرونده ۱۰۰۹" } },
+    { id: 18, number: "B18", ward: "عمومی", occupied: false, patient: null },
+    { id: 19, number: "B19", ward: "ICU", occupied: true, patient: { id: 110, name: "نیلوفر شیری", age: 29, gender: "زن", medicalRecord: "پرونده ۱۰۱۰" } },
+    { id: 20, number: "B20", ward: "عمومی", occupied: false, patient: null }
 ];
 
 const hospitalSections = [
-  { id: 1, secName: 'جراحی قلب', totalBed: 45, occupaidBed: 12 },
-  { id: 2, secName: 'جراحی مغز و اعصاب', totalBed: 38, occupaidBed: 21 },
-  { id: 3, secName: 'جراحی عمومی', totalBed: 52, occupaidBed: 40 },
-  { id: 4, secName: 'ارتوپدی', totalBed: 30, occupaidBed: 18 },
-  { id: 5, secName: 'ICU', totalBed: 20, occupaidBed: 15 },
-  { id: 6, secName: 'CCU', totalBed: 25, occupaidBed: 9 },
-  { id: 7, secName: 'داخلی', totalBed: 48, occupaidBed: 17 },
-  { id: 8, secName: 'زنان و زایمان', totalBed: 34, occupaidBed: 22 },
-  { id: 9, secName: 'اطفال', totalBed: 28, occupaidBed: 17 },
-  { id: 10, secName: 'اورژانس', totalBed: 40, occupaidBed: 35 },
-  { id: 11, secName: 'رادیولوژی', totalBed: 15, occupaidBed: 9 }
+    { id: 1, secName: 'جراحی قلب', totalBed: 45, occupaidBed: 12 },
+    { id: 2, secName: 'جراحی مغز و اعصاب', totalBed: 38, occupaidBed: 21 },
+    { id: 3, secName: 'جراحی عمومی', totalBed: 52, occupaidBed: 40 },
+    { id: 4, secName: 'ارتوپدی', totalBed: 30, occupaidBed: 18 },
+    { id: 5, secName: 'ICU', totalBed: 20, occupaidBed: 15 },
+    { id: 6, secName: 'CCU', totalBed: 25, occupaidBed: 9 },
+    { id: 7, secName: 'داخلی', totalBed: 48, occupaidBed: 17 },
+    { id: 8, secName: 'زنان و زایمان', totalBed: 34, occupaidBed: 22 },
+    { id: 9, secName: 'اطفال', totalBed: 28, occupaidBed: 17 },
+    { id: 10, secName: 'اورژانس', totalBed: 40, occupaidBed: 35 },
+    { id: 11, secName: 'رادیولوژی', totalBed: 15, occupaidBed: 9 }
 ];
 
 const hospitalDevices = [
-  { name: "MRI Scanner", status: "فعال", idleHours: 0 },
-  { name: "CT Scanner", status: "در حال تعمیر", idleHours: 4 },
-  { name: "X-Ray Machine", status: "فعال", idleHours: 1 },
-  { name: "Ultrasound", status: "غیرفعال", idleHours: 6 },
-  { name: "ECG Machine", status: "فعال", idleHours: 0 },
-  { name: "Ventilator", status: "فعال", idleHours: 0 },
-  { name: "Defibrillator", status: "در حال تعمیر", idleHours: 3 },
-  { name: "Infusion Pump", status: "غیرفعال", idleHours: 5 },
-  { name: "Dialysis Machine", status: "فعال", idleHours: 2 },
-  { name: "Patient Monitor", status: "فعال", idleHours: 1 },
+    { name: "MRI Scanner", status: "فعال", idleHours: 0 },
+    { name: "CT Scanner", status: "در حال تعمیر", idleHours: 4 },
+    { name: "X-Ray Machine", status: "فعال", idleHours: 1 },
+    { name: "Ultrasound", status: "غیرفعال", idleHours: 6 },
+    { name: "ECG Machine", status: "فعال", idleHours: 0 },
+    { name: "Ventilator", status: "فعال", idleHours: 0 },
+    { name: "Defibrillator", status: "در حال تعمیر", idleHours: 3 },
+    { name: "Infusion Pump", status: "غیرفعال", idleHours: 5 },
+    { name: "Dialysis Machine", status: "فعال", idleHours: 2 },
+    { name: "Patient Monitor", status: "فعال", idleHours: 1 },
+];
+
+const emergencyPatient = [
+    {
+        id: 1,
+        name: 'احمد محمدی',
+        mainArg: 'درد شدید قفسه سینه',
+        age: 45,
+        gender: 'مرد',
+        status: 'بحرانی',
+        onWay: false,
+        vitalSigns: { heartbeat: 117, oxy: 96 },
+        emergencyTasks: [
+            { id: 1, task: 'ECG فوری', isDone: true },
+            { id: 2, task: 'آزمایش خون', isDone: false },
+            { id: 3, task: 'مشاوره قلب', isDone: false },
+        ],
+    },
+    {
+        id: 2,
+        name: 'فاطمه احمدی',
+        mainArg: 'تب و سردرد شدید',
+        age: 31,
+        gender: 'زن',
+        status: 'فوری',
+        onWay: true,
+        vitalSigns: { heartbeat: 91, oxy: 96 },
+        emergencyTasks: [
+            { id: 1, task: 'اندازه گیری تب', isDone: false },
+            { id: 2, task: 'آزمایش ادرار', isDone: false },
+            { id: 3, task: 'داروی ضد درد', isDone: false },
+        ],
+    },
+    {
+        id: 3,
+        name: 'علی رضایی',
+        mainArg: 'درد شکم',
+        age: 20,
+        gender: 'مرد',
+        status: 'استاندارد',
+        onWay: false,
+        vitalSigns: { heartbeat: 61, oxy: 98 },
+        emergencyTasks: [
+            { id: 1, task: 'معاینه شکم', isDone: false },
+            { id: 2, task: 'سونوگرافی', isDone: false },
+        ],
+    },
+    {
+        id: 4,
+        name: 'مریم احمدی',
+        mainArg: 'سرگیجه خفیف',
+        age: 28,
+        gender: 'زن',
+        status: 'غیر فوری',
+        onWay: false,
+        vitalSigns: { heartbeat: 91, oxy: 96 },
+        emergencyTasks: [
+            { id: 1, task: 'اندازه گیری فشارخون', isDone: false },
+            { id: 2, task: 'مشاوره عمومی', isDone: false },
+        ],
+    },
+    {
+        id: 5,
+        name: 'رضا کریمی',
+        mainArg: 'سرفه شدید و تنگی نفس',
+        age: 60,
+        gender: 'مرد',
+        status: 'بحرانی',
+        onWay: true,
+        vitalSigns: { heartbeat: 132, oxy: 82 },
+        emergencyTasks: [
+            { id: 1, task: 'اکسیژن تراپی', isDone: false },
+            { id: 2, task: 'رادیوگرافی قفسه سینه', isDone: false },
+            { id: 3, task: 'مشاوره ریه', isDone: false },
+        ],
+    },
+    {
+        id: 6,
+        name: 'سارا موسوی',
+        mainArg: 'سقوط از ارتفاع',
+        age: 35,
+        gender: 'زن',
+        status: 'فوری',
+        onWay: false,
+        vitalSigns: { heartbeat: 110, oxy: 94 },
+        emergencyTasks: [
+            { id: 1, task: 'سی‌تی‌اسکن مغز', isDone: false },
+            { id: 2, task: 'عکس‌برداری لگن', isDone: false },
+            { id: 3, task: 'بررسی شکستگی', isDone: false },
+        ],
+    },
+    {
+        id: 7,
+        name: 'محمد جلالی',
+        mainArg: 'تصادف رانندگی',
+        age: 29,
+        gender: 'مرد',
+        status: 'فوری',
+        onWay: true,
+        vitalSigns: { heartbeat: 125, oxy: 90 },
+        emergencyTasks: [
+            { id: 1, task: 'کنترل خونریزی', isDone: true },
+            { id: 2, task: 'سرم‌تراپی', isDone: false },
+            { id: 3, task: 'عکس‌برداری ستون فقرات', isDone: false },
+        ],
+    },
+    {
+        id: 8,
+        name: 'زهرا قاسمی',
+        mainArg: 'سردرد میگرنی',
+        age: 26,
+        gender: 'زن',
+        status: 'استاندارد',
+        onWay: false,
+        vitalSigns: { heartbeat: 78, oxy: 98 },
+        emergencyTasks: [
+            { id: 1, task: 'داروی ضد میگرن', isDone: false },
+            { id: 2, task: 'مشاوره نورولوژی', isDone: false },
+        ],
+    },
+    {
+        id: 9,
+        name: 'کامران نوری',
+        mainArg: 'سوختگی دست',
+        age: 40,
+        gender: 'مرد',
+        status: 'استاندارد',
+        onWay: false,
+        vitalSigns: { heartbeat: 92, oxy: 97 },
+        emergencyTasks: [
+            { id: 1, task: 'پانسمان سوختگی', isDone: false },
+            { id: 2, task: 'داروی مسکن', isDone: false },
+        ],
+    },
+    {
+        id: 10,
+        name: 'لیلا یوسفی',
+        mainArg: 'حمله آسم',
+        age: 19,
+        gender: 'زن',
+        status: 'بحرانی',
+        onWay: true,
+        vitalSigns: { heartbeat: 140, oxy: 75 },
+        emergencyTasks: [
+            { id: 1, task: 'اسپری تنفسی', isDone: true },
+            { id: 2, task: 'اکسیژن تراپی', isDone: false },
+            { id: 3, task: 'مشاوره ریه', isDone: false },
+        ],
+    },
+    {
+        id: 11,
+        name: 'حسین شریفی',
+        mainArg: 'بیهوشی کوتاه‌مدت',
+        age: 52,
+        gender: 'مرد',
+        status: 'فوری',
+        onWay: false,
+        vitalSigns: { heartbeat: 102, oxy: 92 },
+        emergencyTasks: [
+            { id: 1, task: 'کنترل فشارخون', isDone: false },
+            { id: 2, task: 'نوار مغز', isDone: false },
+        ],
+    },
+    {
+        id: 12,
+        name: 'ندا عباسی',
+        mainArg: 'حالت تهوع شدید',
+        age: 34,
+        gender: 'زن',
+        status: 'استاندارد',
+        onWay: false,
+        vitalSigns: { heartbeat: 86, oxy: 99 },
+        emergencyTasks: [
+            { id: 1, task: 'تزریق سرم', isDone: false },
+            { id: 2, task: 'آزمایش خون', isDone: false },
+        ],
+    },
+    {
+        id: 13,
+        name: 'محمود فرهادی',
+        mainArg: 'درد کمر مزمن',
+        age: 47,
+        gender: 'مرد',
+        status: 'غیر فوری',
+        onWay: false,
+        vitalSigns: { heartbeat: 74, oxy: 98 },
+        emergencyTasks: [
+            { id: 1, task: 'مشاوره ارتوپدی', isDone: false },
+            { id: 2, task: 'داروی ضد درد', isDone: false },
+        ],
+    },
+    {
+        id: 14,
+        name: 'الهام رستمی',
+        mainArg: 'تپش قلب ناگهانی',
+        age: 38,
+        gender: 'زن',
+        status: 'فوری',
+        onWay: true,
+        vitalSigns: { heartbeat: 150, oxy: 93 },
+        emergencyTasks: [
+            { id: 1, task: 'ECG فوری', isDone: false },
+            { id: 2, task: 'کنترل دارویی', isDone: false },
+        ],
+    },
 ];
 
 
 
 
-export { topConsumer, areas, noganData, summaryData, productList, devices, factories , beds , hospitalSections , hospitalDevices}
+export { topConsumer, areas, devices, factories, beds, hospitalSections, hospitalDevices, emergencyPatient }

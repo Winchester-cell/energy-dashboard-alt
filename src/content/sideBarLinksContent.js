@@ -11,13 +11,13 @@ import {
     FaWarehouse, FaBuilding, FaUserFriends, FaShoppingCart, FaShippingFast,
     FaCartPlus, FaHandshake, FaCalculator, FaFolderOpen, FaFileAlt, FaCogs,
     FaBolt, FaTachometerAlt, FaRecycle, FaLeaf, FaStore, FaChartBar, FaRegCalendarAlt,
-    FaListAlt, FaProjectDiagram, FaDatabase, FaLightbulb, FaServer, FaChartArea 
+    FaListAlt, FaProjectDiagram, FaDatabase, FaLightbulb, FaServer, FaChartArea, FaAmbulance
 } from "react-icons/fa";
 
 import { IoChatbubbles } from "react-icons/io5";
 import { AiFillProduct } from "react-icons/ai";
 import { GiBrain, GiCircuitry } from 'react-icons/gi';
-import { FaUserDoctor , FaBedPulse  } from "react-icons/fa6";
+import { FaUserDoctor, FaBedPulse } from "react-icons/fa6";
 import { ImLab } from "react-icons/im";
 import { PiJarLabelFill } from "react-icons/pi";
 
@@ -127,15 +127,6 @@ const sideBarLinksContent = {
                         { type: 'item', text: 'آب و محیط زیست', href: '#', icon: <FaRecycle /> },
                     ]
                 },
-                // {
-                //     type: 'dropdown',
-                //     text: 'نوغانداری',
-                //     icon: <FaLeaf />,
-                //     options: [
-                //         { type: 'item', text: 'داشبورد نوغانداری', href: '/sericulture-dashboard', icon: <AiFillProduct /> },
-                //         { type: 'item', text: 'بازارچه پیله', href: '/cocon-shop', icon: <FaStore /> },
-                //     ]
-                // },
                 {
                     type: 'dropdown',
                     text: 'شمارش افراد',
@@ -151,7 +142,8 @@ const sideBarLinksContent = {
                     text: 'بیمارستان هوشمند',
                     icon: <MdLocalHospital />,
                     options: [
-                        { type: 'item', text: 'مرکز فرماندهی', href: '/hospital/command-center', icon: <FaChartArea   /> },
+                        { type: 'item', text: 'مرکز فرماندهی', href: '/hospital/command-center', icon: <FaChartArea /> },
+                        { type: 'item', text: 'بخش اورژانس', href: '/hospital/emergency-department', icon: <FaAmbulance /> },
                     ]
                 },
             ]
