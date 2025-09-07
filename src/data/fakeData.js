@@ -387,7 +387,139 @@ const emergencyPatient = [
     },
 ];
 
+const wardInfo = {
+    name: "اورژانس",
+    rooms: [
+        {
+            roomNumber: 101,
+            beds: [
+                {
+                    bedNumber: 1,
+                    patient: {
+                        name: "علی رضایی",
+                        status: "مستقر"
+                    }
+                },
+                {
+                    bedNumber: 2,
+                    patient: {
+                        name: "سارا احمدی",
+                        status: "بحرانی"
+                    }
+                }
+            ]
+        },
+        {
+            roomNumber: 102,
+            beds: [
+                {
+                    bedNumber: 1,
+                    patient: {
+                        name: "مهدی حسینی",
+                        status: "مستقر"
+                    }
+                },
+                {
+                    bedNumber: 2,
+                    patient: {
+                        name: "نیلوفر کریمی",
+                        status: "ترخیص شده"
+                    }
+                }
+            ]
+        },
+        {
+            roomNumber: 103,
+            beds: [
+                {
+                    bedNumber: 1,
+                    patient: {
+                        name: "حسین رحمانی",
+                        status: "بحرانی"
+                    }
+                },
+                {
+                    bedNumber: 2,
+                    patient: {
+                        name: "لیلا موسوی",
+                        status: "مستقر"
+                    }
+                }
+            ]
+        },
+        {
+            roomNumber: 104,
+            beds: [
+                {
+                    bedNumber: 1,
+                    patient: {
+                        name: "امیر محمدی",
+                        status: "مستقر"
+                    }
+                },
+                {
+                    bedNumber: 2,
+                    patient: {
+                        name: "زهرا عباسی",
+                        status: "ترخیص شده"
+                    }
+                }
+            ]
+        },
+        {
+            roomNumber: 105,
+            beds: [
+                {
+                    bedNumber: 1,
+                    patient: {
+                        name: "رضا کاظمی",
+                        status: "بحرانی"
+                    }
+                },
+                {
+                    bedNumber: 2,
+                    patient: {
+                        name: "مهسا صالحی",
+                        status: "مستقر"
+                    }
+                }
+            ]
+        }
+    ]
+};
+
+export const alerts = [
+    {
+        message: "کاهش اکسیژن خون",
+        patientName: "علی رضایی",
+        bed: "101-1",
+        minutesAgo: 5
+    },
+    {
+        message: "نیاز به دارو",
+        patientName: "سارا احمدی",
+        bed: "101-2",
+        minutesAgo: 15
+    },
+    {
+        message: "تب بالا",
+        patientName: "مهدی حسینی",
+        bed: "102-1",
+        minutesAgo: 30
+    },
+    {
+        message: "فشار خون پایین",
+        patientName: "نیلوفر کریمی",
+        bed: "102-2",
+        minutesAgo: 20
+    },
+    {
+        message: "نیاز به مراقبت ویژه",
+        patientName: "حسین رحمانی",
+        bed: "103-1",
+        minutesAgo: 10
+    }
+];
 
 
-
-export { topConsumer, areas, devices, factories, beds, hospitalSections, hospitalDevices, emergencyPatient }
+export { topConsumer, areas, devices, factories, beds, hospitalSections, hospitalDevices, emergencyPatient, wardInfo }

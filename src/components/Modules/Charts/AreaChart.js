@@ -36,6 +36,11 @@ const AreaChart = ({ shadow, labelSize, categories, series, title }) => {
                     fontSize: `${labelSize}px`,
                 },
             },
+            labels: {
+                formatter: function (value) {
+                    return toPersianDigits(value);
+                }
+            },
         },
         yaxis: {
             min: 0,
@@ -85,7 +90,7 @@ const AreaChart = ({ shadow, labelSize, categories, series, title }) => {
 
     return (
         <div
-            className={`w-[100%] h-full p-2 bg-[var(--colCard)] rounded-2xl  ${shadow ? "shadow-lg" : ""
+            className={`w-[100%] h-full rounded-2xl  ${shadow ? "shadow-lg" : ""
                 }`}
         >
             <ApexChart options={options} series={series} type="area" height={'100%'} />

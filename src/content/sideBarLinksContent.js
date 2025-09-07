@@ -21,6 +21,7 @@ import { FaUserDoctor, FaBedPulse } from "react-icons/fa6";
 import { ImLab } from "react-icons/im";
 import { PiJarLabelFill } from "react-icons/pi";
 
+import Nurse from "@/asset/nurse.svg"
 
 
 
@@ -144,6 +145,7 @@ const sideBarLinksContent = {
                     options: [
                         { type: 'item', text: 'مرکز فرماندهی', href: '/hospital/command-center', icon: <FaChartArea /> },
                         { type: 'item', text: 'بخش اورژانس', href: '/hospital/emergency-department', icon: <FaAmbulance /> },
+                        { type: 'item', text: 'بخش داخلی', href: '/hospital/inpatient-ward', icon: <Nurse /> },
                     ]
                 },
             ]
@@ -154,7 +156,7 @@ const sideBarLinksContent = {
             links: [
                 {
                     type: 'dropdown',
-                    text: 'مرکز هوش منصوعی',
+                    text: 'مرکز هوش مصنوعی',
                     icon: <GiBrain />,
                     options: [
                         { type: 'item', text: 'پیشبینی ها', href: '#', icon: <FaRegCalendarAlt /> },
