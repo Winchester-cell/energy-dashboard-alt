@@ -5,7 +5,7 @@ import { toPersianDigits } from '@/utils/formaters/toPersianDigits'
 import React from 'react'
 
 
-export default function PatientListSection() {
+export default function PatientListSection({ filteredList, setFilteredList }) {
 
     return (
         <>
@@ -23,7 +23,7 @@ export default function PatientListSection() {
                         <div className='border-l-2 border-[#ffffff33]'>وضعیت</div>
                     </div>
                     {
-                        patients.map((p, index) => {
+                        filteredList.map((p, index) => {
                             return (
                                 <AnimateOnScroll delay={index * 70}>
                                     <div className='p-5 glass-card-b rounded-2xl gap-5 grid grid-cols-8 cursor-pointer'>
