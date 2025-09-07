@@ -132,6 +132,9 @@ const factories = [
     },
 ];
 
+
+// hospital
+
 const beds = [
     { id: 1, number: "B01", ward: "ICU", occupied: true, patient: { id: 101, name: "علی رضایی", age: 45, gender: "مرد", medicalRecord: "پرونده ۱۰۰۱" } },
     { id: 2, number: "B02", ward: "عمومی", occupied: false, patient: null },
@@ -520,6 +523,28 @@ export const alerts = [
         minutesAgo: 10
     }
 ];
+
+export const patients = [
+  { id: 1, name: "علی رضایی", nationalId: "0012345678", admissionId: 45623, doctor: "دکتر احمدی", ward: "داخلی", admissionDate: "1404/06/01", status: "بستری" },
+  { id: 2, name: "زهرا محمدی", nationalId: "0012345679", admissionId: 75165, doctor: "دکتر کریمی", ward: "جراحی", admissionDate: "1404/06/02", status: "ترخیص" },
+  { id: 3, name: "مهدی کاظمی", nationalId: "0012345680", admissionId: 83215, doctor: "دکتر مرادی", ward: "اورژانس", admissionDate: "1404/06/03", status: "بستری" },
+  { id: 4, name: "سارا حسینی", nationalId: "0012345681", admissionId: 39482, doctor: "دکتر رفیعی", ward: "زنان", admissionDate: "1404/06/04", status: "بستری" },
+  { id: 5, name: "محمد جعفری", nationalId: "0012345682", admissionId: 61829, doctor: "دکتر قاسمی", ward: "قلب", admissionDate: "1404/06/05", status: "ترخیص" },
+  { id: 6, name: "الهام موسوی", nationalId: "0012345683", admissionId: 28731, doctor: "دکتر نادری", ward: "داخلی", admissionDate: "1404/06/06", status: "بستری" },
+  { id: 7, name: "حمید اکبری", nationalId: "0012345684", admissionId: 56390, doctor: "دکتر رحمانی", ward: "جراحی", admissionDate: "1404/06/07", status: "ترخیص" },
+  { id: 8, name: "فاطمه صادقی", nationalId: "0012345685", admissionId: 47826, doctor: "دکتر سلیمی", ward: "اطفال", admissionDate: "1404/06/08", status: "بستری" },
+  { id: 9, name: "رضا امیری", nationalId: "0012345686", admissionId: 39517, doctor: "دکتر حیدری", ward: "اورژانس", admissionDate: "1404/06/09", status: "بستری" },
+  { id: 10, name: "نگار شریفی", nationalId: "0012345687", admissionId: 72984, doctor: "دکتر کریمی", ward: "قلب", admissionDate: "1404/06/10", status: "ترخیص" },
+  { id: 11, name: "حسین احمدی", nationalId: "0012345688", admissionId: 81642, doctor: "دکتر مرادی", ward: "داخلی", admissionDate: "1404/06/11", status: "بستری" },
+  { id: 12, name: "مریم قربانی", nationalId: "0012345689", admissionId: 47193, doctor: "دکتر رفیعی", ward: "زنان", admissionDate: "1404/06/12", status: "ترخیص" },
+  { id: 13, name: "احمد رستمی", nationalId: "0012345690", admissionId: 68425, doctor: "دکتر قاسمی", ward: "اورژانس", admissionDate: "1404/06/13", status: "بستری" },
+  { id: 14, name: "مونا یوسفی", nationalId: "0012345691", admissionId: 53918, doctor: "دکتر نادری", ward: "اطفال", admissionDate: "1404/06/14", status: "بستری" },
+  { id: 15, name: "سعید طاهری", nationalId: "0012345692", admissionId: 79834, doctor: "دکتر رحمانی", ward: "قلب", admissionDate: "1404/06/15", status: "ترخیص" }
+];
+
+
+
+
 
 
 export { topConsumer, areas, devices, factories, beds, hospitalSections, hospitalDevices, emergencyPatient, wardInfo }

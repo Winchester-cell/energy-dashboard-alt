@@ -6,20 +6,22 @@ import useOptionSelector from '@/hooks/useOptionSelector';
 
 const animatedComponents = makeAnimated();
 
-export default function SingleSelectInput({ optionKey, value, onChange, place }) {
+export default function SingleSelectInput({ staticOption = [], optionKey, value, onChange, place, style = selectBoxStyle }) {
 
-    const { options } = useOptionSelector(optionKey)
+    const { options } = optionKey ? useOptionSelector(optionKey) : { options: null }
 
     return (
         <Select
             closeMenuOnSelect={true}
             components={animatedComponents}
-            options={options ? options : []}
+            options={options || staticOption}
             isMulti={false}
             placeholder={place}
-            styles={selectBoxStyle}
+            styles={style}
             value={value}
             onChange={onChange}
+            menuPortalTarget={document.body}
+            menuPosition={'fixed'}
         />
     )
 }

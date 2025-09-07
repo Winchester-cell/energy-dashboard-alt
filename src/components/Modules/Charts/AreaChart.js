@@ -25,9 +25,17 @@ const AreaChart = ({ shadow, labelSize, categories, series, title }) => {
             type: "area",
             toolbar: { show: false },
             zoom: { enabled: false },
-            fontFamily: 'Yekan'
+            fontFamily: 'Yekan',
+            animations: {
+                enabled: true,
+                easing: 'linear',
+                dynamicAnimation: {
+                    speed: 500 // سرعت حرکت خط، میلی‌ثانیه
+                }
+            },
         },
         xaxis: {
+            type: 'category',
             categories: categories,
             title: {
                 // text: t('month'),

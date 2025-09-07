@@ -8,7 +8,7 @@ export function useInView(options = {}) {
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         setInView(true);
-        observer.unobserve(entry.target); // فقط یک بار تریگر بشه
+        observer.unobserve(entry.target);
       }
     }, options);
 

@@ -12,7 +12,6 @@
 }
 
 :root {
-
   --colBg: #e4e4e4;
   --colCard: #f2f2f0;
   --colTextA: #3A3878;
@@ -361,7 +360,7 @@ input {
   background: #ffffff1f;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid #ffffff33;
   box-shadow:
     0 8px 32px rgba(0, 0, 0, 0.1),
     0 0 0 1px rgba(255, 255, 255, 0.2);

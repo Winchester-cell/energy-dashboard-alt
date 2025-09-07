@@ -22,32 +22,24 @@ export default function VitalSignsSection({ selectedPatient }) {
         ]
     })
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            // تولید داده‌های تصادفی برای SpO2 (مثال)
-            // const newSpO2 = chartData01.series[0].data.map(
-            //     value => Math.max(90, Math.min(100, value + (Math.random() * 2 - 1)))
-            // )
+     useEffect(() => {
+    // فقط وقتی کامپوننت بارگذاری شد اجرا شود
+    const interval = setInterval(() => {
+      setChartData02((prev) => {
+        const newPoint = Math.random() * 0.5 + 0.4; // شبیه‌سازی ECG
+        const newCategories = [...prev.categories, new Date().toLocaleTimeString().slice(3,8)];
+        const newSeriesData = [...prev.series[0].data, newPoint];
 
-            // تولید داده‌های تصادفی برای ECG
-            const newECG = chartData02.series[0].data.map(
-                value => value + (Math.random() * 0.2 - 0.1)
-            )
+        // فقط آخرین 50 نقطه نگه داشته شود
+        return {
+          categories: newCategories.slice(-10),
+          series: [{ name: 'ECG بیمار', data: newSeriesData.slice(-10) }]
+        };
+      });
+    }, 400); // هر 200 میلی‌ثانیه یک نقطه جدید
 
-            // setChartData01({
-            //     ...chartData01,
-            //     series: [{ name: 'SpO2 بیمار', data: newSpO2 }]
-            // })
-
-            setChartData02({
-                ...chartData02,
-                series: [{ name: 'ECG بیمار', data: newECG }]
-            })
-
-        }, 2000) // هر ۵ ثانیه
-
-        return () => clearInterval(interval)
-    }, [chartData01, chartData02])
+    return () => clearInterval(interval); // پاک کردن interval هنگام unmount
+  }, []);
 
     return (
         <div className='glass-card mt-5 p-5 rounded-xl'>

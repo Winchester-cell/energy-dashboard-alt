@@ -10,11 +10,11 @@ export default function WardInfoContainer() {
                 <h2 className='text-xl font-bold'>بخش {wardInfo.name}</h2>
                 <div className='p-3 flex items-center gap-5 glass-card rounded-full overflow-hidden'>
                     <div className='flex items-center gap-2'>
-                        <div className='w-4 h-4 glass-card-no-bg bg-[#35de732d] rounded-full' />
+                        <div className='w-4 h-4 glass-card-no-bg bg-[#35de7357] rounded-full' />
                         <div>نرمال</div>
                     </div>
                     <div className='flex items-center gap-2'>
-                        <div className='w-4 h-4 glass-card-no-bg bg-[#de35353c] rounded-full' />
+                        <div className='w-4 h-4 glass-card-no-bg bg-[#b8292961] rounded-full' />
                         <div>بحرانی</div>
                     </div>
                     <div className='flex items-center gap-2'>
@@ -23,7 +23,7 @@ export default function WardInfoContainer() {
                     </div>
                 </div>
             </div>
-            <div className='p-5 h-full'>
+            <div className='pb-10 pt-5 h-full'>
                 <SimpleBar className='h-full'>
                     <div className='flex flex-col gap-5'>
                         {wardInfo.rooms.map((room, index) => (

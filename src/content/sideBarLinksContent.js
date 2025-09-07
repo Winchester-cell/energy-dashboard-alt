@@ -11,7 +11,7 @@ import {
     FaWarehouse, FaBuilding, FaUserFriends, FaShoppingCart, FaShippingFast,
     FaCartPlus, FaHandshake, FaCalculator, FaFolderOpen, FaFileAlt, FaCogs,
     FaBolt, FaTachometerAlt, FaRecycle, FaLeaf, FaStore, FaChartBar, FaRegCalendarAlt,
-    FaListAlt, FaProjectDiagram, FaDatabase, FaLightbulb, FaServer, FaChartArea, FaAmbulance
+    FaListAlt, FaProjectDiagram, FaDatabase, FaLightbulb, FaServer, FaChartArea, FaAmbulance, FaUserNurse
 } from "react-icons/fa";
 
 import { IoChatbubbles } from "react-icons/io5";
@@ -145,7 +145,8 @@ const sideBarLinksContent = {
                     options: [
                         { type: 'item', text: 'مرکز فرماندهی', href: '/hospital/command-center', icon: <FaChartArea /> },
                         { type: 'item', text: 'بخش اورژانس', href: '/hospital/emergency-department', icon: <FaAmbulance /> },
-                        { type: 'item', text: 'بخش داخلی', href: '/hospital/inpatient-ward', icon: <Nurse /> },
+                        { type: 'item', text: 'بخش داخلی', href: '/hospital/inpatient-ward', icon: <FaUserNurse /> },
+                        { type: 'item', text: 'مدیریت بیماران', href: '/hospital/patients', icon: <FaUsers /> },
                     ]
                 },
             ]
