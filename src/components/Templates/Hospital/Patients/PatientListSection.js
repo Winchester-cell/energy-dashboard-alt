@@ -26,7 +26,7 @@ export default function PatientListSection({ filteredList, setFilteredList }) {
                         filteredList.map((p, index) => {
                             return (
                                 <AnimateOnScroll delay={index * 70}>
-                                    <div className='p-5 glass-card-b rounded-2xl gap-5 grid grid-cols-8 cursor-pointer'>
+                                    <div className='p-5 glass-card-b rounded-2xl gap-5 grid grid-cols-8 cursor-pointer hover:py-7 transition-all duration-500'>
                                         <div className='border-l-2 border-[#ffffff33]'>{toPersianDigits(index + 1)}</div>
                                         <div className='border-l-2 border-[#ffffff33]'>{p.name}</div>
                                         <div className='border-l-2 border-[#ffffff33]'>{toPersianDigits(p.nationalId)}</div>
