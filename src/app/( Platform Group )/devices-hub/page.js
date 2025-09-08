@@ -1,6 +1,6 @@
 'use client'
 import TabSelector from '@/components/Templates/DevicesHub/TabSelector'
-import { devicesHubTabsContent } from '@/content/devicesHubTabs'
+import { devicesHubTabsContent } from '@/content/tabs'
 import React, { useState } from 'react'
 
 export default function DevicesHub() {

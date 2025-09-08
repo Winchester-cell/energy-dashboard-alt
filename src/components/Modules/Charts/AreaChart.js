@@ -6,7 +6,7 @@ import i18n from "@/i18n";
 
 const ApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
-const AreaChart = ({ shadow, labelSize, categories, series, title }) => {
+const AreaChart = ({ shadow, labelSize, categories, series, title, yMin, colors = ["#008ffb", "#00e396"] }) => {
 
     const { t } = useTranslation()
 
@@ -51,7 +51,7 @@ const AreaChart = ({ shadow, labelSize, categories, series, title }) => {
             },
         },
         yaxis: {
-            min: 0,
+            min: yMin ? yMin : 0,
             labels: {
                 formatter: function (value) {
                     return toPersianDigits(value);
@@ -74,7 +74,7 @@ const AreaChart = ({ shadow, labelSize, categories, series, title }) => {
             },
             enabled: false,
         },
-        colors: ["#008ffb", "#00e396"], // Colors for the two lines
+        colors, // Colors for the two lines
         grid: {
             yaxis: {
                 lines: {

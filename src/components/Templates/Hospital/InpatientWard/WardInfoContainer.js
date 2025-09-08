@@ -19,7 +19,7 @@ export default function WardInfoContainer() {
                     </div>
                     <div className='flex items-center gap-2'>
                         <div className='w-4 h-4 glass-card-no-bg bg-[#ffffff1f] rounded-full' />
-                        <div>نرمال</div>
+                        <div>ترخیص شده</div>
                     </div>
                 </div>
             </div>

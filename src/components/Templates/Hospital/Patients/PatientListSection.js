@@ -1,11 +1,11 @@
 'use client'
 import AnimateOnScroll from '@/components/AnimateOnScrollWrapper/AnimateOnScroll'
-import { patients } from '@/data/fakeData'
-import { toPersianDigits } from '@/utils/formaters/toPersianDigits'
+import PatientInfoCard from '@/components/Modules/Cards/HospitalCards/PatientInfoCard'
+import Link from 'next/link'
 import React from 'react'
 
 
-export default function PatientListSection({ filteredList, setFilteredList }) {
+export default function PatientListSection({ filteredList }) {
 
     return (
         <>
@@ -25,17 +25,10 @@ export default function PatientListSection({ filteredList, setFilteredList }) {
                     {
                         filteredList.map((p, index) => {
                             return (
-                                <AnimateOnScroll delay={index * 70}>
-                                    <div className='p-5 glass-card-b rounded-2xl gap-5 grid grid-cols-8 cursor-pointer hover:py-7 transition-all duration-500'>
-                                        <div className='border-l-2 border-[#ffffff33]'>{toPersianDigits(index + 1)}</div>
-                                        <div className='border-l-2 border-[#ffffff33]'>{p.name}</div>
-                                        <div className='border-l-2 border-[#ffffff33]'>{toPersianDigits(p.nationalId)}</div>
-                                        <div className='border-l-2 border-[#ffffff33]'>{toPersianDigits(p.admissionId)}</div>
-                                        <div className='border-l-2 border-[#ffffff33]'>{p.doctor}</div>
-                                        <div className='border-l-2 border-[#ffffff33]'>{p.ward}</div>
-                                        <div className='border-l-2 border-[#ffffff33]'>{toPersianDigits(p.admissionDate)}</div>
-                                        <div className='border-l-2 border-[#ffffff33]'>{p.status}</div>
-                                    </div>
+                                <AnimateOnScroll key={p.id} delay={index * 70}>
+                                    <Link className='block' href={`/hospital/patients/${p.id}`}>
+                                        <PatientInfoCard index={index} {...p} />
+                                    </Link>
                                 </AnimateOnScroll>
                             )
                         })
