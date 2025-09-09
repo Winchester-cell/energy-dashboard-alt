@@ -8,6 +8,7 @@ import getUser from "@/axios/requests/auth/getUser";
 import { useQuery } from "@tanstack/react-query";
 import { useEffect } from "react";
 import SideBar from "./Modules/SideBar/SideBar";
+import ThemeTypeSelector from "./Modules/ThemeContorl/ThemeTypeSelector";
 
 export default function MainLayout({ children }) {
 
@@ -44,6 +45,7 @@ export default function MainLayout({ children }) {
         <div className={`${layoutClass} transition-all duration-500`}>
             <div className="w-full flex items-center px-3 pt-5 gap-3">
                 <SideBarToggleButton />
+                <ThemeTypeSelector />
                 <Header />
             </div>
             <SideBar />

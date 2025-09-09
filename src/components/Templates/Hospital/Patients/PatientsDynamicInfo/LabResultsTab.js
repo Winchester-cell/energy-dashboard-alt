@@ -1,12 +1,20 @@
+import { colorVariantSelector } from '@/data/themeVariants'
+import { useThemeTypeStore } from '@/stores/useThemeTypeStore'
+import { usePathname } from 'next/navigation'
 import React from 'react'
 
 export default function LabResultsTab() {
+
+    const { themeType } = useThemeTypeStore()
+    const pathname = usePathname()
+    const style = colorVariantSelector(pathname, themeType)
+
     return (
-        <div className='glass-card rounded-3xl p-5'>
+        <div className={`${style.cardStyleA} rounded-3xl p-5`}>
 
             <h2 className='font-bold text-lg'>نتایج آزمایش</h2>
 
-            <div className='glass-card-b rounded-xl p-5 mt-5'>
+            <div className={`rounded-xl p-5 mt-5 ${style.cardStyleB}`}>
                 <div className='flex justify-between items-center'>
                     <div>آزمایش خون کامل (CBC)</div>
                     <div>امروز ، ۰۸:۳۰</div>
@@ -22,7 +30,7 @@ export default function LabResultsTab() {
                     طبیعی
                 </div>
             </div>
-            <div className='glass-card-b rounded-xl p-5 mt-5'>
+            <div className={`rounded-xl p-5 mt-5 ${style.cardStyleB}`}>
                 <div className='flex justify-between items-center'>
                     <div>بیوشیمی خون</div>
                     <div>دیروز، ۱۶:۱۵</div>
@@ -38,7 +46,7 @@ export default function LabResultsTab() {
                     نیاز به پیگیری
                 </div>
             </div>
-            <div className='glass-card-b rounded-xl p-5 mt-5'>
+            <div className={`rounded-xl p-5 mt-5 ${style.cardStyleB}`}>
                 <div className='flex justify-between items-center'>
                     <div>آزمایش ادرار</div>
                     <div>۲ روز پیش، ۱۰:۰۰</div>

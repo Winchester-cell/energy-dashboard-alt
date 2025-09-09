@@ -6,13 +6,15 @@ import Link from 'next/link'
 import Loading from '@/components/Modules/Loadings/Loading'
 import { usePathname } from 'next/navigation'
 import { colorVariantSelector } from '@/data/themeVariants'
+import { useThemeTypeStore } from '@/stores/useThemeTypeStore'
 
 export default function ProfileSection() {
 
   const { isSideBarCollapsed } = useSideBarStore()
   const { user } = useAuthStore()
   const pathname = usePathname()
-  const style = colorVariantSelector(pathname)
+  const { themeType } = useThemeTypeStore()
+  const style = colorVariantSelector(pathname , themeType)
 
   if (!user) {
     return (

@@ -1,5 +1,6 @@
 import { colorVariantSelector } from '@/data/themeVariants'
 import useSideBarStore from '@/stores/useSideBarStore'
+import { useThemeTypeStore } from '@/stores/useThemeTypeStore'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React, { useEffect } from 'react'
@@ -7,7 +8,8 @@ import React, { useEffect } from 'react'
 export default function SubmenuItems({ text, href, icon, setIsOpen }) {
 
     const path = usePathname()
-    const style = colorVariantSelector(path)
+    const { themeType } = useThemeTypeStore()
+    const style = colorVariantSelector(path, themeType)
     const { isSideBarCollapsed } = useSideBarStore()
 
     useEffect(() => {

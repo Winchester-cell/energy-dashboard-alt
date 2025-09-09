@@ -6,11 +6,13 @@ import Clock from '../Clock/Clock'
 import CetecLogo from "@/asset/CetecLogo.svg"
 import { usePathname } from 'next/navigation'
 import { colorVariantSelector } from '@/data/themeVariants'
+import { useThemeTypeStore } from '@/stores/useThemeTypeStore'
 export default function Header() {
 
     const { t } = useTranslation()
     const pathname = usePathname()
-    const style = colorVariantSelector(pathname)
+     const { themeType } = useThemeTypeStore()
+    const style = colorVariantSelector(pathname , themeType)
 
     return (
         <div className={`w-full h-12 ${style.cardStyleA} ${style.textStyleA} shadow-md rounded-full flex justify-between items-center px-5 md:px-10 lg:px-16 py-7`}>

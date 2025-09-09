@@ -1,4 +1,4 @@
-export const colorVariantSelector = (path) => {
+export const colorVariantSelector = (path, themeType) => {
 
     const themesColor = {
 
@@ -8,8 +8,12 @@ export const colorVariantSelector = (path) => {
             cardStyleA: `bg-[var(--colCard)]`,
             cardStyleB: `bg-[var(--colBg)]`,
             cardStyleC: `bg-[var(--colCard)]`,
+            cardStyleD: `bg-[var(--colBg)]`,
+            cardStyleE: `bg-[var(--colCard)]`,
+            cardStyleF: `bg-[var(--colBg)]`,
             textStyleA: `text-[var(--colTextA)]`,
             textStyleB: `text-[var(--colTextB)]`,
+            placeHolderStyle: `placeholder:text-[var(--colTextB)]`,
             hoverStyle: `hover:text-[var(--textHover)] hover:border-[var(--textHover)]`,
             openedSideBarMenuStyle: `bg-[var(--textHover)] text-[white]`,
             SelectedSideBarMenuStyle: `text-[var(--textHover)]`,
@@ -21,9 +25,13 @@ export const colorVariantSelector = (path) => {
             borderStyle: `border-[#b7b7b7]`,
             cardStyleA: `glass-card text-[white]`,
             cardStyleB: `glass-card-b text-[white]`,
-            cardStyleB: `glass-card-b text-[white]`,
+            cardStyleC: `glass-card-b text-[white]`,
+            cardStyleD: `glass-card-no-bg`,
+            cardStyleE: `glass-card-no-bg`,
+            cardStyleF: `glass-card-b`,
             textStyleA: `text-[white]`,
             textStyleB: `text-[#b7b7b7]`,
+            placeHolderStyle: `placeholder:text-[#e3e3e3]`,
             hoverStyle: `hover:text-[#60a5fa] hover:border-[#60a5fa]`,
             openedSideBarMenuStyle: `bg-[#60a5fa] text-[white]`,
             SelectedSideBarMenuStyle: `text-[#60a5fa]`,
@@ -34,7 +42,7 @@ export const colorVariantSelector = (path) => {
 
     let themeVar = null
 
-    if (path.startsWith('/hospital')) {
+    if (path.startsWith('/hospital') && themeType === 'hospital') {
         themeVar = themesColor.hospital
         return themeVar
     }

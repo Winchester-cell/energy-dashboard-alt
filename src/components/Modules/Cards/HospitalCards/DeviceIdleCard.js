@@ -1,9 +1,17 @@
+import { colorVariantSelector } from '@/data/themeVariants'
+import { useThemeTypeStore } from '@/stores/useThemeTypeStore'
+import { usePathname } from 'next/navigation'
 import React from 'react'
 
 export default function DeviceIdleCard(props) {
+
+    const { themeType } = useThemeTypeStore()
+    const pathname = usePathname()
+    const style = colorVariantSelector(pathname, themeType)
     const { name, status, idleHours } = props
+
     return (
-        <div className='w-full glass-card-b p-5 rounded-xl flex flex-col gap-2'>
+        <div className={`w-full ${style.cardStyleA} p-5 rounded-xl flex flex-col gap-2 shadow-lg`}>
             <div>
                 نام دستگاه : {name}
             </div>

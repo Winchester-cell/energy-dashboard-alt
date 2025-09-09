@@ -18,7 +18,7 @@ export default function BedsInfoCard({ bedNumber, patient }) {
     <div className={`p-5 rounded-xl ${cardColor} glass-card-no-bg w-full flex items-center justify-center gap-5`}>
       <FaBedPulse className='text-4xl'/>
       <div className='flex flex-col items-center'>
-        <div className='text-[12px] text-[#ebebeb]'>تخت شماره {toPersianDigits(bedNumber)}</div>
+        <div className='text-[12px]'>تخت شماره {toPersianDigits(bedNumber)}</div>
         <div>{patient.name}</div>
       </div>
     </div>

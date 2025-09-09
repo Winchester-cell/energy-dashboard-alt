@@ -1,7 +1,16 @@
+import { colorVariantSelector } from '@/data/themeVariants'
+import { useThemeTypeStore } from '@/stores/useThemeTypeStore'
 import { toPersianDigits } from '@/utils/formaters/toPersianDigits'
+import { usePathname } from 'next/navigation'
 import React from 'react'
 
 export default function WardCard(props) {
+
+    const { themeType } = useThemeTypeStore()
+    const pathname = usePathname()
+    const style = colorVariantSelector(pathname, themeType)
+
+
     const { secName, occupaidBed, totalBed } = props
     const bedPercent = Math.floor(occupaidBed / totalBed * 100)
     let barColor = "";
@@ -13,7 +22,7 @@ export default function WardCard(props) {
         barColor = "bg-red-300";
     }
     return (
-        <div className='w-full bg-[var(--colCard)] glass-card p-5 rounded-2xl flex flex-col gap-2'>
+        <div className={`w-full shadow-lg ${style.cardStyleA} p-5 rounded-2xl flex flex-col gap-2`}>
             <div>
                 نام بخش : {secName}
             </div>

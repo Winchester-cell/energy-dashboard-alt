@@ -11,6 +11,7 @@ import sideBarLinksContent from "@/content/sideBarLinksContent";
 import SideBarField from "./SideBarField";
 import { usePathname } from "next/navigation";
 import { colorVariantSelector } from "@/data/themeVariants";
+import { useThemeTypeStore } from "@/stores/useThemeTypeStore";
 
 
 export default function SideBar() {
@@ -18,7 +19,8 @@ export default function SideBar() {
   const { isSideBarCollapsed, isSideBarOpen, toggleSideBar } = useSideBarStore()
   const translateClass = i18n.language === 'en' ? `-translate-x-full` : `translate-x-full`
   const pathname = usePathname()
-  const style = colorVariantSelector(pathname)
+  const { themeType } = useThemeTypeStore()
+  const style = colorVariantSelector(pathname, themeType)
 
   return (
     <>

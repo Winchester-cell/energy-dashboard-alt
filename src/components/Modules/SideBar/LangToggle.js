@@ -1,6 +1,7 @@
 'use client'
 import { colorVariantSelector } from '@/data/themeVariants';
 import i18n from '@/i18n';
+import { useThemeTypeStore } from '@/stores/useThemeTypeStore';
 import { usePathname } from 'next/navigation';
 import React from 'react'
 import { LuLanguages } from "react-icons/lu";
@@ -8,7 +9,8 @@ import { LuLanguages } from "react-icons/lu";
 export default function LangToggle() {
 
     const pathname = usePathname()
-    const style = colorVariantSelector(pathname)
+    const { themeType } = useThemeTypeStore()
+    const style = colorVariantSelector(pathname , themeType)
 
     const toggleLang = () => {
         i18n.changeLanguage(i18n.language === 'fa' ? 'en' : 'fa')

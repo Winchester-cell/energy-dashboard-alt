@@ -1,5 +1,8 @@
 import AnimateOnScroll from '@/components/AnimateOnScrollWrapper/AnimateOnScroll';
+import { colorVariantSelector } from '@/data/themeVariants';
+import { useThemeTypeStore } from '@/stores/useThemeTypeStore';
 import { toPersianDigits } from '@/utils/formaters/toPersianDigits';
+import { usePathname } from 'next/navigation';
 import React from 'react'
 import { GiCheckMark } from "react-icons/gi";
 
@@ -44,17 +47,20 @@ export default function CureProcessTab() {
     }
   ];
 
+  const { themeType } = useThemeTypeStore()
+  const pathname = usePathname()
+  const style = colorVariantSelector(pathname, themeType)
 
   return (
     <>
-      <div className='glass-card rounded-3xl p-5'>
+      <div className={`${style.cardStyleA} rounded-3xl p-5`}>
 
         <div className='flex items-center justify-between'>
           <h2 className='font-bold text-lg'>فرایند درمان</h2>
-          <div className='glass-card-b px-5 py-2 rounded-full'>در حال انجام</div>
+          <div className={`${style.cardStyleB} px-5 py-2 rounded-full`}>در حال انجام</div>
         </div>
 
-        <div className='glass-card-b rounded-xl p-5 mt-5'>
+        <div className={`${style.cardStyleF} rounded-xl p-5 mt-5`}>
 
           <h2>مراحل درمان :</h2>
 
@@ -74,8 +80,8 @@ export default function CureProcessTab() {
 
                       <div className='flex flex-col gap-2'>
                         <div className='font-bold'>{t.taskTitle}</div>
-                        <div className='text-[#b7b7b7]'>{t.taskDesc}</div>
-                        <div className='text-[#b7b7b7] text-[12px]'>{t.isDone ? t.doneDate : t.inProgress ? 'در حال انجام' : 'در انتظار'}</div>
+                        <div className={`${style.textStyleB}`}>{t.taskDesc}</div>
+                        <div className={`${style.textStyleB} text-[12px]`}>{t.isDone ? t.doneDate : t.inProgress ? 'در حال انجام' : 'در انتظار'}</div>
                       </div>
 
 
@@ -88,7 +94,7 @@ export default function CureProcessTab() {
 
         </div>
 
-        <div className='glass-card-b rounded-xl p-5 mt-5'>
+        <div className={`${style.cardStyleF} rounded-xl p-5 mt-5`}>
           <h2> آمار فرایند :</h2>
           <div className='flex flex-col gap-2 mt-5 px-5'>
 

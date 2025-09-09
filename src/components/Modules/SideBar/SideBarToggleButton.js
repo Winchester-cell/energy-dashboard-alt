@@ -3,6 +3,7 @@
 import { colorVariantSelector } from '@/data/themeVariants';
 import i18n from '@/i18n';
 import useSideBarStore from '@/stores/useSideBarStore';
+import { useThemeTypeStore } from '@/stores/useThemeTypeStore';
 import { usePathname } from 'next/navigation';
 import React from 'react'
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
@@ -11,7 +12,8 @@ export default function SideBarToggleButton() {
 
     const { isSideBarOpen, toggleSideBar } = useSideBarStore()
     const pathname = usePathname()
-    const style = colorVariantSelector(pathname)
+    const { themeType } = useThemeTypeStore()
+    const style = colorVariantSelector(pathname, themeType)
 
     return (
         <button onClick={toggleSideBar} className={`

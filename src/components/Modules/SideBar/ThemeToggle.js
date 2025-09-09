@@ -1,6 +1,7 @@
 'use client'
 
 import { colorVariantSelector } from '@/data/themeVariants';
+import { useThemeTypeStore } from '@/stores/useThemeTypeStore';
 import { useTheme } from 'next-themes';
 import { usePathname } from 'next/navigation';
 import React from 'react'
@@ -10,7 +11,8 @@ export default function ThemeToggle() {
 
     const { theme, setTheme } = useTheme()
     const pathname = usePathname()
-    const style = colorVariantSelector(pathname)
+    const { themeType } = useThemeTypeStore()
+    const style = colorVariantSelector(pathname , themeType)
 
     const themeToggleHandler = () => {
         setTheme(theme === 'light' ? 'dark' : 'light')

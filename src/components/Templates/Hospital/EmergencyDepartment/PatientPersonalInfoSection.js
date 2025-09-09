@@ -1,15 +1,23 @@
+import { colorVariantSelector } from '@/data/themeVariants'
+import { useThemeTypeStore } from '@/stores/useThemeTypeStore'
+import { usePathname } from 'next/navigation'
 import React from 'react'
 import { FaUserCircle } from 'react-icons/fa'
 
-export default function PatientPersonalInfoSection({selectedPatient}) {
+export default function PatientPersonalInfoSection({ selectedPatient }) {
+
+    const { themeType } = useThemeTypeStore()
+    const pathname = usePathname()
+    const style = colorVariantSelector(pathname, themeType)
+
     return (
         <div className='w-full flex items-center justify-between'>
             <div className='flex items-center gap-5'>
                 <FaUserCircle className='w-16 h-16' />
-                <div className='glass-card-b p-3 rounded-full'>{selectedPatient.name}</div>
-                <div className='text-[16px] glass-card-b text-[#b7b7b7] p-3 rounded-full'>{selectedPatient.gender} | {selectedPatient.age} ساله</div>
+                <div className={`${style.cardStyleB} text-[16px] shadow-lg p-3 rounded-full`}>{selectedPatient.name}</div>
+                <div className={`text-[16px] ${style.cardStyleB} ${style.textStyleB} shadow-lg p-3 rounded-full`}>{selectedPatient.gender} | {selectedPatient.age} ساله</div>
             </div>
-            <div className='text-[16px] glass-card-b w-[200px] py-3 rounded-full text-center'>
+            <div className={`text-[16px] ${style.cardStyleB} w-[200px] py-3 rounded-full shadow-lg text-center`}>
                 وضعیت بیمار : {selectedPatient.status}
             </div>
         </div>

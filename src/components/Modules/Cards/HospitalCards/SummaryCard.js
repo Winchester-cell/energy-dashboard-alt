@@ -1,11 +1,18 @@
+import { colorVariantSelector } from '@/data/themeVariants';
+import { useThemeTypeStore } from '@/stores/useThemeTypeStore';
 import '@/styles/cardStyle.css'
 import { toPersianDigits } from '@/utils/formaters/toPersianDigits';
+import { usePathname } from 'next/navigation';
 import React from 'react'
 
 export default function SummryCard({ icon, cardTitle, metricA, valA, metricB, valB, extraText, extraVal }) {
 
+    const { themeType } = useThemeTypeStore()
+    const pathname = usePathname()
+    const style = colorVariantSelector(pathname, themeType)
+
     return (
-        <div className='w-full glass-card p-10 flex flex-col gap-5 rounded-3xl shadow-lg'> 
+        <div className={`w-full ${style.cardStyleA} p-10 flex flex-col gap-5 rounded-3xl shadow-lg`}>
             <div className='w-full flex items-center justify-between'>
                 {icon}
                 <div>

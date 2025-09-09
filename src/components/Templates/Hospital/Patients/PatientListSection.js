@@ -1,26 +1,33 @@
 'use client'
 import AnimateOnScroll from '@/components/AnimateOnScrollWrapper/AnimateOnScroll'
 import PatientInfoCard from '@/components/Modules/Cards/HospitalCards/PatientInfoCard'
+import { colorVariantSelector } from '@/data/themeVariants'
+import { useThemeTypeStore } from '@/stores/useThemeTypeStore'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import React from 'react'
 
 
 export default function PatientListSection({ filteredList }) {
 
+    const { themeType } = useThemeTypeStore()
+    const pathname = usePathname()
+    const style = colorVariantSelector(pathname, themeType)
+
     return (
         <>
-            <div className='glass-card mt-5 p-5 rounded-2xl'>
+            <div className={`${style.cardStyleA} shadow-lg mt-5 p-5 rounded-2xl`}>
                 <h2 className='flex justify-center w-full'>لیست بیماران :</h2>
                 <div className='w-full mt-5 rounded-2xl flex flex-col gap-3 text-[12px]'>
-                    <div className='p-5 glass-card-b rounded-2xl gap-5 grid grid-cols-8'>
-                        <div className='border-l-2 border-[#ffffff33]'>ردیف</div>
-                        <div className='border-l-2 border-[#ffffff33]'>نام بیمار</div>
-                        <div className='border-l-2 border-[#ffffff33]'>کدملی</div>
-                        <div className='border-l-2 border-[#ffffff33]'>شماره پذیرش</div>
-                        <div className='border-l-2 border-[#ffffff33]'>پزشک</div>
-                        <div className='border-l-2 border-[#ffffff33]'>بخش</div>
-                        <div className='border-l-2 border-[#ffffff33]'>تاریخ پذیرش</div>
-                        <div className='border-l-2 border-[#ffffff33]'>وضعیت</div>
+                    <div className={`p-5 ${style.cardStyleB} shadow-lg rounded-2xl gap-5 grid grid-cols-8`}>
+                        <div className={`border-l-2 ${themeType === 'hospital' ? `border-[#ffffff33]` : `border-[var(--colTextA)]`} `}>ردیف</div>
+                        <div className={`border-l-2 ${themeType === 'hospital' ? `border-[#ffffff33]` : `border-[var(--colTextA)]`} `}>نام بیمار</div>
+                        <div className={`border-l-2 ${themeType === 'hospital' ? `border-[#ffffff33]` : `border-[var(--colTextA)]`} `}>کدملی</div>
+                        <div className={`border-l-2 ${themeType === 'hospital' ? `border-[#ffffff33]` : `border-[var(--colTextA)]`} `}>شماره پذیرش</div>
+                        <div className={`border-l-2 ${themeType === 'hospital' ? `border-[#ffffff33]` : `border-[var(--colTextA)]`} `}>پزشک</div>
+                        <div className={`border-l-2 ${themeType === 'hospital' ? `border-[#ffffff33]` : `border-[var(--colTextA)]`} `}>بخش</div>
+                        <div className={`border-l-2 ${themeType === 'hospital' ? `border-[#ffffff33]` : `border-[var(--colTextA)]`} `}>تاریخ پذیرش</div>
+                        <div>وضعیت</div>
                     </div>
                     {
                         filteredList.map((p, index) => {

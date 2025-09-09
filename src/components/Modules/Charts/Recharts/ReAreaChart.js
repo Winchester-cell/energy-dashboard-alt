@@ -1,3 +1,6 @@
+import { colorVariantSelector } from '@/data/themeVariants';
+import { useThemeTypeStore } from '@/stores/useThemeTypeStore';
+import { usePathname } from 'next/navigation';
 import React from 'react'
 import {
     AreaChart,
@@ -12,6 +15,11 @@ import {
 
 
 export default function ReAreaChart() {
+
+
+    const { themeType } = useThemeTypeStore()
+    const pathname = usePathname()
+    const style = colorVariantSelector(pathname, themeType)
 
     const data = [
         { hour: "0", actual: 20, predicted: 22 },
@@ -29,9 +37,9 @@ export default function ReAreaChart() {
     ];
 
     return (
-        <div className="w-full h-96 rounded-2xl shadow-md p-5 my-5 glass-card">
+        <div className={`w-full h-96 rounded-2xl shadow-md p-5 my-5 ${style.cardStyleA}`}>
             <h2 className="text-xl font-semibold mb-4">تعداد بیماران (۲۴ ساعت گذشته و آینده)</h2>
-            <ResponsiveContainer width="100%" height="100%" style={{padding:40}}>
+            <ResponsiveContainer width="100%" height="100%" style={{ padding: 40 }}>
                 <AreaChart data={data}>
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="hour" label={{ value: "", position: "insideBottom", offset: -5 }} />

@@ -4,13 +4,15 @@ import { IoIosArrowUp } from "react-icons/io";
 import SubmenuItems from './SubmenuItems';
 import { usePathname } from 'next/navigation';
 import { colorVariantSelector } from '@/data/themeVariants';
+import { useThemeTypeStore } from '@/stores/useThemeTypeStore';
 
 export default function SideBarDropDown({ text, icon, options }) {
 
     const { isSideBarCollapsed } = useSideBarStore()
     const [isOpen, setIsOpen] = useState(false)
     const pathname = usePathname()
-    const style = colorVariantSelector(pathname)
+    const { themeType } = useThemeTypeStore()
+    const style = colorVariantSelector(pathname, themeType)
 
     return (
         <li>
@@ -19,7 +21,7 @@ export default function SideBarDropDown({ text, icon, options }) {
                     <span className='text-2xl'>{icon}</span>
                     <span className={`${isSideBarCollapsed ? `hidden` : `text-[14px]`}`}>{text}</span>
                 </div>
-                <IoIosArrowUp className={`w-4 h-4 top-1 end-4 text-[var(--colTextA)] ${isOpen ? `` : `rotate-180`} transition-all duration-500 absolute rounded-full p-[3px] ${style.cardStyleA} ${isSideBarCollapsed ? `` : `hidden`}`}/>
+                <IoIosArrowUp className={`w-4 h-4 top-1 end-4 text-[var(--colTextA)] ${isOpen ? `` : `rotate-180`} transition-all duration-500 absolute rounded-full p-[3px] ${style.cardStyleA} ${isSideBarCollapsed ? `` : `hidden`}`} />
                 <IoIosArrowUp className={`mr-2 ${isSideBarCollapsed ? `hidden` : ``} ${isOpen ? `` : `rotate-180`} transition-all duration-500`} />
             </div>
             <ul className={`transition-all overflow-hidden duration-500 flex flex-col gap-3 ${isOpen ? `max-h-[999px] my-3` : `max-h-0`}`}>

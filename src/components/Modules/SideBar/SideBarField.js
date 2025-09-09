@@ -3,12 +3,14 @@ import React from 'react'
 import SideBarLinkItems from './SideBarLinkItems'
 import { usePathname } from 'next/navigation'
 import { colorVariantSelector } from '@/data/themeVariants'
+import { useThemeTypeStore } from '@/stores/useThemeTypeStore'
 
 export default function SideBarField({ title, links, icon }) {
 
     const { isSideBarCollapsed } = useSideBarStore()
     const pathname = usePathname()
-    const style = colorVariantSelector(pathname)
+    const { themeType } = useThemeTypeStore()
+    const style = colorVariantSelector(pathname , themeType)
 
     return (
         <fieldset className={`border-t ${style.borderStyle}`}>

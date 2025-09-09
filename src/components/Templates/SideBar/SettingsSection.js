@@ -3,6 +3,7 @@ import LangToggle from '@/components/Modules/SideBar/LangToggle'
 import ThemeToggle from '@/components/Modules/SideBar/ThemeToggle'
 import { colorVariantSelector } from '@/data/themeVariants'
 import useSideBarStore from '@/stores/useSideBarStore'
+import { useThemeTypeStore } from '@/stores/useThemeTypeStore'
 import { usePathname } from 'next/navigation'
 import React from 'react'
 
@@ -10,7 +11,8 @@ export default function SettingsSection() {
 
     const { isSideBarCollapsed } = useSideBarStore()
     const pathname = usePathname()
-    const style = colorVariantSelector(pathname)
+    const { themeType } = useThemeTypeStore()
+    const style = colorVariantSelector(pathname, themeType)
 
     return (
         <div>
