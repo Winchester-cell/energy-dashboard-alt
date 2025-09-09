@@ -67,7 +67,7 @@ export default function VitalSignsSection({ selectedPatient }) {
                         <AreaChart categories={chartData01.categories} series={chartData01.series} />
                     </div>
                     <div className='w-1/2 h-full rounded-xl glass-card'>
-                        <AreaChart categories={chartData02.categories} series={chartData02.series} />
+                        <AreaChart colors={["#00e396"]} categories={chartData02.categories} series={chartData02.series} />
                     </div>
                 </div>
 

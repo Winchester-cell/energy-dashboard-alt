@@ -214,7 +214,7 @@
 body {
   font-size: 14px;
   color: var(--colTextA);
-  background: var(--colBg);
+  background-color: var(--colBg);
   transition: all ease-in-out 300ms;
 }
 

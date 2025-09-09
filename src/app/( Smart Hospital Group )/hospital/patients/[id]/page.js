@@ -6,6 +6,7 @@ import { FaUserCircle } from "react-icons/fa";
 
 
 export default function PatientInfoPage() {
+    
     const [selectedTab, setSelectedTab] = useState(patientInfoTabsContent[0])
 
     return (
