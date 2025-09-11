@@ -3,6 +3,7 @@ export const colorVariantSelector = (path, themeType) => {
     const themesColor = {
 
         defaultColors: {
+            gradCardBlue: `gradCardBlue`,
             sidebarStyle: `bg-[var(--colCard)] border-none`,
             matteCard: `bg-[var(--colCard)]`,
             borderStyle: `border-[var(--colTextB)]`,
@@ -22,6 +23,7 @@ export const colorVariantSelector = (path, themeType) => {
         },
 
         hospital: {
+            gradCardBlue: `gradCardBlue`,
             sidebarStyle: `bg-[#ffffff0d] border-e-2 border-[#ffffff29] glass-sidebar`,
             borderStyle: `border-[#b7b7b7]`,
             matteCard: `glass-card-x`,

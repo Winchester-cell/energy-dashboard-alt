@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import dynamic from 'next/dynamic';
 const ApexChart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
-const DonutChart = ({ title, data, labels }) => {
+const DonutChart = ({ title, data, labels , legendShow = true }) => {
 
     const { i18n } = useTranslation()
 
@@ -73,7 +73,7 @@ const DonutChart = ({ title, data, labels }) => {
             cssClass: i18n.language === 'fa' ? 'rtl' : ''
         },
         legend: {
-            show: true,
+            show: legendShow,
             position: 'bottom',
             fontFamily: 'Yekan',
         },

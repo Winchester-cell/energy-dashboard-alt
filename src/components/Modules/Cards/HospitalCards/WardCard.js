@@ -26,7 +26,7 @@ export default function WardCard(props) {
             <div>
                 نام بخش : {secName}
             </div>
-            <div>
+            <div className={`${style.textStyleB}`}>
                 تخت های اشغال شده : {toPersianDigits(occupaidBed)} از {toPersianDigits(totalBed)}
             </div>
             <div className='flex items-center gap-2'>

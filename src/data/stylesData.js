@@ -98,6 +98,8 @@ export const selectBoxStyleNoPadding = {
         borderRadius: '2rem',
         overflow: 'hidden',
         padding: 15,
+        fontFamily: "Yekan",
+        direction: `rtl`,
         zIndex: 9999,
     }),
     option: (baseStyles, state) => ({
@@ -176,8 +178,8 @@ export const selectBoxGlassStyle = {
         border: '1px solid rgba(255, 255, 255, 0.2)',
         boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.2)',
         padding: 15,
-        fontFamily:"Yekan",
-        direction:`rtl`,
+        fontFamily: "Yekan",
+        direction: `rtl`,
         zIndex: 99999,
     }),
     option: (baseStyles, state) => ({
