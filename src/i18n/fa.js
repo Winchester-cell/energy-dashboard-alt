@@ -2,7 +2,7 @@ const fa = {
 
     // header
 
-    headerTitle: 'سامانه  جامع شمارش افراد',
+    headerTitle: 'سامانه  بیمارستان هوشمند',
 
     sideBarSection: {
         username: 'نام کاربری',

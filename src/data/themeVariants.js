@@ -4,6 +4,7 @@ export const colorVariantSelector = (path, themeType) => {
 
         defaultColors: {
             sidebarStyle: `bg-[var(--colCard)] border-none`,
+            matteCard: `bg-[var(--colCard)]`,
             borderStyle: `border-[var(--colTextB)]`,
             cardStyleA: `bg-[var(--colCard)]`,
             cardStyleB: `bg-[var(--colBg)]`,
@@ -23,6 +24,7 @@ export const colorVariantSelector = (path, themeType) => {
         hospital: {
             sidebarStyle: `bg-[#ffffff0d] border-e-2 border-[#ffffff29] glass-sidebar`,
             borderStyle: `border-[#b7b7b7]`,
+            matteCard: `glass-card-x`,
             cardStyleA: `glass-card text-[white]`,
             cardStyleB: `glass-card-b text-[white]`,
             cardStyleC: `glass-card-b text-[white]`,

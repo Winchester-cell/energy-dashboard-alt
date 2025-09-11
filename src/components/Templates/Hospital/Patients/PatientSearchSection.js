@@ -9,7 +9,7 @@ import { useThemeTypeStore } from '@/stores/useThemeTypeStore';
 import { usePathname } from 'next/navigation';
 import { colorVariantSelector } from '@/data/themeVariants';
 
-export default function PatientSearchSection({ filteredList, setFilteredList }) {
+export default function PatientSearchSection({ setFilteredList }) {
 
     const options = [
         { value: 'all', label: 'تمامی بخش ها' },
@@ -29,15 +29,41 @@ export default function PatientSearchSection({ filteredList, setFilteredList }) 
         const newList = patients.filter(item => item.name.includes(e.target.value))
         setFilteredList(newList)
     }
+    const filterByCode = (e) => {
+        const newList = patients.filter(item => item.nationalId.includes(e.target.value))
+        setFilteredList(newList)
+    }
+    const filterByAdmission = (e) => {
+        const newList = patients.filter(item => String(item.admissionId).includes(e.target.value))
+        setFilteredList(newList)
+    }
+    const filterByDoctor = (e) => {
+        const newList = patients.filter(item => item.doctor.includes(e.target.value))
+        setFilteredList(newList)
+    }
+    const filterByDate = (e) => {
+        const newList = patients.filter(item => item.admissionDate.includes(e.target.value))
+        setFilteredList(newList)
+    }
+    const filterByWard = (e) => {
+        if (e.value === 'all') {
+            setFilteredList(patients)
+        } else {
+            const newList = patients.filter(item => item.ward === e.label)
+            setFilteredList(newList)
+        }
+    }
+
+
 
     return (
         <div className={`w-full ${style.cardStyleA} shadow-lg rounded-2xl p-5 grid grid-cols-3 gap-5`}>
             <input onChange={filterHanlde} className={`block ${style.placeHolderStyle} ${style.cardStyleB} ps-5 py-2 rounded-full`} type="text" placeholder='نام و نام خانوادگی ...' />
-            <input className={`block ${style.placeHolderStyle} ${style.cardStyleB} ps-5 py-2 rounded-full`} type="text" placeholder='کد ملی ...' />
-            <input className={`block ${style.placeHolderStyle} ${style.cardStyleB} ps-5 py-2 rounded-full`} type="text" placeholder=' شماره پذیرش ...' />
-            <input className={`block ${style.placeHolderStyle} ${style.cardStyleB} ps-5 py-2 rounded-full`} type="text" placeholder='پزشک معالج ...' />
-            <input className={`block ${style.placeHolderStyle} ${style.cardStyleB} ps-5 py-2 rounded-full`} type="text" placeholder=' تاریخ پذیرش ...' />
-            <SingleSelectInput staticOption={options} place={'بخش'} style={themeType === 'hospital' ? selectBoxGlassStyle : selectBoxStyleNoPadding} />
+            <input onChange={filterByCode} className={`block ${style.placeHolderStyle} ${style.cardStyleB} ps-5 py-2 rounded-full`} type="text" placeholder='کد ملی ...' />
+            <input onChange={filterByAdmission} className={`block ${style.placeHolderStyle} ${style.cardStyleB} ps-5 py-2 rounded-full`} type="text" placeholder=' شماره پذیرش ...' />
+            <input onChange={filterByDoctor} className={`block ${style.placeHolderStyle} ${style.cardStyleB} ps-5 py-2 rounded-full`} type="text" placeholder='پزشک معالج ...' />
+            <input onChange={filterByDate}  className={`block ${style.placeHolderStyle} ${style.cardStyleB} ps-5 py-2 rounded-full`} type="text" placeholder=' تاریخ پذیرش ...' />
+            <SingleSelectInput onChange={(e) => filterByWard(e)} staticOption={options} place={'بخش'} style={themeType === 'hospital' ? selectBoxGlassStyle : selectBoxStyleNoPadding} />
             {/* <div className='w-full col-span-3 flex justify-center'>
                 <button className={`${style.cardStyleB} py-2 px-10 rounded-full flex items-center gap-1`}> <FaSearchengin className='text-xl' /> جستوجو </button>
             </div> */}

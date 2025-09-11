@@ -1,6 +1,7 @@
 'use client'
 import LangToggle from '@/components/Modules/SideBar/LangToggle'
 import ThemeToggle from '@/components/Modules/SideBar/ThemeToggle'
+import ThemeTypeSelector from '@/components/Modules/ThemeContorl/ThemeTypeSelector'
 import { colorVariantSelector } from '@/data/themeVariants'
 import useSideBarStore from '@/stores/useSideBarStore'
 import { useThemeTypeStore } from '@/stores/useThemeTypeStore'
@@ -22,6 +23,7 @@ export default function SettingsSection() {
             <div className={`mt-5 gap-2 flex items-center ${isSideBarCollapsed ? `flex-col` : `flex-row ps-5`}`}>
                 <ThemeToggle />
                 <LangToggle />
+                <ThemeTypeSelector />
             </div>
         </div>
     )

@@ -24,8 +24,8 @@ export default function SideBar() {
 
   return (
     <>
-      <div id="sidebar" className={`h-[100dvh] ${style.textStyleA} ${style.sidebarStyle} ${isSideBarCollapsed ? `w-[100px]` : ` w-[240px]`}  overflow-y-auto shadow-lg transition-all duration-300 ease-in-out fixed z-[999999] top-0 start-0 ${isSideBarOpen ? 'translate-x-0' : translateClass}`}>
-        <SimpleBar style={{ maxHeight: '100vh' }} >
+      <div id="sidebar" className={`h-[100dvh] ${style.textStyleA} ${style.sidebarStyle} ${isSideBarCollapsed ? `w-[100px]` : ` w-[240px]`}  overflow-y-auto shadow-lg transition-all duration-300 ease-in-out fixed z-[99] top-0 start-0 ${isSideBarOpen ? 'translate-x-0' : translateClass}`}>
+        <SimpleBar  style={{ maxHeight: '100vh' , overflow:'visible' }} >
 
           <div className={`flex w-full ${isSideBarCollapsed ? `justify-center` : `justify-end`}`}>
             <SideBarCollapseButton />
