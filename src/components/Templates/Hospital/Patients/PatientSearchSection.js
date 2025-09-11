@@ -1,8 +1,6 @@
 'use client'
 import SingleSelectInput from '@/components/Modules/Inputs/SingleSelectInput'
 import { selectBoxGlassStyle, selectBoxStyleNoPadding } from '@/data/stylesData'
-import { FaSearchengin } from "react-icons/fa";
-
 import React from 'react'
 import { patients } from '@/data/fakeData';
 import { useThemeTypeStore } from '@/stores/useThemeTypeStore';
@@ -16,6 +14,7 @@ export default function PatientSearchSection({ setFilteredList }) {
         { value: 'internal', label: 'داخلی' },
         { value: 'surgery', label: 'جراحی' },
         { value: 'pediatrics', label: 'اطفال' },
+        { value: 'emergency', label: 'اورژانس' },
         { value: 'cardiology', label: 'قلب و عروق' },
         { value: 'obgyn', label: 'زنان و زایمان' },
         { value: 'orthopedics', label: 'ارتوپدی' },
@@ -64,9 +63,6 @@ export default function PatientSearchSection({ setFilteredList }) {
             <input onChange={filterByDoctor} className={`block ${style.placeHolderStyle} ${style.cardStyleB} ps-5 py-2 rounded-full`} type="text" placeholder='پزشک معالج ...' />
             <input onChange={filterByDate}  className={`block ${style.placeHolderStyle} ${style.cardStyleB} ps-5 py-2 rounded-full`} type="text" placeholder=' تاریخ پذیرش ...' />
             <SingleSelectInput onChange={(e) => filterByWard(e)} staticOption={options} place={'بخش'} style={themeType === 'hospital' ? selectBoxGlassStyle : selectBoxStyleNoPadding} />
-            {/* <div className='w-full col-span-3 flex justify-center'>
-                <button className={`${style.cardStyleB} py-2 px-10 rounded-full flex items-center gap-1`}> <FaSearchengin className='text-xl' /> جستوجو </button>
-            </div> */}
         </div>
     )
 }

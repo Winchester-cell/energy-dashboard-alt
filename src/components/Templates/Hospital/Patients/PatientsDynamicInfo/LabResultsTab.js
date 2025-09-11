@@ -20,10 +20,10 @@ export default function LabResultsTab() {
                     <div>امروز ، ۰۸:۳۰</div>
                 </div>
                 <div className='grid grid-cols-4 mt-10'>
-                    <div className='text-[#d1d1d1] text-center'>WBC : ۷.۲ K/μL</div>
-                    <div className='text-[#d1d1d1] text-center'>RBC: ۴.۵ M/μL</div>
-                    <div className='text-[#d1d1d1] text-center'>HGB: ۱۴.۲ g/dL</div>
-                    <div className='text-[#d1d1d1] text-center'>PLT: ۱۸۰ K/μL</div>
+                    <div className='text-center'>WBC : ۷.۲ K/μL</div>
+                    <div className='text-center'>RBC: ۴.۵ M/μL</div>
+                    <div className='text-center'>HGB: ۱۴.۲ g/dL</div>
+                    <div className='text-center'>PLT: ۱۸۰ K/μL</div>
                 </div>
                 <div className='glass-card-b my-5' />
                 <div className='glass-card-no-bg bg-[#35de7357] rounded-full w-fit text-[#bbffd4] px-5 py-1'>
@@ -36,10 +36,10 @@ export default function LabResultsTab() {
                     <div>دیروز، ۱۶:۱۵</div>
                 </div>
                 <div className='grid grid-cols-4 mt-10'>
-                    <div className='text-[#d1d1d1] text-center'>گلوکز : ۹۵ mg/dL</div>
-                    <div className='text-[#d1d1d1] text-center'>کراتینین : ۱.۰ mg/dL</div>
-                    <div className='text-[#d1d1d1] text-center'>کلسترول : ۲۲۰ mg/dL</div>
-                    <div className='text-[#d1d1d1] text-center'>تری‌گلیسرید : ۱۶۰ mg/dL</div>
+                    <div className='text-center'>گلوکز : ۹۵ mg/dL</div>
+                    <div className='text-center'>کراتینین : ۱.۰ mg/dL</div>
+                    <div className='text-center'>کلسترول : ۲۲۰ mg/dL</div>
+                    <div className='text-center'>تری‌گلیسرید : ۱۶۰ mg/dL</div>
                 </div>
                 <div className='glass-card-b my-5' />
                 <div className='glass-card-no-bg bg-[#ded83557] rounded-full w-fit text-[#f8ffbb] px-5 py-1'>
@@ -52,10 +52,10 @@ export default function LabResultsTab() {
                     <div>۲ روز پیش، ۱۰:۰۰</div>
                 </div>
                 <div className='grid grid-cols-4 mt-10'>
-                    <div className='text-[#d1d1d1] text-center'>پروتئین: منفی</div>
-                    <div className='text-[#d1d1d1] text-center'>گلوکز: منفی</div>
-                    <div className='text-[#d1d1d1] text-center'>کتون: منفی</div>
-                    <div className='text-[#d1d1d1] text-center'>خون: منفی</div>
+                    <div className='text-center'>پروتئین: منفی</div>
+                    <div className='text-center'>گلوکز: منفی</div>
+                    <div className='text-center'>کتون: منفی</div>
+                    <div className='text-center'>خون: منفی</div>
                 </div>
                 <div className='glass-card-b my-5' />
                 <div className='glass-card-no-bg bg-[#35de7357] rounded-full w-fit text-[#bbffd4] px-5 py-1'>
