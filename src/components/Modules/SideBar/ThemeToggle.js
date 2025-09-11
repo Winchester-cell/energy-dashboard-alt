@@ -12,7 +12,7 @@ export default function ThemeToggle() {
     const { theme, setTheme } = useTheme()
     const pathname = usePathname()
     const { themeType } = useThemeTypeStore()
-    const style = colorVariantSelector(pathname , themeType)
+    const style = colorVariantSelector(pathname, themeType)
 
     const themeToggleHandler = () => {
         setTheme(theme === 'light' ? 'dark' : 'light')
