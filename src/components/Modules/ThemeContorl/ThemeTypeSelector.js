@@ -28,6 +28,7 @@ export default function ThemeTypeSelector() {
                 {
                     menuItems.map(m => {
                         return <li
+                            key={m.id}
                             onClick={() => {
                                 setThemeType(m.key)
                                 setIsOpen(false)

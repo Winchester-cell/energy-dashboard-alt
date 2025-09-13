@@ -15,11 +15,13 @@ export const colorVariantSelector = (path, themeType) => {
             cardStyleF: `bg-[var(--colBg)]`,
             textStyleA: `text-[var(--colTextA)]`,
             textStyleB: `text-[var(--colTextB)]`,
+            textStyleC: `text-[var(--textHover)]`,
             placeHolderStyle: `placeholder:text-[var(--colTextB)]`,
             hoverStyle: `hover:text-[var(--textHover)] hover:border-[var(--textHover)]`,
             openedSideBarMenuStyle: `bg-[var(--textHover)] text-[white]`,
             SelectedSideBarMenuStyle: `text-[var(--textHover)]`,
             bgStyleA: `bg-[var(--colTextB)]`,
+            bgStyleB: `bg-[var(--textHover)]`,
         },
 
         hospital: {
@@ -35,11 +37,13 @@ export const colorVariantSelector = (path, themeType) => {
             cardStyleF: `glass-card-b`,
             textStyleA: `text-[white]`,
             textStyleB: `text-[#b7b7b7]`,
+            textStyleC: `text-[#60a5fa]`,
             placeHolderStyle: `placeholder:text-[#e3e3e3]`,
             hoverStyle: `hover:text-[#60a5fa] hover:border-[#60a5fa]`,
             openedSideBarMenuStyle: `bg-[#60a5fa] text-[white]`,
             SelectedSideBarMenuStyle: `text-[#60a5fa]`,
             bgStyleA: `bg-[#b7b7b7]`,
+            bgStyleB: `bg-[#60a5fa]`,
         }
 
     }

@@ -397,6 +397,14 @@ input {
   background: linear-gradient(132deg, rgba(68, 164, 212, 1) 56%, rgba(181, 193, 196, 1) 100%);
 }
 
+.absoluteCenter{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  transform: translateY(-50%);
+}
+
 /* .simplebar-content-wrapper {
   overflow: visible !important;
 } */
