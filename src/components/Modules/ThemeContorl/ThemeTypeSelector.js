@@ -27,7 +27,16 @@ export default function ThemeTypeSelector() {
             <ul className={`${style.matteCard} ${isOpen ? `` : `hidden`} backdrop-blur-2xl shadow-lg p-3 rounded-xl w-[150px] flex flex-col gap-2 absolute z-[9999999] top-[50px] start-[-50px]`}>
                 {
                     menuItems.map(m => {
-                        return <li onClick={() => setThemeType(m.key)} className={`cursor-pointer`}>{m.name}</li>
+                        return <li
+                            onClick={() => {
+                                setThemeType(m.key)
+                                setIsOpen(false)
+                            }
+                            }
+                            className={`cursor-pointer`}
+                        >
+                            {m.name}
+                        </li>
                     })
                 }
             </ul>

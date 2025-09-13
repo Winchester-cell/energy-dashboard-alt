@@ -147,6 +147,7 @@ const sideBarLinksContent = {
                         { type: 'item', text: 'بخش اورژانس', href: '/hospital/emergency-department', icon: <FaAmbulance /> },
                         { type: 'item', text: 'بخش داخلی', href: '/hospital/inpatient-ward', icon: <FaUserNurse /> },
                         { type: 'item', text: 'مدیریت بیماران', href: '/hospital/patients', icon: <FaUsers /> },
+                        { type: 'item', text: 'بخش جراحی', href: '/hospital/surgery', icon: <FaUsers /> },
                     ]
                 },
             ]
