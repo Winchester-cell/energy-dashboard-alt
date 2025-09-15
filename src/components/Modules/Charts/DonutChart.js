@@ -81,7 +81,7 @@ const DonutChart = ({ title, data, labels , legendShow = true }) => {
 
     return (
         <div className="w-full h-full">
-            <ApexChart key={JSON.stringify(data)} options={options} series={data} type="donut" width={'90%'} height={'100%'} />
+            <ApexChart key={JSON.stringify(data)} options={options} series={data} type="donut" width={'100%'} height={'100%'} />
         </div>
     );
 };

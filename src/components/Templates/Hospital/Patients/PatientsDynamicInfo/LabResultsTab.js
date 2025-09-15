@@ -26,7 +26,7 @@ export default function LabResultsTab() {
                     <div className='text-center'>PLT: ۱۸۰ K/μL</div>
                 </div>
                 <div className='glass-card-b my-5' />
-                <div className='glass-card-no-bg bg-[#35de7357] rounded-full w-fit text-[#bbffd4] px-5 py-1'>
+                <div className='glass-card-no-bg bg-[#35de7390] rounded-full w-fit text-[white] px-5 py-1'>
                     طبیعی
                 </div>
             </div>
@@ -42,7 +42,7 @@ export default function LabResultsTab() {
                     <div className='text-center'>تری‌گلیسرید : ۱۶۰ mg/dL</div>
                 </div>
                 <div className='glass-card-b my-5' />
-                <div className='glass-card-no-bg bg-[#ded83557] rounded-full w-fit text-[#f8ffbb] px-5 py-1'>
+                <div className='glass-card-no-bg bg-[#ded8358e] rounded-full w-fit text-[white] px-5 py-1'>
                     نیاز به پیگیری
                 </div>
             </div>
@@ -58,7 +58,7 @@ export default function LabResultsTab() {
                     <div className='text-center'>خون: منفی</div>
                 </div>
                 <div className='glass-card-b my-5' />
-                <div className='glass-card-no-bg bg-[#35de7357] rounded-full w-fit text-[#bbffd4] px-5 py-1'>
+                <div className='glass-card-no-bg bg-[#35de7390] rounded-full w-fit text-[white] px-5 py-1'>
                     طبیعی
                 </div>
             </div>

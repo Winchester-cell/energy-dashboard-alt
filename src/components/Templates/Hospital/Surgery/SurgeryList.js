@@ -50,12 +50,12 @@ export default function SurgeryList() {
     const style = colorVariantSelector(path, themeType)
 
     return (
-        <div className={`w-full flex-grow ${style.cardStyleA} rounded-2xl p-5 overflow-hidden`}>
+        <div className={`w-full flex-grow ${style.cardStyleA} rounded-2xl p-5 w-full overflow-hidden`}>
             <SimpleBar className='h-full'>
                 {
                     todaySurgeries.map(s => {
                         return (
-                            <div className={`${style.cardStyleB} rounded-xl p-3 mt-2 flex items-center justify-between`}>
+                            <div className={`${style.cardStyleB} w-full rounded-xl p-3 mt-2 flex items-center justify-between`}>
                                 <div>
                                     <div>{s.surgery}</div>
                                     <div className={`text-[12px] ${style.textStyleB}`}>{s.doctor}</div>
