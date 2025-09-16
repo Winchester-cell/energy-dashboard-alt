@@ -7,6 +7,9 @@ const fetchDashboard = async (dashboardID) => {
             return res.data
         }
     } catch (err) {
+        if (err.response?.status === 404) {
+            return 404
+        }
         return 'خطایی رخ داد'
     }
 }

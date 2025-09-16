@@ -15,13 +15,17 @@ export async function GET(req, { params }) {
             }
         })
 
-        return new Response(JSON.stringify((dashboardResponse.data)))
+        return new Response(JSON.stringify((dashboardResponse.data)), { status: 200 })
 
     } catch (err) {
 
         console.log('Error =>', err)
 
-        return new Response(JSON.stringify({ message: 'ServerError' }))
+        if (err.response?.status === 404) {
+            return new Response(JSON.stringify({ message: 'Not Found' }), { status: 404 })
+        }
+
+        return new Response(JSON.stringify({ message: 'ServerError' }), { status: 500 })
 
     }
 

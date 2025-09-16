@@ -5,7 +5,7 @@ import DashboardGrid from '@/components/Templates/Organizations-DashBoard/Dashbo
 import DashboardHead from '@/components/Templates/Organizations-DashBoard/DashboardHead'
 import useDynamicDashboardStore from '@/stores/useDynamicDashboardStore'
 import { useQuery } from '@tanstack/react-query'
-import { useParams } from 'next/navigation'
+import { redirect, useParams } from 'next/navigation'
 import React, { useEffect } from 'react'
 
 export default function DashboardEditor() {
@@ -22,6 +22,11 @@ export default function DashboardEditor() {
     const { setWidgets } = useDynamicDashboardStore()
 
     useEffect(() => {
+        console.log(data);
+        
+        if(data === 404){
+            redirect('/dashboard-management')
+        }
         if (data?.widgets) {
             setWidgets(data.widgets)
         }

@@ -3,15 +3,17 @@ import { useForm } from 'react-hook-form'
 import TextInput from '../../Inputs/TextInput'
 import postDashboard from '@/axios/requests/dashboards/postDashboard'
 import { useToast } from '@/context/ToastContext'
+import useAddDashboard from '@/hooks/queryHooks/dashboard/useDashboardUpdate'
 
 export default function AddDashboardModal({ isOpen, setIsOpen }) {
 
     const { register, handleSubmit , reset } = useForm()
     const { showToast } = useToast()
+    const dashboardMutation = useAddDashboard()
 
     const submitHandler = async (data) => {
         const newDashboard = { name: data.name, is_default: false, widgets: [] }
-        const createDashboardResult = await postDashboard(newDashboard)
+        const createDashboardResult = await dashboardMutation.mutateAsync(newDashboard)        
         if (createDashboardResult.isOk) {
             reset()
             showToast(createDashboardResult.result)
