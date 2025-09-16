@@ -6,13 +6,15 @@ import useDynamicDashboardStore from '@/stores/useDynamicDashboardStore';
 import React, { useState } from 'react'
 import { FaPlus, FaSave } from "react-icons/fa";
 import { MdEdit } from "react-icons/md";
+import { BsEraserFill } from "react-icons/bs";
+
 
 
 
 export default function DashboardHead({ dashboardID }) {
 
     const [isOpen, setIsOpen] = useState(false)
-    const { widgets, isEditing, setIsEditing } = useDynamicDashboardStore()
+    const { widgets, setWidgets, isEditing, setIsEditing } = useDynamicDashboardStore()
     const { showToast } = useToast()
     const saveButtonHandler = async () => {
         const result = await patchDashboard(dashboardID, widgets)
@@ -34,13 +36,19 @@ export default function DashboardHead({ dashboardID }) {
                             <span>ذخیره</span>
                         </button>
                     ) : (
-                        <button onClick={()=>setIsEditing(true)} className='bg-[var(--colCard)] px-7 py-3 rounded-full shadow-lg flex items-center gap-2' >
+                        <button onClick={() => setIsEditing(true)} className='bg-[var(--colCard)] px-7 py-3 rounded-full shadow-lg flex items-center gap-2' >
                             <MdEdit />
                             <span>ویرایش</span>
                         </button>
                     )
                 }
-
+                {
+                    isEditing &&
+                    <button onClick={() => setWidgets([])} className='bg-[var(--colCard)] px-7 py-3 rounded-full shadow-lg flex items-center gap-2'>
+                        <BsEraserFill />
+                        <span>پاک کردن</span>
+                    </button>
+                }
             </div>
             <WidgetModal isOpen={isOpen} setIsOpen={setIsOpen} />
         </div >

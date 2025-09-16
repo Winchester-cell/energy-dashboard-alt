@@ -1,6 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 export default function ModalBase({ isOpen, setIsOpen, children }) {
+
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            if (e.key === "Escape") {
+                setIsOpen(false)
+            }
+        }
+
+        if (isOpen) {
+            window.addEventListener("keydown", handleKeyDown)
+        } else {
+            window.removeEventListener("keydown", handleKeyDown)
+        }
+
+        return () => window.removeEventListener("keydown", handleKeyDown)
+    }, [isOpen])
+
+
     return (
         <div className={`${isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'} z-[999999] transition-all duration-500 flex fixed items-center justify-center w-screen h-screen left-0 top-0 bg-black/50 backdrop-blur-md`}>
 

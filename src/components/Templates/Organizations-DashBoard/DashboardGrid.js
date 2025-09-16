@@ -35,10 +35,6 @@ export default function DashboardGrid() {
         setWidgets(newWidgets)
     }
 
-    useEffect(() => {
-        console.log(widgets);
-
-    }, [widgets])
 
     return (
         <div className="min-h-screen">

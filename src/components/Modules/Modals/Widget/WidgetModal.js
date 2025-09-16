@@ -1,5 +1,5 @@
 import useDynamicDashboardStore from "@/stores/useDynamicDashboardStore"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import widgetModalContent from "@/content/widgetModalContent"
 import WidgetOptionRender from "./WidgetOptionRender"
 
@@ -8,6 +8,22 @@ export default function WidgetModal({ isOpen, setIsOpen }) {
     const [isButtonClicked, setIsButtonClicked] = useState(false)
     const [widgetTypeConfig, setWidgetTypeConfig] = useState('')
     const { setIsEditing } = useDynamicDashboardStore()
+
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            if (e.key === "Escape") {
+                setIsOpen(false)
+            }
+        }
+
+        if (isOpen) {
+            window.addEventListener("keydown", handleKeyDown)
+        } else {
+            window.removeEventListener("keydown", handleKeyDown)
+        }
+
+        return () => window.removeEventListener("keydown", handleKeyDown)
+    }, [isOpen])
 
     return (
         <div className={`${isOpen ? 'opacity-100 z-[999999]' : 'opacity-0 -z-[999999]'} transition-all duration-500 flex fixed items-center justify-center w-screen h-screen left-0 top-0 bg-black/50 backdrop-blur-md`}>
