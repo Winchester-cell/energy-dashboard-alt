@@ -16,15 +16,9 @@ import {
 
 import { IoChatbubbles } from "react-icons/io5";
 import { AiFillProduct } from "react-icons/ai";
-import { GiBrain, GiCircuitry } from 'react-icons/gi';
-import { FaUserDoctor, FaBedPulse } from "react-icons/fa6";
-import { ImLab } from "react-icons/im";
-import { PiJarLabelFill } from "react-icons/pi";
+import { GiBrain , GiScalpel } from 'react-icons/gi';
 
-import Nurse from "@/asset/nurse.svg"
-
-
-
+import Nurse from '@/asset/nurse.svg'
 
 
 const sideBarLinksContent = {
@@ -145,9 +139,9 @@ const sideBarLinksContent = {
                     options: [
                         { type: 'item', text: 'مرکز فرماندهی', href: '/hospital/command-center', icon: <FaChartArea /> },
                         { type: 'item', text: 'بخش اورژانس', href: '/hospital/emergency-department', icon: <FaAmbulance /> },
-                        { type: 'item', text: 'بخش داخلی', href: '/hospital/inpatient-ward', icon: <FaUserNurse /> },
+                        { type: 'item', text: 'بخش داخلی', href: '/hospital/inpatient-ward', icon: <Nurse className={`w-5 h-5`}/> },
                         { type: 'item', text: 'مدیریت بیماران', href: '/hospital/patients', icon: <FaUsers /> },
-                        { type: 'item', text: 'بخش جراحی', href: '/hospital/surgery', icon: <FaUsers /> },
+                        { type: 'item', text: 'بخش جراحی', href: '/hospital/surgery', icon: <GiScalpel /> },
                     ]
                 },
             ]

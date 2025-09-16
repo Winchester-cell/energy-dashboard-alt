@@ -23,7 +23,7 @@ export default function StaffStatus() {
             <div className='text-[12px] mt-5 flex flex-col gap-5'>
                 <div className='w-full flex justify-between items-center'>
                     <div>
-                        <span className={`${style.textStyleC} font-bold`}>وضعیت اشغال تخت </span>: <span>{` 7 از 10 تخت`}</span>
+                        <span className={`${style.textStyleC} font-bold`}>وضعیت اشغال تخت </span>: <span className={`${style.textStyleB}`}>{` 7 از 10 تخت`}</span>
                     </div>
                     <FaBedPulse className='text-2xl' />
                 </div>
@@ -32,12 +32,12 @@ export default function StaffStatus() {
                     <FaChartPie className='text-2xl' />
                 </div>
                 <div className='w-full bg-[#979797] h-7 rounded-lg text-center overflow-hidden relative'>
-                    <div className='absoluteCenter'>70%</div>
+                    <div className={`text-white absoluteCenter`}>70%</div>
                     <div className={`h-full w-[70%] ${style.bgStyleB}`} />
                 </div>
                 <div className='w-full flex justify-between items-center mt-2'>
                     <div>
-                        <span className={`${style.textStyleC} font-bold`}>وضعیت پرسنل </span>: <span>{`14/20 مشغول به کار`}</span>
+                        <span className={`${style.textStyleC} font-bold`}>وضعیت پرسنل </span>: <span className={`${style.textStyleB}`}>{`14/20 مشغول به کار`}</span>
                     </div>
                     <FaUserDoctor className='text-2xl' />
                 </div>

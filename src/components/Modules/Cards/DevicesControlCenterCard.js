@@ -3,7 +3,7 @@ import React from 'react'
 export default function DevicesControlCenterCard({ name, serial, isActive }) {
     return (
         <div className='w-full bg-[var(--colCard)] rounded-xl shadow-lg overflow-hidden'>
-            <div className={`${isActive ? `bg-green-700` : `bg-red-800`} flex w-full justify-center py-5`}>
+            <div className={`${isActive ? `bg-green-700` : `bg-red-800`} flex text-white w-full justify-center py-5`}>
                 {isActive ? `فعال` : `غیرفعال`}
             </div>
             <div className='flex w-full justify-center py-5'>

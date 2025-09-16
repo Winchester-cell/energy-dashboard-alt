@@ -31,7 +31,7 @@ export default function WardCard(props) {
             </div>
             <div className='flex items-center gap-2'>
                 <span>{toPersianDigits(bedPercent)}%</span>
-                <div className='w-full h-3 rounded-full bg-gray-700'>
+                <div className='w-full h-3 rounded-full bg-[#878787]'>
                     <div style={{ width: `${bedPercent}%` }} className={`h-full rounded-full transition-all duration-500 ${barColor}`} />
                 </div>
             </div>

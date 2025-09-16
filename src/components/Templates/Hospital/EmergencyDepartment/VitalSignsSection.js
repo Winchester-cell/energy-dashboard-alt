@@ -14,7 +14,29 @@ export default function VitalSignsSection({ selectedPatient }) {
     const style = colorVariantSelector(pathname, themeType)
 
     const initialCategories = ['08:00', '08:10', '08:20', '08:30', '08:40', '08:50']
-    const egcCategories = ['', '', '', '', '', '']
+
+    // --- فرمول ECG ---
+    function ecgFormula(t) {
+        const x = (t % 0.8) // فاصله کمتر بین موج‌ها
+
+        // موج P
+        const P = 0.15 * Math.sin(2 * Math.PI * x * 6) * Math.exp(-Math.pow((x - 0.1) * 25, 2))
+
+        // QRS
+        const QRS = Math.exp(-Math.pow((x - 0.25) * 120, 2)) * 1.5
+            - Math.exp(-Math.pow((x - 0.27) * 250, 2)) * 0.8
+
+        // موج T
+        const T = 0.3 * Math.sin(2 * Math.PI * x * 2) * Math.exp(-Math.pow((x - 0.55) * 12, 2))
+
+        return P + QRS + T
+    }
+
+    // --- دیتا اولیه ECG (شبیه موج واقعی) ---
+    const initialECGData = Array.from({ length: 60 }, (_, i) => {
+        const t = i * 0.02
+        return ecgFormula(t)
+    })
 
     const [chartData01, setChartData01] = useState({
         categories: initialCategories,
@@ -24,32 +46,19 @@ export default function VitalSignsSection({ selectedPatient }) {
     })
 
     const [chartData02, setChartData02] = useState({
-        categories: egcCategories,
+        categories: Array(60).fill(""),
         series: [
-            { name: 'ECG بیمار', data: [0, 0, 0, 0, 0, 0] }
+            { name: 'ECG بیمار', data: initialECGData }
         ]
     })
 
-    // فرمول ECG
-    const tRef = useRef(0)
-    function ecgFormula(t) {
-        // موج P (سینوسی کوچک)
-        const P = 0.15 * Math.sin(2 * Math.PI * (t % 1) * 5) * Math.exp(-Math.pow((t % 1 - 0.1) * 20, 2))
-
-        // QRS (قله تیز)
-        const QRS = Math.exp(-Math.pow((t % 1 - 0.25) * 100, 2)) * 1.5
-            - Math.exp(-Math.pow((t % 1 - 0.27) * 200, 2)) * 0.8
-
-        // موج T (سینوسی پهن‌تر)
-        const T = 0.3 * Math.sin(2 * Math.PI * (t % 1) * 2) * Math.exp(-Math.pow((t % 1 - 0.6) * 10, 2))
-
-        return P + QRS + T
-    }
+    // --- آپدیت زنده ECG ---
+    const tRef = useRef(initialECGData.length * 0.02)
 
     useEffect(() => {
         const interval = setInterval(() => {
             setChartData02((prev) => {
-                const point = ecgFormula(tRef.current) + (Math.random() * 0.02 - 0.01) // نویز کوچک
+                const point = ecgFormula(tRef.current) + (Math.random() * 0.02 - 0.01) // نویز
                 tRef.current += 0.02
 
                 const newCategories = [...prev.categories, ""]
@@ -60,7 +69,7 @@ export default function VitalSignsSection({ selectedPatient }) {
                     series: [{ name: 'ECG بیمار', data: newSeriesData.slice(-100) }]
                 }
             })
-        }, 100) // هر 100ms یک نقطه
+        }, 200) // هر 100ms یک نقطه
 
         return () => clearInterval(interval)
     }, [])
@@ -95,7 +104,7 @@ export default function VitalSignsSection({ selectedPatient }) {
                     <div className={`w-1/2 h-full rounded-xl shadow-lg ${style.cardStyleA}`}>
                         <AreaChart
                             yMin={-1}
-                            yMax={2}
+                            yMax={1}
                             colors={["#00e396"]}
                             categories={chartData02.categories}
                             series={chartData02.series}
