@@ -6,14 +6,16 @@ import { useToast } from '@/context/ToastContext'
 
 export default function AddDashboardModal({ isOpen, setIsOpen }) {
 
-    const { register, handleSubmit } = useForm()
+    const { register, handleSubmit , reset } = useForm()
     const { showToast } = useToast()
 
     const submitHandler = async (data) => {
         const newDashboard = { name: data.name, is_default: false, widgets: [] }
         const createDashboardResult = await postDashboard(newDashboard)
         if (createDashboardResult.isOk) {
+            reset()
             showToast(createDashboardResult.result)
+            setIsOpen(false)
         }else{
             showToast(createDashboardResult.result , 'error')
         }
