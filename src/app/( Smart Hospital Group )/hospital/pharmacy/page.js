@@ -1,0 +1,23 @@
+'use client'
+import PharmacyTabSelector from '@/components/Templates/Hospital/Pharmacy/PharmacyTabSelector'
+import { pharmacyTabsContent } from '@/content/tabs'
+import { useThemeTypeStore } from '@/stores/useThemeTypeStore'
+import React, { useState } from 'react'
+
+export default function PharmacyPage() {
+
+    const [selectedTab, setSelectedTab] = useState(pharmacyTabsContent[0])
+    const { themeType } = useThemeTypeStore()
+
+    return (
+        <div className='px-5 pb-5'>
+            <PharmacyTabSelector selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
+            {themeType === 'hospital' && <div className='glass-card' />}
+            <div className={`${themeType === 'hospital' ? `` : `bg-[var(--colCard)]`} p-5 rounded-xl`}>
+                <div className='rounded-full'>
+                    {selectedTab.elem}
+                </div>
+            </div>
+        </div>
+    )
+}

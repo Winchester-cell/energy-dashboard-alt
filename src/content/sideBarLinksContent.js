@@ -11,7 +11,8 @@ import {
     FaWarehouse, FaBuilding, FaUserFriends, FaShoppingCart, FaShippingFast,
     FaCartPlus, FaHandshake, FaCalculator, FaFolderOpen, FaFileAlt, FaCogs,
     FaBolt, FaTachometerAlt, FaRecycle, FaLeaf, FaStore, FaChartBar, FaRegCalendarAlt,
-    FaListAlt, FaProjectDiagram, FaDatabase, FaLightbulb, FaServer, FaChartArea, FaAmbulance, FaUserNurse
+    FaListAlt, FaProjectDiagram, FaDatabase, FaLightbulb, FaServer, FaChartArea, FaAmbulance, FaPills ,
+
 } from "react-icons/fa";
 
 import { IoChatbubbles } from "react-icons/io5";
@@ -142,6 +143,7 @@ const sideBarLinksContent = {
                         { type: 'item', text: 'بخش داخلی', href: '/hospital/inpatient-ward', icon: <Nurse className={`w-5 h-5`}/> },
                         { type: 'item', text: 'مدیریت بیماران', href: '/hospital/patients', icon: <FaUsers /> },
                         { type: 'item', text: 'بخش جراحی', href: '/hospital/surgery', icon: <GiScalpel /> },
+                        { type: 'item', text: 'داروخانه', href: '/hospital/pharmacy', icon: <FaPills /> },
                     ]
                 },
             ]
