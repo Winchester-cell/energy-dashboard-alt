@@ -1,5 +1,5 @@
 'use client'
-import PatientInfoTabSelector from '@/components/Templates/Hospital/Patients/PatientsDynamicInfo/PatientInfoTabSelector'
+import TabSelector from '@/components/Modules/TabSelector/TabSelector';
 import { patientInfoTabsContent } from '@/content/tabs'
 import { patients } from '@/data/fakeData';
 import { colorVariantSelector } from '@/data/themeVariants';
@@ -7,7 +7,6 @@ import { useThemeTypeStore } from '@/stores/useThemeTypeStore';
 import { toPersianDigits } from '@/utils/formaters/toPersianDigits';
 import { useParams, usePathname } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
-import { FaUserCircle } from "react-icons/fa";
 import { SlUser, SlUserFemale } from 'react-icons/sl';
 
 
@@ -41,7 +40,7 @@ export default function PatientInfoPage() {
                     <div>بخش : {currentPatient.ward}</div>
                 </div>
             }
-            <PatientInfoTabSelector selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
+            <TabSelector tabs={patientInfoTabsContent} selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
             {themeType === 'hospital' && <div className='glass-card' />}
             <div className={`${themeType === 'hospital' ? `` : `bg-[var(--colCard)]`} p-5 rounded-xl`}>
                 <div className='rounded-full'>

@@ -1,5 +1,5 @@
 'use client'
-import TabSelector from '@/components/Templates/DevicesHub/TabSelector'
+import TabSelector from '@/components/Modules/TabSelector/TabSelector'
 import { devicesHubTabsContent } from '@/content/tabs'
 import React, { useState } from 'react'
 
@@ -9,7 +9,7 @@ export default function DevicesHub() {
 
     return (
         <div>
-            <TabSelector selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
+            <TabSelector tabs={devicesHubTabsContent} selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
             {selectedTab.elem}
         </div>
     )

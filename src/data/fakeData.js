@@ -609,6 +609,83 @@ export const interactions = [
 ];
 
 
+export const drugWorkList = [
+  {
+    id: 1,
+    name: "علی رضایی",
+    age: 64,
+    ward: "ICU",
+    priority: "فوری",
+    drug: {
+      name: "وارفارین",
+      dosage: "۵ میلی‌گرم",
+      type: "خوراکی",
+    },
+    doctor: "دکتر سروش",
+    registeredAt: "۲۷ شهریور ۱۴۰۴، ۱۴:۰۰",
+    status: "در انتظار تایید",
+  },
+  {
+    id: 2,
+    name: "مینا احمدی",
+    age: 37,
+    ward: "اورژانس",
+    priority: "عادی",
+    drug: {
+      name: "سفتریاکسون",
+      dosage: "۱ گرم",
+      type: "تزریقی",
+    },
+    doctor: "دکتر نامداری",
+    registeredAt: "۲۸ شهریور ۱۴۰۴، ۱۱:۴۵",
+    status: "در انتظار تایید",
+  },
+  {
+    id: 3,
+    name: "حسین برزگر",
+    age: 52,
+    ward: "بخش داخلی",
+    priority: "عادی",
+    drug: {
+      name: "متفورمین",
+      dosage: "۵۰۰ میلی‌گرم",
+      type: "خوراکی",
+    },
+    doctor: "دکتر یگانه",
+    registeredAt: "۲۸ شهریور ۱۴۰۴، ۱۲:۳۰",
+    status: "تایید شده",
+  },
+  {
+    id: 4,
+    name: "سارا کریمی",
+    age: 45,
+    ward: "بخش جراحی",
+    priority: "فوری",
+    drug: {
+      name: "مورفین",
+      dosage: "۱۰ میلی‌گرم",
+      type: "تزریقی",
+    },
+    doctor: "دکتر مرادی",
+    registeredAt: "۲۸ شهریور ۱۴۰۴، ۱۵:۲۰",
+    status: "در انتظار تایید",
+  },
+  {
+    id: 5,
+    name: "مجید رفیعی",
+    age: 29,
+    ward: "بخش عفونی",
+    priority: "عادی",
+    drug: {
+      name: "آزیترومایسین",
+      dosage: "۵۰۰ میلی‌گرم",
+      type: "خوراکی",
+    },
+    doctor: "دکتر بهمنی",
+    registeredAt: "۲۹ شهریور ۱۴۰۴، ۱۰:۰۰",
+    status: "تایید شده",
+  },
+];
 
 
 
