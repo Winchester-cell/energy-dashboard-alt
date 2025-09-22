@@ -17,7 +17,7 @@ export default function WorkListModal({ isOpen, setIsOpen, selectedWork }) {
         <ModalBase isOpen={isOpen} setIsOpen={setIsOpen}>
             {
                 isOpen && (
-                    <div className={`${style.cardStyleA} shadow-lg w-[70%] p-5 rounded-2xl`}>
+                    <div className={`${style.cardStyleA} ${style.textStyleA} shadow-lg w-[70%] p-5 rounded-2xl`}>
                         <h2 className='text-2xl'>جزئیات نسخه </h2>
 
                         <div className={`${style.cardStyleB} shadow-lg w-full p-5 mt-5 rounded-xl flex items-center justify-between`}>
