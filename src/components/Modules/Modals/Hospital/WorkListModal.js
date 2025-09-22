@@ -65,9 +65,9 @@ export default function WorkListModal({ isOpen, setIsOpen, selectedWork }) {
                     </div>
                 </div>
 
-                <div className='mt-5'>
+                <div className='mt-5 text-white'>
                     <button className='bg-green-700 px-5 py-2 rounded-xl me-5'>تایید نسخه</button>
-                    <input className={`${style.cardStyleB} rounded-xl px-5 py-2`} type="text" placeholder='علت رد ...' />
+                    <input className={`${style.cardStyleB} rounded-xl px-5 py-2 text-[var(--colTextA)]`} type="text" placeholder='علت رد ...' />
                     <button className='bg-red-700 px-5 py-2 rounded-xl'>رد نسخه</button>
                 </div>
             </div>

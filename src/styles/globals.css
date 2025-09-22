@@ -346,56 +346,7 @@ input {
   /* چپ */
 }
 
-.glass-card {
-  background: #ffffff0d;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.1),
-    0 0 0 1px rgba(255, 255, 255, 0.2);
-}
 
-.glass-card-b {
-  background: #ffffff1f;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid #ffffff33;
-  box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.1),
-    0 0 0 1px rgba(255, 255, 255, 0.2);
-}
-
-.glass-card-no-bg {
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.1),
-    0 0 0 1px rgba(255, 255, 255, 0.2);
-}
-
-
-.glass-sidebar {
-  background: #ffffff0d;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  color: white;
-}
-
-.glass-card-x {
-  background: #808080eb;
-  border: 1px solid #ffffff33;
-  box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.1),
-    0 0 0 1px rgba(255, 255, 255, 0.2);
-}
-
-.gradCardBlue {
-  color: white !important;
-  background: #44a4d4;
-  background: linear-gradient(132deg, rgba(68, 164, 212, 1) 56%, rgba(181, 193, 196, 1) 100%);
-}
 
 .absoluteCenter{
   position: absolute;

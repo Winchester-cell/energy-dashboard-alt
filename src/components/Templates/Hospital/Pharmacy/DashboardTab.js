@@ -25,50 +25,50 @@ export default function PharmcayDashboardTab() {
   return (
     <>
       <div className='grid grid-cols-2 gap-5'>
-        <div className={`${style.cardStyleA} shadow-lg rounded-2xl py-5 px-10 flex justify-between items-center`}>
+        <div className={`gradCardBlue shadow-lg rounded-2xl py-5 px-10 flex justify-between items-center text-white`}>
 
           <div className='flex items-center gap-2'>
             <HiOutlineClipboardDocumentList className='w-16 h-16' />
             <div className='text-2xl'>نخسه های جدید در انتظار تایید</div>
           </div>
 
-          <div className={`text-2xl ${style.textStyleB}`}>
+          <div className={`text-2xl`}>
             {toPersianDigits(25)}
           </div>
 
         </div>
-        <div className={`${style.cardStyleA} shadow-lg rounded-2xl py-5 px-10 flex justify-between items-center`}>
+        <div className={`gradCardGreen shadow-lg rounded-2xl py-5 px-10 flex justify-between items-center text-white`}>
 
           <div className='flex items-center gap-2'>
             <FaBoltLightning className='w-16 h-16' />
             <div className='text-2xl'>نسخه های فوری</div>
           </div>
 
-          <div className={`text-2xl ${style.textStyleB}`}>
+          <div className={`text-2xl`}>
             {toPersianDigits(5)}
           </div>
 
         </div>
-        <div className={`${style.cardStyleA} shadow-lg rounded-2xl py-5 px-10 flex justify-between items-center`}>
+        <div className={`gradCardPink shadow-lg rounded-2xl py-5 px-10 flex justify-between items-center text-white`}>
 
           <div className='flex items-center gap-2'>
             <CiPill className='w-16 h-16' />
             <div className='text-2xl'> داروهای با موجودی کم</div>
           </div>
 
-          <div className={`text-2xl ${style.textStyleB}`}>
+          <div className={`text-2xl`}>
             {toPersianDigits(25)}
           </div>
 
         </div>
-        <div className={`${style.cardStyleA} shadow-lg rounded-2xl py-5 px-10 flex justify-between items-center`}>
+        <div className={`gradCardYellow shadow-lg rounded-2xl py-5 px-10 flex justify-between items-center text-white`}>
 
           <div className='flex items-center gap-2'>
             <MdAttachMoney className='w-16 h-16' />
             <div className='text-2xl'> هزینه کل داروهای توزیع شده امروز </div>
           </div>
 
-          <div className={`text-2xl ${style.textStyleB}`}>
+          <div className={`text-2xl`}>
             {toPersianDigits(2_500_000)}
           </div>
 

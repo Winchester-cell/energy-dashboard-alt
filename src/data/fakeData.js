@@ -687,6 +687,58 @@ export const drugWorkList = [
   },
 ];
 
+export const medicines = [
+  {
+    id: 1,
+    name: "آموکسی‌سیلین",
+    generic: "Amoxicillin",
+    form: "کپسول",
+    strength: "500 mg",
+    barcode: "6260001234567",
+  },
+  {
+    id: 2,
+    name: "استامینوفن",
+    generic: "Acetaminophen",
+    form: "قرص",
+    strength: "325 mg",
+    barcode: "6260007654321",
+  },
+  {
+    id: 3,
+    name: "ایبوپروفن",
+    generic: "Ibuprofen",
+    form: "قرص",
+    strength: "400 mg",
+    barcode: "6260001112223",
+  },
+  {
+    id: 4,
+    name: "پنی‌سیلین جی",
+    generic: "Penicillin G",
+    form: "آمپول",
+    strength: "1,000,000 IU",
+    barcode: "6260005556667",
+  },
+  {
+    id: 5,
+    name: "سالبوتامول",
+    generic: "Salbutamol",
+    form: "شربت",
+    strength: "2 mg/5mL",
+    barcode: "6260003334445",
+  },
+  {
+    id: 6,
+    name: "کلوتریمازول",
+    generic: "Clotrimazole",
+    form: "پماد",
+    strength: "1%",
+    barcode: "6260007778889",
+  },
+];
+
+
 
 
 

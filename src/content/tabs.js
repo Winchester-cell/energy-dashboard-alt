@@ -7,6 +7,7 @@ import MedPhotosTab from "@/components/Templates/Hospital/Patients/PatientsDynam
 import SummaryTab from "@/components/Templates/Hospital/Patients/PatientsDynamicInfo/SummaryTab";
 import VitalSignsChartTab from "@/components/Templates/Hospital/Patients/PatientsDynamicInfo/VitalSignsChartTab";
 import PharmcayDashboardTab from "@/components/Templates/Hospital/Pharmacy/DashboardTab";
+import DrugsManagmentTab from "@/components/Templates/Hospital/Pharmacy/DrugsManagmentTab";
 import WorkListTab from "@/components/Templates/Hospital/Pharmacy/WorkListTab";
 
 export const devicesHubTabsContent = [
@@ -26,5 +27,5 @@ export const patientInfoTabsContent = [
 export const pharmacyTabsContent = [
     { id: 1, tabName: 'داشبورد', selectKey: 'dashboard', elem: <PharmcayDashboardTab /> },
     { id: 2, tabName: 'لیست کارها', selectKey: 'worklist', elem: <WorkListTab /> },
-    { id: 3, tabName: 'مدیریت دارو', selectKey: 'formulary', elem: <PharmcayDashboardTab /> },
+    { id: 3, tabName: 'مدیریت دارو', selectKey: 'formulary', elem: <DrugsManagmentTab /> },
 ]
