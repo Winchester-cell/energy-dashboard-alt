@@ -18,10 +18,6 @@ export default function WorkListTab() {
     const [selectedWork, setSelectedWork] = useState(drugWorkList[0])
     const [isOpen, setIsOpen] = useState(false)
 
-    useEffect(() => {
-        console.log(selectedWork);
-    }, [selectedWork])
-
     return (
         <>
             <div className={`w-full ${style.cardStyleA} shadow-lg rounded-2xl p-5 grid grid-cols-3 gap-5 mt-5`}>
