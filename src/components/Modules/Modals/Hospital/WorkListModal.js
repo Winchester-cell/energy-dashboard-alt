@@ -11,7 +11,7 @@ export default function WorkListModal({ isOpen, setIsOpen, selectedWork }) {
 
     const path = usePathname()
     const { themeType } = useThemeTypeStore()
-    const style = colorVariantSelector(path, themeType)
+    const style = colorVariantSelector(path, 'def')
 
     return (
         <ModalBase isOpen={isOpen} setIsOpen={setIsOpen}>
