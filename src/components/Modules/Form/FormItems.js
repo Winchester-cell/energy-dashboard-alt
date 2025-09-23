@@ -19,7 +19,7 @@ export default function FormItems({ inputType, fieldName, register, registerKey 
         return <Controller name={registerKey} control={control} render={({field})=>(<SelectInput place={fieldName} optionKey={optionKey} value={field.value} onChange={field.onChange} />)} />  
     }
     if (inputType === 'select') {
-        return <Controller name={registerKey} control={control} render={({field})=>(<SingleSelectInput place={fieldName} optionKey={optionKey} value={field.value} onChange={field.onChange} />)} />  
+        return <Controller name={registerKey} control={control} render={({field})=>(<SingleSelectInput menuPosition={null} menuPortalTarget={null} place={fieldName} optionKey={optionKey} value={field.value} onChange={field.onChange} />)} />  
     }
 
     return null

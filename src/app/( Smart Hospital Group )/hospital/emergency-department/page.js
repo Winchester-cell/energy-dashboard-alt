@@ -3,6 +3,7 @@ import { emergencyPatient } from '@/data/fakeData'
 import React, { useState } from 'react'
 import PatientsListBar from '@/components/Templates/Hospital/EmergencyDepartment/PatientsListBar'
 import PatientsInfoContainer from '@/components/Templates/Hospital/EmergencyDepartment/PatientsInfoContainer'
+import NewPatient from '@/components/Templates/Hospital/Patients/NewPatient'
 
 export default function EmergencyPage() {
 
@@ -10,13 +11,20 @@ export default function EmergencyPage() {
 
     return (
 
-        <div className='w-full flex gap-5 p-5'>
+        <>
+            <div className='px-5 pt-5'>
+                <NewPatient />
+            </div>
 
-            <PatientsListBar selectedPatient={selectedPatient} setSelectedPatient={setSelectedPatient} />
+            <div className='w-full flex gap-5 pb-5 px-5'>
 
-            <PatientsInfoContainer selectedPatient={selectedPatient} />
+                <PatientsListBar selectedPatient={selectedPatient} setSelectedPatient={setSelectedPatient} />
 
-        </div>
+                <PatientsInfoContainer selectedPatient={selectedPatient} />
+
+            </div>
+        </>
+
 
     )
 }
