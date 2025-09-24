@@ -5,11 +5,9 @@ import { useTranslation } from 'react-i18next';
 import dynamic from 'next/dynamic';
 const ApexChart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
-const DonutChart = ({ title, data, labels , legendShow = true }) => {
+const DonutChart = ({ colors = ["#008ffb", "#00e396"], title, data, labels, legendShow = true }) => {
 
     const { i18n } = useTranslation()
-
-    const colors = ["#008ffb", "#00e396"]
 
     const options = {
 

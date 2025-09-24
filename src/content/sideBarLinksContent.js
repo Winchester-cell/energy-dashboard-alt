@@ -144,6 +144,7 @@ const sideBarLinksContent = {
                         { type: 'item', text: 'مدیریت بیماران', href: '/hospital/patients', icon: <FaUsers /> },
                         { type: 'item', text: 'بخش جراحی', href: '/hospital/surgery', icon: <GiScalpel /> },
                         { type: 'item', text: 'داروخانه', href: '/hospital/pharmacy', icon: <FaPills /> },
+                        { type: 'item', text: 'امور مالی', href: '/hospital/finance', icon: <FaCalculator /> },
                     ]
                 },
             ]
