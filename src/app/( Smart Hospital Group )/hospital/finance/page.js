@@ -127,7 +127,7 @@ export default function FinancePage() {
                 <div className='flex items-center gap-5'>
                     <button onClick={() => setCurrentData(KPI.month)} className={`${style.cardStyleB} py-2 w-[120px] rounded-full`}>ماه جاری</button>
                     <button onClick={() => setCurrentData(KPI.season)} className={`${style.cardStyleB} py-2 w-[120px] rounded-full`}>فصل</button>
-                    <button onClick={() => setCurrentData(KPI.year)} className={`${style.cardStyleB} py-2 w-[120px] rounded-full`}>سال فصل</button>
+                    <button onClick={() => setCurrentData(KPI.year)} className={`${style.cardStyleB} py-2 w-[120px] rounded-full`}>سال جاری</button>
                 </div>
             </div>
 
@@ -142,10 +142,10 @@ export default function FinancePage() {
             <div className={`${style.cardStyleA} p-5 rounded-2xl shadow-lg mt-5`}>
                 <h2 className='text-2xl'>تحلیل درآمد</h2>
                 <div className='w-full grid grid-cols-2 mt-5 gap-5'>
-                    <div className={`${style.cardStyleB} shadow-lg p-5 rounded-xl h-[400px]`}>
+                    <div className={`${style.borderStyle} border-2 shadow-lg p-5 rounded-xl h-[400px]`}>
                         <DonutChart title={'جریان‌های درآمد'} colors={["#008ffb", "#00e396", "#f580bd", "#f6a824", "#d92647"]} legendShow={true} data={donutChartData.data} labels={donutChartData.labels} />
                     </div>
-                    <div className={`${style.cardStyleB} shadow-lg p-5 rounded-xl h-[400px]`}>
+                    <div className={`${style.borderStyle} border-2 shadow-lg p-5 rounded-xl h-[400px]`}>
                         <InsuranceChart title={'ترکیب پرداخت‌کنندگان'} />
                     </div>
                 </div>
@@ -153,7 +153,7 @@ export default function FinancePage() {
 
             <div className={`${style.cardStyleA} p-5 rounded-2xl shadow-lg mt-5`}>
                 <h2 className='text-2xl'>تحلیل هزینه</h2>
-                <div className={`${style.cardStyleB} rounded-2xl shadow-lg p-5 mt-5`}>
+                <div className={`rounded-2xl p-5 mt-5`}>
                     <h2>شکست هزینه ها</h2>
                     <div className='grid grid-cols-2 rounded-2xl overflow-hidden mt-5'>
                         <div className='gradCardBlue flex justify-center gap-5 items-center p-14'>
@@ -161,15 +161,15 @@ export default function FinancePage() {
                                 دارو و تجهیزات مصرفی
                             </span>
                             <span>
-                                ۲۵٪
+                                ۲۴٪
                             </span>
                         </div>
-                        <div className='gradCardGreen row-span-3 flex justify-center gap-5 items-center'>
+                        <div className='gradCardGreen text-white row-span-3 flex justify-center gap-5 items-center'>
                             <span>
-                                انرژی و تاسيسات (EMS)
+                                حقوق و دستمزد
                             </span>
                             <span>
-                                ۱۷٪
+                                ۴۷٪
                             </span>
                         </div>
                         <div className='gradCardYellow flex justify-center gap-5 items-center p-7'>
@@ -177,15 +177,15 @@ export default function FinancePage() {
                                 انرژی و تاسيسات (EMS)
                             </span>
                             <span>
-                                ۱۷٪
+                                ۱۴٪
                             </span>
                         </div>
                         <div className='gradCardPink flex justify-center gap-5 items-center p-4'>
                             <span>
-                                انرژی و تاسيسات (EMS)
+                                استهلاک
                             </span>
                             <span>
-                                ۱۷٪
+                                ۱۱٪
                             </span>
                         </div>
 
