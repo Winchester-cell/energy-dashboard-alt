@@ -1,11 +1,11 @@
 import React from "react";
 import Chart from "react-apexcharts";
 
-const InsuranceChart = ({title}) => {
+const InsuranceChart = ({ title }) => {
     const series = [
         {
             name: "درصد",
-            data: [42, 28, 18, 12], // داده‌های شما
+            data: [42, 28, 18, 12],
         },
     ];
 
@@ -19,15 +19,17 @@ const InsuranceChart = ({title}) => {
                 horizontal: false,
                 columnWidth: "50%",
                 endingShape: "rounded",
+                borderRadius: 8,
+                distributed: true, // 🔑 اینجا اضافه کن
             },
         },
         title: {
             text: title,
-            align: 'center',
+            align: "center",
             style: {
-                color: 'var(--colTextA)',
-                fontSize: '14px',
-                fontFamily: 'Yekan'
+                color: "var(--colTextA)",
+                fontSize: "14px",
+                fontFamily: "Yekan",
             },
         },
         dataLabels: {
@@ -61,10 +63,10 @@ const InsuranceChart = ({title}) => {
                 },
             },
         },
-        colors: ["#1E40AF"], // می‌تونید رنگ دلخواه بدید
+        colors: ["#1E40AF", "#059669", "#D97706", "#DC2626"], // هر میله یه رنگ
     };
 
-    return <Chart options={options} series={series} type="bar" height={'100%'} />;
+    return <Chart options={options} series={series} type="bar" height={"100%"} />;
 };
 
 export default InsuranceChart;

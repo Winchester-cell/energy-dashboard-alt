@@ -10,27 +10,31 @@ import DonutChart from '@/components/Modules/Charts/DonutChart';
 import InsuranceChart from '@/components/Modules/Charts/Hospital/FicanceBarChart';
 import AnimateOnScroll from '@/components/AnimateOnScrollWrapper/AnimateOnScroll';
 import FinanceTableCard from '@/components/Modules/Cards/HospitalCards/TableCard/FinanceTableCard';
+import SvgElem1 from '@/components/Modules/SvgElems/SvgElem1';
+import SvgElem2 from '@/components/Modules/SvgElems/SvgElem2';
+import SvgElem3 from '@/components/Modules/SvgElems/SvgElem3';
+import SvgElem4 from '@/components/Modules/SvgElems/SvgElem4';
 
 export default function FinancePage() {
 
     const KPI = {
         month: [
-            { id: 1, title: 'درآمد کل', price: 26, desc: 'روند روزانه ماه جاری' },
-            { id: 2, title: 'هزینه کل', price: 21, desc: 'مقایسه با ماه گذشته' },
-            { id: 3, title: 'سود خالص', price: 5, desc: 'حاشیه سود' },
-            { id: 4, title: 'میانگین درآمد هر تخت', price: 51, desc: 'برآورد میانگین' },
+            { id: 1, svg: <SvgElem1 />, title: 'درآمد کل', price: 26, desc: 'روند روزانه ماه جاری' },
+            { id: 2, svg: <SvgElem2 />, title: 'هزینه کل', price: 21, desc: 'مقایسه با ماه گذشته' },
+            { id: 3, svg: <SvgElem3 />, title: 'سود خالص', price: 5, desc: 'حاشیه سود' },
+            { id: 4, svg: <SvgElem4 />, title: 'میانگین درآمد هر تخت', price: 51, desc: 'برآورد میانگین' },
         ],
         season: [
-            { id: 1, title: 'درآمد کل', price: 69, desc: 'روند روزانه ماه جاری' },
-            { id: 2, title: 'هزینه کل', price: 57, desc: 'مقایسه با ماه گذشته' },
-            { id: 3, title: 'سود خالص', price: 11, desc: 'حاشیه سود' },
-            { id: 4, title: 'میانگین درآمد هر تخت', price: 50, desc: 'برآورد میانگین' },
+            { id: 1, svg: <SvgElem1 />, title: 'درآمد کل', price: 69, desc: 'روند روزانه ماه جاری' },
+            { id: 2, svg: <SvgElem2 />, title: 'هزینه کل', price: 57, desc: 'مقایسه با ماه گذشته' },
+            { id: 3, svg: <SvgElem3 />, title: 'سود خالص', price: 11, desc: 'حاشیه سود' },
+            { id: 4, svg: <SvgElem4 />, title: 'میانگین درآمد هر تخت', price: 50, desc: 'برآورد میانگین' },
         ],
         year: [
-            { id: 1, title: 'درآمد کل', price: 269, desc: 'روند روزانه ماه جاری' },
-            { id: 2, title: 'هزینه کل', price: 225, desc: 'مقایسه با ماه گذشته' },
-            { id: 3, title: 'سود خالص', price: 43, desc: 'حاشیه سود' },
-            { id: 4, title: 'میانگین درآمد هر تخت', price: 41, desc: 'برآورد میانگین' },
+            { id: 1, svg: <SvgElem1 />, title: 'درآمد کل', price: 269, desc: 'روند روزانه ماه جاری' },
+            { id: 2, svg: <SvgElem2 />, title: 'هزینه کل', price: 225, desc: 'مقایسه با ماه گذشته' },
+            { id: 3, svg: <SvgElem3 />, title: 'سود خالص', price: 43, desc: 'حاشیه سود' },
+            { id: 4, svg: <SvgElem4 />, title: 'میانگین درآمد هر تخت', price: 41, desc: 'برآورد میانگین' },
         ]
     }
 
@@ -119,12 +123,16 @@ export default function FinancePage() {
     return (
         <div className='p-5'>
 
-            <div className={`${style.cardStyleA} p-5 rounded-2xl flex items-center justify-between shadow-lg`}>
-                <h2 className='font-bold text-3xl flex gap-3 items-center'>
+            <div className={`${style.cardStyleA} p-5 h-[100px] rounded-2xl flex items-center justify-between shadow-lg relative`}>
+                <svg class="ecg w-full absolute top-0 left-0" viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden="true">
+                    <path d="M0,40 L120,40 L150,15 L165,55 L180,25 L210,60 L260,40 L340,40 L370,10 L385,70 L400,30 L420,60 L500,40 L560,40 L590,15 L605,55 L620,25 L650,60 L700,40 L780,40 L810,15 L825,55 L840,25 L870,60 L920,40 L1000,40 L1030,10 L1045,70 L1060,30 L1080,60 L1200,40"
+                        fill="none" stroke="#06b6d4" stroke-width="2" />
+                </svg>
+                <h2 className='font-bold text-3xl flex gap-3 items-center relative z-10'>
                     <FaChartArea />
                     داشبورد مالی بیمارستان
                 </h2>
-                <div className='flex items-center gap-5'>
+                <div className='flex items-center gap-5 relative z-10'>
                     <button onClick={() => setCurrentData(KPI.month)} className={`${style.cardStyleB} py-2 w-[120px] rounded-full`}>ماه جاری</button>
                     <button onClick={() => setCurrentData(KPI.season)} className={`${style.cardStyleB} py-2 w-[120px] rounded-full`}>فصل</button>
                     <button onClick={() => setCurrentData(KPI.year)} className={`${style.cardStyleB} py-2 w-[120px] rounded-full`}>سال جاری</button>
@@ -156,7 +164,7 @@ export default function FinancePage() {
                 <div className={`rounded-2xl p-5 mt-5`}>
                     <h2>شکست هزینه ها</h2>
                     <div className='grid grid-cols-2 rounded-2xl overflow-hidden mt-5'>
-                        <div className='gradCardBlue flex justify-center gap-5 items-center p-14'>
+                        <div className='gradCardBlue2 flex justify-center gap-5 items-center p-14'>
                             <span>
                                 دارو و تجهیزات مصرفی
                             </span>

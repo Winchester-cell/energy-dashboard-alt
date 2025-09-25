@@ -14,7 +14,7 @@ export default function FinanceKPiCard(props) {
 
     return (
         <div className={`${style.cardStyleA} rounded-xl p-5 relative shadow-lg`}>
-            <FaChartArea className='absolute top-5 end-5 text-5xl' />
+            {props.svg}
             <div className='text-lg'>{props.title}</div>
             <div className='text-3xl mt-2'>{toPersianDigits(props.price)} میلیارد تومان</div>
             <div className={`${style.textStyleB} mt-3`}>{props.desc}</div>

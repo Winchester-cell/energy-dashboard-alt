@@ -9,6 +9,11 @@
     background: linear-gradient(132deg, rgba(68, 164, 212, 1) 56%, rgba(181, 193, 196, 1) 100%);
 }
 
+.gradCardBlue2 {
+    color: white !important;
+    background: linear-gradient(132deg, rgb(142, 210, 244) 56%, rgba(181, 193, 196, 0.625) 100%);
+}
+
 .gradCardPink {
     color: white !important;
     background: #c572cc;
@@ -64,4 +69,22 @@
     box-shadow:
         0 8px 32px rgba(0, 0, 0, 0.1),
         0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+
+.lightblue {
+    background: linear-gradient(to bottom right, #ecfeff, #fff, #cffafe);
+}
+
+
+/* Header ECG line */
+.ecg path {
+    stroke-dasharray: 6 10;
+    animation: dash 3s linear infinite;
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: -200;
+    }
 }
