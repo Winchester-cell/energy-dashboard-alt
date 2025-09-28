@@ -1,8 +1,10 @@
 'use client'
+import { getPatients } from '@/axios/requests/solutions/ehr/patients/getPatients'
 import AnimateOnScroll from '@/components/AnimateOnScrollWrapper/AnimateOnScroll'
 import PatientInfoCard from '@/components/Modules/Cards/HospitalCards/PatientInfoCard'
 import { colorVariantSelector } from '@/data/themeVariants'
 import { useThemeTypeStore } from '@/stores/useThemeTypeStore'
+import { useQuery } from '@tanstack/react-query'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
@@ -10,6 +12,10 @@ import React from 'react'
 
 export default function PatientListSection({ filteredList }) {
 
+    const { data: patientData } = useQuery({
+        queryKey: ['patients'],
+        queryFn: getPatients
+    })
     const { themeType } = useThemeTypeStore()
     const pathname = usePathname()
     const style = colorVariantSelector(pathname, themeType)
@@ -30,7 +36,7 @@ export default function PatientListSection({ filteredList }) {
                         <div>وضعیت</div>
                     </div>
                     {
-                        filteredList.map((p, index) => {
+                        patientData?.map((p, index) => {
                             return (
                                 <AnimateOnScroll key={p.id} delay={index * 70}>
                                     <Link className='block' href={`/hospital/patients/${p.id}`}>
