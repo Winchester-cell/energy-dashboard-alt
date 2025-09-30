@@ -1,5 +1,4 @@
 import apiRequest from "@/axios/instacne/mainApi"
-import { data } from "autoprefixer";
 import { cookies } from "next/headers";
 
 export async function GET() {
@@ -21,12 +20,12 @@ export async function GET() {
             }
         })
 
-        const userRole = meResponse.data.is_superuser ? 'SuperAdmin' : meResponse.data.memberships[0].role.name
+        // const userRole = meResponse.data.is_superuser ? 'SuperAdmin' : meResponse.data.memberships[0].role.name
 
         console.log('me =>' , meResponse.data);
 
 
-        return new Response(JSON.stringify({ userData: meResponse.data, userRole }), {
+        return new Response(JSON.stringify({ userData: meResponse.data}), {
             status: 200,
             headers: {
                 "Content-Type": "application/json",

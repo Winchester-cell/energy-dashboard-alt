@@ -10,7 +10,7 @@ export default function PatientAlert({ message, patientName, bed, minutesAgo }) 
     const style = colorVariantSelector(pathname, themeType)
 
     return (
-        <div className={`cursor-pointer w-full ${style.cardStyleB} shadow-lg text-[12px] p-3 rounded-xl flex justify-between items-center`} >
+        <div className={`transition-all duration-500 hover:-translate-x-1 hover:scale-[1.01] cursor-pointer w-full ${style.cardStyleB} shadow-lg text-[12px] p-3 rounded-xl flex justify-between items-center`} >
             <div className='flex flex-col gap-2'>
                 <div className='font-bold'>{message}</div>
                 <div className='text-[10px]'>{patientName}</div>

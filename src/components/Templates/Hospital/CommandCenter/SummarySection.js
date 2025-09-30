@@ -20,6 +20,7 @@ export default function SummarySection() {
                     valB={200}
                     extraText={'ظرفیت کل :'}
                     extraVal={`${toPersianDigits(300)} تخت`}
+                    color={'#008ffb'}
                 />
                 <SummryCard
                     icon={<LuBedSingle className='w-16 h-16' />}
@@ -30,6 +31,7 @@ export default function SummarySection() {
                     valB={50}
                     extraText={'اشغال شده :'}
                     extraVal={`${toPersianDigits(150)} از ${toPersianDigits(300)} تخت`}
+                    color={'#00e396'}
                 />
                 <SummryCard
                     icon={<IoIosWarning className='w-16 h-16' />}
@@ -40,6 +42,7 @@ export default function SummarySection() {
                     valB={7}
                     extraText={'اورژانس :'}
                     extraVal={`${toPersianDigits(7)} هشدار`}
+                    color={'#f580bd'}
                 />
                 <SummryCard
                     icon={<IoIosTime className='w-16 h-16' />}
@@ -50,6 +53,7 @@ export default function SummarySection() {
                     valB={22}
                     extraText={' هدف استاندارد :'}
                     extraVal={'پانزده دقیقه'}
+                    color={'#f6a824'}
                 />
             </div>
         </>

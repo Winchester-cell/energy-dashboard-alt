@@ -9,12 +9,15 @@ export default function LabResultsTab() {
     const pathname = usePathname()
     const style = colorVariantSelector(pathname, themeType)
 
+    const glassThemeGreen = themeType==='hospital' ? {color:'#00e396',  textShadow:`2px 2px 4px #00e396`} : {}
+    const glassThemeYellow = themeType==='hospital' ? {color:'#f6a824',  textShadow:`2px 2px 4px #f6a824`} : {}
+
     return (
         <div className={`${style.cardStyleA} rounded-3xl p-5`}>
 
             <h2 className='font-bold text-lg'>نتایج آزمایش</h2>
 
-            <div className={`rounded-xl p-5 mt-5 ${style.cardStyleB}`}>
+            <div style={{ ...glassThemeGreen , boxShadow:`2px 2px 4px #00e396`}} className={`rounded-xl p-5 mt-5 ${style.cardStyleB} transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02]`}>
                 <div className='flex justify-between items-center'>
                     <div>آزمایش خون کامل (CBC)</div>
                     <div>امروز ، ۰۸:۳۰</div>
@@ -30,7 +33,8 @@ export default function LabResultsTab() {
                     طبیعی
                 </div>
             </div>
-            <div className={`rounded-xl p-5 mt-5 ${style.cardStyleB}`}>
+
+            <div style={{ ...glassThemeYellow ,boxShadow:`2px 2px 4px #f6a824`}} className={`rounded-xl p-5 mt-5 ${style.cardStyleB} transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02]`}>
                 <div className='flex justify-between items-center'>
                     <div>بیوشیمی خون</div>
                     <div>دیروز، ۱۶:۱۵</div>
@@ -46,7 +50,8 @@ export default function LabResultsTab() {
                     نیاز به پیگیری
                 </div>
             </div>
-            <div className={`rounded-xl p-5 mt-5 ${style.cardStyleB}`}>
+
+            <div style={{ ...glassThemeGreen , boxShadow:`2px 2px 4px #00e396`}} className={`rounded-xl p-5 mt-5 ${style.cardStyleB} transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02]`}>
                 <div className='flex justify-between items-center'>
                     <div>آزمایش ادرار</div>
                     <div>۲ روز پیش، ۱۰:۰۰</div>

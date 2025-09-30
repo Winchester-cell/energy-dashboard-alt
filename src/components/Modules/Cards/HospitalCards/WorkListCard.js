@@ -17,7 +17,7 @@ export default function WorkListCard(props) {
     }
 
     return (
-        <div onClick={()=> setWorkHandler(props.id)} className={`p-5 ${style.cardStyleB} cursor-pointer hover:py-7 shadow-lg rounded-2xl gap-5 grid grid-cols-6 transition-all duration-500 `}>
+        <div style={{boxShadow:`2px 2px 4px #008ffb`}} onClick={()=> setWorkHandler(props.id)} className={`p-5 ${style.cardStyleB} cursor-pointer hover:py-7 shadow-lg rounded-2xl gap-5 grid grid-cols-6 transition-all duration-500 `}>
             <div className={`border-l-2 ${themeType === 'hospital' ? `border-[#ffffff33]` : `border-[var(--colTextA)]`} `}>
                 {props.name}
                 <div className={`${style.textStyleB} mt-2`}>{props.age} ساله</div>

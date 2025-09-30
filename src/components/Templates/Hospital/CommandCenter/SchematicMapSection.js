@@ -22,8 +22,8 @@ export default function SchematicMapSection() {
                     <SearchInput />
                 </div>
                 <div className={`rounded-3xl overflow-hidden ${style.cardStyleD} mt-5`}>
-                    <SimpleBar className='mt-5' style={{ height: 295 }}>
-                        <div className='p-5 grid grid-cols-3 gap-5'>
+                    <SimpleBar className='mt-5' style={{ height: 600 }}>
+                        <div className='p-5 grid grid-cols-4 gap-5'>
                             {hospitalSections.map(sec => <WardCard key={sec.id} {...sec} />)}
                         </div>
                     </SimpleBar>

@@ -37,7 +37,7 @@ export default function ReAreaChart() {
     ];
 
     return (
-        <div className={`w-full h-96 rounded-2xl shadow-md p-5 my-5 ${style.cardStyleA}`}>
+        <div className={`w-full h-96 rounded-2xl shadow-md p-5 my-5 ${style.cardStyleA} transition-all duration-500 hover:-translate-y-2 hover:scale-[1.01]`}>
             <h2 className="text-xl font-semibold mb-4">تعداد بیماران (۲۴ ساعت گذشته و آینده)</h2>
             <ResponsiveContainer width="100%" height="100%" style={{ padding: 40 }}>
                 <AreaChart data={data}>

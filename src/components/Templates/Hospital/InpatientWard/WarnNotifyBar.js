@@ -18,7 +18,7 @@ export default function WarnNotifyBar() {
             <h2>هشدار های اخیر :</h2>
             <div className='h-full pb-5'>
                 <SimpleBar className='h-full'>
-                    <div className='flex flex-col gap-3'>
+                    <div className='flex flex-col gap-3 px-2'>
                         {alerts.map((a, index) => (
                             <AnimateOnScroll key={index} delay={index * 100}>
                                 <PatientAlert {...a} />

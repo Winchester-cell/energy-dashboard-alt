@@ -13,9 +13,9 @@ export default function SummaryTab() {
     return (
         <>
 
-            <div className={`${style.cardStyleA} rounded-3xl p-5`}>
+            <div style={{boxShadow:`2px 2px 4px #00e396`}} className={`${style.cardStyleA} rounded-3xl p-5 transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02]`}>
 
-                <h2 className='font-bold text-lg'>وضعیت فعلی</h2>
+                <h2 style={{color:'#00e396',  textShadow:`2px 2px 4px #00e396`}} className='font-bold text-lg'>وضعیت فعلی</h2>
 
                 <div className={`${style.cardStyleF} rounded-xl p-5 mt-5`}>
 
@@ -29,8 +29,8 @@ export default function SummaryTab() {
                 </div>
             </div>
 
-            <div className={`${style.cardStyleA} rounded-3xl p-5 mt-5`}>
-                <h2 className='font-bold text-lg'>فعالیت های اخیر</h2>
+            <div style={{boxShadow:`2px 2px 4px #008ffb`}} className={`${style.cardStyleA} rounded-3xl p-5 mt-5 transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02]`}>
+                <h2 style={{color:'#008ffb',  textShadow:`2px 2px 4px #008ffb`}} className='font-bold text-lg'>فعالیت های اخیر</h2>
                 <div className={`${style.cardStyleF} rounded-xl p-5 mt-5`}>
                     <div className='flex items-center gap-3'>
                         <div className='w-4 h-4 glass-card-no-bg bg-[#00d0ffbb] rounded-full' />
@@ -54,9 +54,9 @@ export default function SummaryTab() {
                 </div>
             </div>
 
-            <div className={`${style.cardStyleA} rounded-3xl p-5 mt-5`}>
+            <div style={{boxShadow:`2px 2px 4px #f580bd`}} className={`${style.cardStyleA} rounded-3xl p-5 mt-5 transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02]`}>
 
-                <h2 className='font-bold text-lg'>آمار سریع</h2>
+                <h2 style={{color:'#f580bd',  textShadow:`2px 2px 4px #f580bd`}} className='font-bold text-lg'>آمار سریع</h2>
 
                 <div className={`${style.cardStyleF} rounded-xl p-5 mt-5`}>
                     <div className='flex items-center justify-between'>

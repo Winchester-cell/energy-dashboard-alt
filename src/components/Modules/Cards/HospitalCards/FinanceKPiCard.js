@@ -13,10 +13,10 @@ export default function FinanceKPiCard(props) {
     const style = colorVariantSelector(pathname, themeType)
 
     return (
-        <div className={`${style.cardStyleA} rounded-xl p-5 relative shadow-lg`}>
+        <div style={{boxShadow:`2px 2px 4px ${props.color}`}} className={`${style.cardStyleA} rounded-xl p-5 relative shadow-lg transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02]`}>
             {props.svg}
-            <div className='text-lg'>{props.title}</div>
-            <div className='text-3xl mt-2'>{toPersianDigits(props.price)} میلیارد تومان</div>
+            <div style={{color:props.color,  textShadow:`2px 2px 4px ${props.color}`}} className='text-lg'>{props.title}</div>
+            <div className='text-3xl mt-2'><span style={{color:props.color,  textShadow:`2px 2px 4px ${props.color}`}}>{toPersianDigits(props.price)}</span> میلیارد تومان</div>
             <div className={`${style.textStyleB} mt-3`}>{props.desc}</div>
         </div>
     )

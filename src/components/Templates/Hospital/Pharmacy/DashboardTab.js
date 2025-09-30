@@ -25,7 +25,7 @@ export default function PharmcayDashboardTab() {
   return (
     <>
       <div className='grid grid-cols-2 gap-5'>
-        <div className={`gradCardBlue shadow-lg rounded-2xl py-5 px-10 flex justify-between items-center text-white`}>
+        <div className={`gradCardBlue shadow-lg rounded-2xl py-5 px-10 flex justify-between items-center text-white transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02]`}>
 
           <div className='flex items-center gap-2'>
             <HiOutlineClipboardDocumentList className='w-16 h-16' />
@@ -37,7 +37,7 @@ export default function PharmcayDashboardTab() {
           </div>
 
         </div>
-        <div className={`gradCardGreen shadow-lg rounded-2xl py-5 px-10 flex justify-between items-center text-white`}>
+        <div className={`gradCardGreen shadow-lg rounded-2xl py-5 px-10 flex justify-between items-center text-white transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02]`}>
 
           <div className='flex items-center gap-2'>
             <FaBoltLightning className='w-16 h-16' />
@@ -49,7 +49,7 @@ export default function PharmcayDashboardTab() {
           </div>
 
         </div>
-        <div className={`gradCardPink shadow-lg rounded-2xl py-5 px-10 flex justify-between items-center text-white`}>
+        <div className={`gradCardPink shadow-lg rounded-2xl py-5 px-10 flex justify-between items-center text-white transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02]`}>
 
           <div className='flex items-center gap-2'>
             <CiPill className='w-16 h-16' />
@@ -61,7 +61,7 @@ export default function PharmcayDashboardTab() {
           </div>
 
         </div>
-        <div className={`gradCardYellow shadow-lg rounded-2xl py-5 px-10 flex justify-between items-center text-white`}>
+        <div className={`gradCardYellow shadow-lg rounded-2xl py-5 px-10 flex justify-between items-center text-white transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02]`}>
 
           <div className='flex items-center gap-2'>
             <MdAttachMoney className='w-16 h-16' />

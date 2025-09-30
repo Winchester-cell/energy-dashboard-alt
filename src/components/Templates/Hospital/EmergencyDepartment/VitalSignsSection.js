@@ -83,25 +83,25 @@ export default function VitalSignsSection({ selectedPatient }) {
 
             <div className='grid grid-cols-3 gap-5 px-5 mt-5'>
 
-                <div className={`w-full text-center ${style.cardStyleA} shadow-lg flex items-center justify-center flex-col gap-3 h-[100px] rounded-xl`}>
-                    <div>اشباع اکسیژن</div>
+                <div style={{ boxShadow: `2px 2px 4px #00e396` }} className={`w-full text-center ${style.cardStyleA} shadow-lg flex items-center justify-center flex-col gap-3 h-[100px] rounded-xl transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02]`}>
+                    <div style={{color:'#00e396' ,  textShadow:`2px 2px 4px #00e396`}}>اشباع اکسیژن</div>
                     <div>{toPersianDigits(selectedPatient.vitalSigns.oxy)}%</div>
                 </div>
 
-                <div className={`w-full text-center ${style.cardStyleA} shadow-lg flex items-center justify-center flex-col gap-3 h-[100px] rounded-xl`}>
-                    <div>ضربان قلب</div>
+                <div style={{ boxShadow: `2px 2px 4px #f580bd` }} className={`w-full text-center ${style.cardStyleA} shadow-lg flex items-center justify-center flex-col gap-3 h-[100px] rounded-xl transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02]`}>
+                    <div style={{color:'#f580bd' ,  textShadow:`2px 2px 4px #f580bd`}}>ضربان قلب</div>
                     <div>{toPersianDigits(selectedPatient.vitalSigns.heartbeat)}</div>
                 </div>
 
-                <div className={`w-full h-[100px] ${style.cardStyleA} flex items-center justify-center rounded-xl`}>
+                <div style={{ boxShadow: `2px 2px 4px #008ffb` }} className={`w-full h-[100px] ${style.cardStyleA} flex items-center justify-center rounded-xl transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02]`}>
                     <ECG />
                 </div>
 
                 <div className='w-full h-[220px] rounded-xl col-span-3 flex items-center gap-5'>
-                    <div className={`w-1/2 h-full rounded-xl shadow-lg ${style.cardStyleA}`}>
+                    <div style={{ boxShadow: `2px 2px 4px #008ffb` }} className={`w-1/2 h-full rounded-xl shadow-lg ${style.cardStyleA} transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02]`}>
                         <AreaChart categories={chartData01.categories} series={chartData01.series} />
                     </div>
-                    <div className={`w-1/2 h-full rounded-xl shadow-lg ${style.cardStyleA}`}>
+                    <div style={{ boxShadow: `2px 2px 4px #00e396` }} className={`w-1/2 h-full rounded-xl shadow-lg ${style.cardStyleA} transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02]`}>
                         <AreaChart
                             yMin={-1}
                             yMax={1}

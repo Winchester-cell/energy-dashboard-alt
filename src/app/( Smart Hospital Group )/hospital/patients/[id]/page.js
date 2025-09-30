@@ -31,7 +31,7 @@ export default function PatientInfoPage() {
         <div className='px-5 pb-5'>
             {
                 currentPatient &&
-                <div className={`${style.cardStyleA} shadow-lg p-5 mt-5 rounded-2xl flex items-center gap-7`}>
+                <div style={{boxShadow:`2px 2px 4px #008ffb`}} className={`${style.cardStyleA} shadow-lg p-5 mt-5 rounded-2xl flex items-center gap-7`}>
                     {currentPatient.gender === 'زن' ? <SlUserFemale className='w-16 h-16' /> : <SlUser className='w-16 h-16' /> }
                     <div>نام : {currentPatient.name}</div>
                     <div>شماره پرونده : ۱۲۳۴۵۶</div>

@@ -14,7 +14,7 @@ export default function PatientCardEmergency(props) {
     const { id, name, age, gender, onWay, mainArg, onPatientSelect, selectedPatient } = props
 
     return (
-        <div style={{ border:selectedPatient.id === id ? '1px solid' : null , borderColor: selectedPatient.id === id  ? `${themeType === 'hospital' ? 'white' : 'var(--colTextA)' }` : null }} className={`cursor-pointer shadow-lg w-full ${onWay ?  style.gradCardBlue : style.cardStyleB} text-[12px] p-3 rounded-xl flex justify-between items-center`} onClick={() => onPatientSelect(id)} >
+        <div style={{ boxShadow: `2px 2px 4px #008ffb`, border: selectedPatient.id === id ? '1px solid' : null, borderColor: selectedPatient.id === id ? `${themeType === 'hospital' ? 'white' : 'var(--colTextA)'}` : null }} className={`cursor-pointer shadow-lg w-full ${onWay ? style.gradCardBlue : style.cardStyleB} text-[12px] p-3 rounded-xl flex justify-between items-center transition-all duration-500 hover:-translate-x-1 hover:scale-[1.01]`} onClick={() => onPatientSelect(id)} >
             <div className='flex flex-col gap-2'>
                 <div className='font-bold'>{name}</div>
                 <div className='text-[10px]'>{age} ساله - {gender}</div>

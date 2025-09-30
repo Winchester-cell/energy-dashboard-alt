@@ -19,22 +19,22 @@ export default function FinancePage() {
 
     const KPI = {
         month: [
-            { id: 1, svg: <SvgElem1 />, title: 'درآمد کل', price: 26, desc: 'روند روزانه ماه جاری' },
-            { id: 2, svg: <SvgElem2 />, title: 'هزینه کل', price: 21, desc: 'مقایسه با ماه گذشته' },
-            { id: 3, svg: <SvgElem3 />, title: 'سود خالص', price: 5, desc: 'حاشیه سود' },
-            { id: 4, svg: <SvgElem4 />, title: 'میانگین درآمد هر تخت', price: 51, desc: 'برآورد میانگین' },
+            { id: 1, color: '#00e396', svg: <SvgElem1 />, title: 'درآمد کل', price: 26, desc: 'روند روزانه ماه جاری' },
+            { id: 2, color: '#f6a824', svg: <SvgElem2 />, title: 'هزینه کل', price: 21, desc: 'مقایسه با ماه گذشته' },
+            { id: 3, color: '#06b6d4', svg: <SvgElem3 />, title: 'سود خالص', price: 5, desc: 'حاشیه سود' },
+            { id: 4, color: '#00e396', svg: <SvgElem4 />, title: 'میانگین درآمد هر تخت', price: 51, desc: 'برآورد میانگین' },
         ],
         season: [
-            { id: 1, svg: <SvgElem1 />, title: 'درآمد کل', price: 69, desc: 'روند روزانه ماه جاری' },
-            { id: 2, svg: <SvgElem2 />, title: 'هزینه کل', price: 57, desc: 'مقایسه با ماه گذشته' },
-            { id: 3, svg: <SvgElem3 />, title: 'سود خالص', price: 11, desc: 'حاشیه سود' },
-            { id: 4, svg: <SvgElem4 />, title: 'میانگین درآمد هر تخت', price: 50, desc: 'برآورد میانگین' },
+            { id: 1, color: '#00e396', svg: <SvgElem1 />, title: 'درآمد کل', price: 69, desc: 'روند روزانه ماه جاری' },
+            { id: 2, color: '#f6a824', svg: <SvgElem2 />, title: 'هزینه کل', price: 57, desc: 'مقایسه با ماه گذشته' },
+            { id: 3, color: '#06b6d4', svg: <SvgElem3 />, title: 'سود خالص', price: 11, desc: 'حاشیه سود' },
+            { id: 4, color: '#00e396', svg: <SvgElem4 />, title: 'میانگین درآمد هر تخت', price: 50, desc: 'برآورد میانگین' },
         ],
         year: [
-            { id: 1, svg: <SvgElem1 />, title: 'درآمد کل', price: 269, desc: 'روند روزانه ماه جاری' },
-            { id: 2, svg: <SvgElem2 />, title: 'هزینه کل', price: 225, desc: 'مقایسه با ماه گذشته' },
-            { id: 3, svg: <SvgElem3 />, title: 'سود خالص', price: 43, desc: 'حاشیه سود' },
-            { id: 4, svg: <SvgElem4 />, title: 'میانگین درآمد هر تخت', price: 41, desc: 'برآورد میانگین' },
+            { id: 1, color: '#00e396', svg: <SvgElem1 />, title: 'درآمد کل', price: 269, desc: 'روند روزانه ماه جاری' },
+            { id: 2, color: '#f6a824', svg: <SvgElem2 />, title: 'هزینه کل', price: 225, desc: 'مقایسه با ماه گذشته' },
+            { id: 3, color: '#06b6d4', svg: <SvgElem3 />, title: 'سود خالص', price: 43, desc: 'حاشیه سود' },
+            { id: 4, color: '#00e396', svg: <SvgElem4 />, title: 'میانگین درآمد هر تخت', price: 41, desc: 'برآورد میانگین' },
         ]
     }
 
@@ -123,8 +123,8 @@ export default function FinancePage() {
     return (
         <div className='p-5'>
 
-            <div className={`${style.cardStyleA} p-5 h-[100px] rounded-2xl flex items-center justify-between shadow-lg relative`}>
-                <svg class="ecg w-full absolute top-0 left-0" viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden="true">
+            <div style={{ boxShadow: `2px 2px 4px #06b6d4` }} className={`${style.cardStyleA} p-5 h-[100px] rounded-2xl flex items-center justify-between shadow-lg relative`}>
+                <svg class="ecg  w-full h-full py-3 absolute top-0 left-0" viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden="true">
                     <path d="M0,40 L120,40 L150,15 L165,55 L180,25 L210,60 L260,40 L340,40 L370,10 L385,70 L400,30 L420,60 L500,40 L560,40 L590,15 L605,55 L620,25 L650,60 L700,40 L780,40 L810,15 L825,55 L840,25 L870,60 L920,40 L1000,40 L1030,10 L1045,70 L1060,30 L1080,60 L1200,40"
                         fill="none" stroke="#06b6d4" stroke-width="2" />
                 </svg>
@@ -147,7 +147,7 @@ export default function FinancePage() {
                 }
             </div>
 
-            <div className={`${style.cardStyleA} p-5 rounded-2xl shadow-lg mt-5`}>
+            <div style={{boxShadow:`2px 2px 4px #f580bd`}} className={`${style.cardStyleA} p-5 rounded-2xl shadow-lg mt-5 transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02]`}>
                 <h2 className='text-2xl'>تحلیل درآمد</h2>
                 <div className='w-full grid grid-cols-2 mt-5 gap-5'>
                     <div className={`${style.borderStyle} border-2 shadow-lg p-5 rounded-xl h-[400px]`}>
@@ -159,7 +159,7 @@ export default function FinancePage() {
                 </div>
             </div>
 
-            <div className={`${style.cardStyleA} p-5 rounded-2xl shadow-lg mt-5`}>
+            <div style={{ boxShadow: `2px 2px 4px #00e396` }} className={`${style.cardStyleA} p-5 rounded-2xl shadow-lg mt-5 transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02]`}>
                 <h2 className='text-2xl'>تحلیل هزینه</h2>
                 <div className={`rounded-2xl p-5 mt-5`}>
                     <h2>شکست هزینه ها</h2>
@@ -201,7 +201,7 @@ export default function FinancePage() {
                 </div>
             </div>
 
-            <div className={`${style.cardStyleA} p-5 rounded-2xl shadow-lg mt-5`}>
+            <div style={{ boxShadow: `2px 2px 4px #00e396` }} className={`${style.cardStyleA} p-5 rounded-2xl shadow-lg mt-5 transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02]`}>
                 <h2 className='text-2xl'>تحلیل سودآوری خطوط خدماتی</h2>
                 <div className='w-full mt-5 rounded-2xl flex flex-col gap-3 text-[12px]'>
                     <div className={`p-5 ${style.gradCardBlue} shadow-lg rounded-2xl gap-5 grid grid-cols-6`}>

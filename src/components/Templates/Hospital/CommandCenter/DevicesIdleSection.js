@@ -23,7 +23,7 @@ export default function DevicesIdleSection() {
                 <div className={`${style.cardStyleD} rounded-3xl mt-5`}>
                     <SimpleBar className='mt-5' style={{ height: 295 }}>
                         <div className='p-5 rounded-xl grid grid-cols-3 gap-5'>
-                            {hospitalDevices.map(dev => <DeviceIdleCard key={dev.id} {...dev} />)}
+                            {hospitalDevices.map(dev => <DeviceIdleCard  color={'#008ffb'} key={dev.id} {...dev} />)}
                         </div>
                     </SimpleBar>
                 </div>

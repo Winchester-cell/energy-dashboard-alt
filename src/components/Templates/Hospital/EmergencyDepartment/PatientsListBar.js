@@ -21,7 +21,7 @@ export default function PatientsListBar({ selectedPatient, setSelectedPatient })
     return (
         <div className={`${style.cardStyleA} w-[300px] h-[83dvh] shadow-lg rounded-2xl flex flex-col gap-2 p-5`}>
             <SimpleBar className='h-full'>
-                <div className='flex flex-col gap-3'>
+                <div className='flex flex-col gap-3 px-2'>
                     {
                         emergencyPatient.map(p => {
                             return <PatientCardEmergency selectedPatient={selectedPatient} onPatientSelect={onPatientSelect} key={p.id} {...p} />

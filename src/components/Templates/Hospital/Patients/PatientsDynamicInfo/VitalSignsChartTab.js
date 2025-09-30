@@ -16,7 +16,7 @@ export default function VitalSignsChartTab() {
 
   return (
     <>
-      <div className='glass-card rounded-3xl p-5'>
+      <div style={{boxShadow:`2px 2px 4px #f580bd`}} className='glass-card rounded-3xl p-5'>
 
         <h2 className='font-bold text-lg'>ضربان قلب ( ۲۴ ساعت گذشته )</h2>
 
@@ -27,7 +27,7 @@ export default function VitalSignsChartTab() {
 
       </div>
 
-      <div className='glass-card rounded-3xl p-5 mt-5'>
+      <div style={{boxShadow:`2px 2px 4px #00e396`}} className='glass-card rounded-3xl p-5 mt-5'>
 
         <h2 className='font-bold text-lg'>دمای بدن ( ۲۴ ساعت گذشته )</h2>
 
@@ -38,7 +38,7 @@ export default function VitalSignsChartTab() {
 
       </div>
 
-      <div className='glass-card rounded-3xl p-5 mt-5'>
+      <div style={{boxShadow:`2px 2px 4px #008ffb`}} className='glass-card rounded-3xl p-5 mt-5'>
 
         <h2 className='font-bold text-lg'> اکسیژن خون ( ۲۴ ساعت گذشته )</h2>
 
