@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <InfoCardsContainer />
       <MapAndCharts />
-      <ChartsGrid />
+      {/* <ChartsGrid /> */}
     </>
   );
 }
