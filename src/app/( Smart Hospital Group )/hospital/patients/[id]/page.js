@@ -27,23 +27,19 @@ export default function PatientInfoPage() {
         queryFn: () => getPatient(params.id)
     })
 
-    const { data: userData } = useQuery({
-        queryKey: ['user', patientData?.user],
-        queryFn: () => getUserInfo(patientData.user),
-        enabled: !!patientData?.user
-    })
-
     return (
         <div className='px-5 pb-5'>
             {
                 patientData &&
                 <div className={`${style.cardStyleA} shadow-lg p-5 mt-5 rounded-2xl flex items-center gap-7`}>
-                    {`زن` === 'زن' ? <SlUserFemale className='w-16 h-16' /> : <SlUser className='w-16 h-16' /> }
-                    <div>نام : {userData?.first_name} {userData?.last_name}</div>
+                    {patientData?.gender === 'female' ? <SlUserFemale className='w-16 h-16' /> : <SlUser className='w-16 h-16' /> }
+                    <div>نام : {patientData.user.first_name} {patientData.user.last_name}</div>
+                    <div>کد ملی : {toPersianDigits(patientData.national_id)}</div>
                     <div>شماره پرونده : ۱۲۳۴۵۶</div>
-                    <div>سن : --- سال</div>
-                    <div>جنسیت : ---</div>
-                    <div>بخش : ---</div>
+                    <div>تاریخ تولد : {toPersianDigits(patientData.date_of_birth)}</div>
+                    <div>جنسیت : {patientData.gender === 'female' ? 'زن' : 'مرد'}</div>
+                    <div>گروه خونی : {patientData.blood_type}</div>
+                    <div>بیمه : {patientData.insurance_provider}</div>
                 </div>
             }
             <TabSelector tabs={patientInfoTabsContent} selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
