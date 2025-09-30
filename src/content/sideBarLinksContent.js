@@ -11,13 +11,13 @@ import {
     FaWarehouse, FaBuilding, FaUserFriends, FaShoppingCart, FaShippingFast,
     FaCartPlus, FaHandshake, FaCalculator, FaFolderOpen, FaFileAlt, FaCogs,
     FaBolt, FaTachometerAlt, FaRecycle, FaLeaf, FaStore, FaChartBar, FaRegCalendarAlt,
-    FaListAlt, FaProjectDiagram, FaDatabase, FaLightbulb, FaServer, FaChartArea, FaAmbulance, FaPills ,
+    FaListAlt, FaProjectDiagram, FaDatabase, FaLightbulb, FaServer, FaChartArea, FaAmbulance, FaPills,
 
 } from "react-icons/fa";
 
 import { IoChatbubbles } from "react-icons/io5";
 import { AiFillProduct } from "react-icons/ai";
-import { GiBrain , GiScalpel } from 'react-icons/gi';
+import { GiBrain, GiScalpel } from 'react-icons/gi';
 
 import Nurse from '@/asset/nurse.svg'
 
@@ -29,7 +29,22 @@ const sideBarLinksContent = {
             icon: <MdDashboard />,
             links: [
                 { type: 'item', text: 'داشبورد', href: '/', icon: <MdDashboard /> },
+                {
+                    type: 'dropdown',
+                    text: 'بیمارستان هوشمند',
+                    icon: <MdLocalHospital />,
+                    options: [
+                        { type: 'item', text: 'مرکز فرماندهی', href: '/hospital/command-center', icon: <FaChartArea /> },
+                        { type: 'item', text: 'بخش اورژانس', href: '/hospital/emergency-department', icon: <FaAmbulance /> },
+                        { type: 'item', text: 'بخش داخلی', href: '/hospital/inpatient-ward', icon: <Nurse className={`w-5 h-5`} /> },
+                        { type: 'item', text: 'مدیریت بیماران', href: '/hospital/patients', icon: <FaUsers /> },
+                        { type: 'item', text: 'بخش جراحی', href: '/hospital/surgery', icon: <GiScalpel /> },
+                        { type: 'item', text: 'داروخانه', href: '/hospital/pharmacy', icon: <FaPills /> },
+                        { type: 'item', text: 'امور مالی', href: '/hospital/finance', icon: <FaCalculator /> },
+                    ]
+                },
             ]
+
         },
         {
             title: 'همکاری و ارتباط',
@@ -133,20 +148,7 @@ const sideBarLinksContent = {
                         { type: 'item', text: 'سایت ها', href: '#', icon: <MdLocationOn /> },
                     ]
                 },
-                {
-                    type: 'dropdown',
-                    text: 'بیمارستان هوشمند',
-                    icon: <MdLocalHospital />,
-                    options: [
-                        { type: 'item', text: 'مرکز فرماندهی', href: '/hospital/command-center', icon: <FaChartArea /> },
-                        { type: 'item', text: 'بخش اورژانس', href: '/hospital/emergency-department', icon: <FaAmbulance /> },
-                        { type: 'item', text: 'بخش داخلی', href: '/hospital/inpatient-ward', icon: <Nurse className={`w-5 h-5`}/> },
-                        { type: 'item', text: 'مدیریت بیماران', href: '/hospital/patients', icon: <FaUsers /> },
-                        { type: 'item', text: 'بخش جراحی', href: '/hospital/surgery', icon: <GiScalpel /> },
-                        { type: 'item', text: 'داروخانه', href: '/hospital/pharmacy', icon: <FaPills /> },
-                        { type: 'item', text: 'امور مالی', href: '/hospital/finance', icon: <FaCalculator /> },
-                    ]
-                },
+
             ]
         },
         {
