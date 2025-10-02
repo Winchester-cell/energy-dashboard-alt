@@ -54,7 +54,7 @@ export default function MapView(props) {
     }, [selectedDevice, theme, isSideBarOpen]);
 
     return (
-        <div id="map" className={`w-[100%] h-[100%] transform-gpu rounded-xl z-0  ${theme.theme === 'dark' ? 'border-zinc-600 border-2 shadow-md' : 'shadow-md'} relative`} >
+        <div id="map" className={`w-[100%] h-[100%] transform-gpu rounded-xl z-0  ${theme.theme === 'dark' ? 'border-zinc-600 border-2 shadow-md' : 'shadow-md'}`} >
 
         </div>
     )
