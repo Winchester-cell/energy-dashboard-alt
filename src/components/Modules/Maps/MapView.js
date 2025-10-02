@@ -54,8 +54,16 @@ export default function MapView(props) {
     }, [selectedDevice, theme, isSideBarOpen]);
 
     return (
-        <div id="map" className={`w-[100%] h-[100%] transform-gpu rounded-xl z-0  ${theme.theme === 'dark' ? 'border-zinc-600 border-2 shadow-md' : 'shadow-md'}`} >
+        <div
+            id="map"
+            className={`w-[100%] h-[100%] transform-gpu rounded-xl relative 
+      ${theme.theme === 'dark' ? 'border-zinc-600 border-2 shadow-md' : 'shadow-md'}`}>
 
+            {/* نقشه توسط Leaflet میاد اینجا */}
+
+            {/* Overlay مشکی بالای همه */}
+            <div className="absolute inset-0 bg-[#0000001d] rounded-xl pointer-events-none z-[9999]"></div>
         </div>
     )
+
 }
