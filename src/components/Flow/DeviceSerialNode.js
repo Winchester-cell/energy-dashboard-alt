@@ -1,10 +1,11 @@
+import React from 'react'
 import { Position, Handle } from '@xyflow/react';
 
-export function TextUpdaterNode(props) {
 
+export default function DeviceSerialNode() {
     return (
         <div>
-            <div className='py-5 px-10 text-[var(--colTextB)] bg-[var(--colBg)] text-sm rounded-full'> وضعیت : <span className='text-green-500'>آنلاین</span>  </div>
+            <div className='py-5 px-10 text-[var(--colTextB)] bg-[var(--colBg)] text-sm rounded-full'>سریال دستگاه : SN002</div>
             {/* Top Handle: input */}
             <Handle type="target" position={Position.Top} id="top" />
             {/* Bottom Handle: output */}
@@ -14,5 +15,5 @@ export function TextUpdaterNode(props) {
             {/* Right Handle: output */}
             <Handle type="source" position={Position.Right} id="right" />
         </div>
-    );
+    )
 }

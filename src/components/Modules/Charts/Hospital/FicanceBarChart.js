@@ -5,7 +5,7 @@ const InsuranceChart = ({ title }) => {
     const series = [
         {
             name: "درصد",
-            data: [42, 28, 18, 12],
+            data: [42, 28, 18, 52],
         },
     ];
 
@@ -42,7 +42,8 @@ const InsuranceChart = ({ title }) => {
             },
         },
         xaxis: {
-            categories: ["تأمین اجتماعی", "بیمه سلامت", "تکمیلی", "آزاد"],
+            // categories: ["تأمین اجتماعی", "بیمه سلامت", "تکمیلی", "آزاد"],
+            categories: ["" , "", "", ""],
             labels: {
                 rotate: -15,
                 style: { fontSize: "14px" },

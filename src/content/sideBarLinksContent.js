@@ -74,7 +74,7 @@ const sideBarLinksContent = {
                     text: 'انبارداری',
                     icon: <FaBoxes />,
                     options: [
-                        { type: 'item', text: 'داشبورد انبار', href: '#', icon: <FaWarehouse /> },
+                        { type: 'item', text: 'داشبورد انبار', href: '/inventory/dashboard', icon: <FaWarehouse /> },
                         { type: 'item', text: 'موجودی کالا', href: '#', icon: <MdInventory /> },
                         { type: 'item', text: 'تراکنش های انبار', href: '#', icon: <FaExchangeAlt /> },
                     ]
@@ -84,7 +84,7 @@ const sideBarLinksContent = {
                     text: 'نگهداری و تعمیرات',
                     icon: <MdBuild />,
                     options: [
-                        { type: 'item', text: 'داشبورد نت', href: '#', icon: <AiFillProduct /> },
+                        { type: 'item', text: 'داشبورد نت', href: '/maintenance', icon: <AiFillProduct /> },
                         { type: 'item', text: 'دستورکار های نت', href: '#', icon: <MdChecklistRtl /> },
                     ]
                 },

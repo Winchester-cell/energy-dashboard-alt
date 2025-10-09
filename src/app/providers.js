@@ -1,5 +1,5 @@
 'use client';
-
+import "@/i18n"
 import { ThemeProvider } from 'next-themes';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';

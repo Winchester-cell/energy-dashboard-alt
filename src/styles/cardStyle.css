@@ -26,6 +26,20 @@
     background: linear-gradient(132deg, rgba(204, 204, 114, 1) 56%, rgba(181, 193, 196, 1) 100%);
 }
 
+
+/* cusom */
+.gradCardRedLight {
+    background: linear-gradient(132deg, #ff9ca1 56%, #fecae8 100%);
+}
+.gradpinkCustom{
+    background: linear-gradient(132deg, #f091f6 26%, #f55b75 100%);
+}
+.gradbluekCustom{
+    background: linear-gradient(132deg, #85f8b3 26%, #8fd5f1 100%);
+}
+
+/* //// */
+
 .glass-card {
     background: #ffffff0d;
     backdrop-filter: blur(10px);
@@ -82,6 +96,9 @@
     stroke-dasharray: 6 10;
     animation: dash 3s linear infinite;
 }
+
+
+
 
 @keyframes dash {
     to {

@@ -62,7 +62,7 @@ export default function MapView(props) {
             {/* نقشه توسط Leaflet میاد اینجا */}
 
             {/* Overlay مشکی بالای همه */}
-            <div className="absolute inset-0 bg-[#0000001d] rounded-xl pointer-events-none z-[9999]"></div>
+            <div className="absolute inset-0 bg-[#00000053] rounded-xl pointer-events-none z-[9999]"></div>
         </div>
     )
 
