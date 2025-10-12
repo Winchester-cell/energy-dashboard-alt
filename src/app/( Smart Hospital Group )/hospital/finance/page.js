@@ -1,13 +1,16 @@
 'use client'
+import dynamic from 'next/dynamic'
+
+const DonutChart = dynamic(() => import('@/components/Modules/Charts/DonutChart'), { ssr: false });
+const InsuranceChart = dynamic(() => import('@/components/Modules/Charts/Hospital/FicanceBarChart'), { ssr: false });
 import { colorVariantSelector } from '@/data/themeVariants'
 import { useThemeTypeStore } from '@/stores/useThemeTypeStore'
 import { usePathname } from 'next/navigation'
 import { FaChartArea } from "react-icons/fa";
-
 import React, { useState } from 'react'
 import FinanceKPiCard from '@/components/Modules/Cards/HospitalCards/FinanceKPiCard';
-import DonutChart from '@/components/Modules/Charts/DonutChart';
-import InsuranceChart from '@/components/Modules/Charts/Hospital/FicanceBarChart';
+// import DonutChart from '@/components/Modules/Charts/DonutChart';
+// import InsuranceChart from '@/components/Modules/Charts/Hospital/FicanceBarChart';
 import AnimateOnScroll from '@/components/AnimateOnScrollWrapper/AnimateOnScroll';
 import FinanceTableCard from '@/components/Modules/Cards/HospitalCards/TableCard/FinanceTableCard';
 import SvgElem1 from '@/components/Modules/SvgElems/SvgElem1';

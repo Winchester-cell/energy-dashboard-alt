@@ -6,7 +6,7 @@ import i18n from "@/i18n";
 
 const ApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
-const AreaChart = ({ shadow, labelSize, categories, series, title, yMin, yMax, colors = ["#008ffb", "#00e396"] }) => {
+const AreaChart = ({ shadow=true, labelSize, categories, series, title, yMin, yMax, colors = ["#008ffb", "#00e396"] }) => {
 
     const { t } = useTranslation()
 

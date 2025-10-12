@@ -21,10 +21,10 @@ export default function MaintenancePage() {
         "اسفند"
     ]
 
-    const monthNumbers = [12, 25, 8, 30, 14, 27, 19, 33, 21, 5, 29, 17];
+    const monthNumbers = [12, 25, 8, 30, 14, 27, 19, 33, 21, 5, 29, 17]
 
     return (
-        
+
         <div className='p-5'>
 
             <div className='w-full bg-[var(--colCard)] shadow-lg p-5 rounded-2xl'>
