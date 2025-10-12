@@ -195,7 +195,8 @@ const sideBarLinksContent = {
                         { type: 'item', text: 'دستگاه ها و دارایی ها', href: '/devices-hub', icon: <MdDevices /> },
                         { type: 'item', text: 'پروفایل های دستگاه', href: '/devices-profiles', icon: <FaServer /> },
                         { type: 'item', text: 'متریک ها', href: '/metrics', icon: <MdInsights /> },
-                        { type: 'item', text: 'فرایند ساز', href: '#', icon: <FaProjectDiagram /> },
+                        { type: 'item', text: 'فرایند ساز', href: '/flow', icon: <FaProjectDiagram /> },
+                        { type: 'item', text: 'پیکربندی فرایند ها', href: '/workflow-settings', icon: <FaProjectDiagram /> },
                         { type: 'item', text: 'مدل ساز داده', href: '#', icon: <FaDatabase /> },
                     ]
                 },

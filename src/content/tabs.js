@@ -9,11 +9,21 @@ import VitalSignsChartTab from "@/components/Templates/Hospital/Patients/Patient
 import PharmcayDashboardTab from "@/components/Templates/Hospital/Pharmacy/DashboardTab";
 import DrugsManagmentTab from "@/components/Templates/Hospital/Pharmacy/DrugsManagmentTab";
 import WorkListTab from "@/components/Templates/Hospital/Pharmacy/WorkListTab";
+import BOMTab from "@/components/Templates/WorkFlowSettings/BOMTab";
+import FlowsTab from "@/components/Templates/WorkFlowSettings/FlowsTab";
+import ProductsTab from "@/components/Templates/WorkFlowSettings/ProductsTab";
 
 export const devicesHubTabsContent = [
     { id: 1, tabName: 'دستگاه ها', selectKey: 'devices', elem: <DevicesTab /> },
     { id: 2, tabName: 'مراکز کاری', selectKey: 'workcenter', elem: <WorkCenterTab /> },
     { id: 3, tabName: 'دارایی ها', selectKey: 'assets', elem: <AssetsTab /> },
+]
+
+
+export const workflowSettingsTabs = [
+    { id: 1, tabName: '📦 محصولات و مواد اولیه', selectKey: 'products', elem: <ProductsTab /> },
+    { id: 2, tabName: '📋 فرمول ساخت (BOM)', selectKey: 'formula', elem: <BOMTab /> },
+    { id: 3, tabName: '🔄 فرآیندهای تولید (Flows)', selectKey: 'flows', elem: <FlowsTab /> },
 ]
 
 export const patientInfoTabsContent = [
