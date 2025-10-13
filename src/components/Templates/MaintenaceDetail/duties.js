@@ -63,9 +63,9 @@ export default function DutiesTab() {
       </div>
 
       {/* DUTIES */}
-      {maintenanceTasks.map((task) => {
+      {maintenanceTasks.map((task , index) => {
         return(
-          <div key={task.id} className='flex gap-6 bg-[#5c6975] rounded-xl p-5 justify-between hover:cursor-pointer transition delay-150 duration-200 ease-in-out hover:-translate-y-1'>
+          <div key={index} className='flex gap-6 bg-[#5c6975] rounded-xl p-5 justify-between hover:cursor-pointer transition delay-150 duration-200 ease-in-out hover:-translate-y-1'>
             <div className='flex flex-col justify-center gap-1'>
               <h6 className='font-semibold'>{task.step}</h6>
               <p>{task.description}</p>

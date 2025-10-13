@@ -66,7 +66,7 @@ export default function SuppliesParts() {
         <div className='mt-3'>
           {materials.map((material) => {
             return(
-              <>
+              <div>
                 <div className='grid grid-cols-5 text-center items-center' key={material.id}>
                   <div className='flex flex-col text-right'>
                     <p>{material.name}</p>
@@ -88,8 +88,7 @@ export default function SuppliesParts() {
                     </div>
                 </div>
                 <span className='w-[100%] h-[1px] bg-slate-500 block mt-3 mb-3'></span>
-              </>
-              
+              </div>       
             )
           })}
         </div>
