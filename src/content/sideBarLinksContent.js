@@ -85,7 +85,7 @@ const sideBarLinksContent = {
                     icon: <MdBuild />,
                     options: [
                         { type: 'item', text: 'داشبورد نت', href: '/maintenance', icon: <AiFillProduct /> },
-                        { type: 'item', text: 'دستورکار های نت', href: '#', icon: <MdChecklistRtl /> },
+                        { type: 'item', text: 'دستورکار های نت', href: '/maintenace-detail', icon: <MdChecklistRtl /> },
                     ]
                 },
             ]

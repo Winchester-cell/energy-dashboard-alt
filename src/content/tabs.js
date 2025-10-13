@@ -9,6 +9,11 @@ import VitalSignsChartTab from "@/components/Templates/Hospital/Patients/Patient
 import PharmcayDashboardTab from "@/components/Templates/Hospital/Pharmacy/DashboardTab";
 import DrugsManagmentTab from "@/components/Templates/Hospital/Pharmacy/DrugsManagmentTab";
 import WorkListTab from "@/components/Templates/Hospital/Pharmacy/WorkListTab";
+import Comments from "@/components/Templates/MaintenaceDetail/comments";
+import DutiesTab from "@/components/Templates/MaintenaceDetail/duties";
+import LogDetailsTab from "@/components/Templates/MaintenaceDetail/LogDetailsTab";
+import SuppliesParts from "@/components/Templates/MaintenaceDetail/suppliesparts";
+
 
 export const devicesHubTabsContent = [
     { id: 1, tabName: 'دستگاه ها', selectKey: 'devices', elem: <DevicesTab /> },
@@ -28,4 +33,11 @@ export const pharmacyTabsContent = [
     { id: 1, tabName: 'داشبورد', selectKey: 'dashboard', elem: <PharmcayDashboardTab /> },
     { id: 2, tabName: 'لیست کارها', selectKey: 'worklist', elem: <WorkListTab /> },
     { id: 3, tabName: 'مدیریت دارو', selectKey: 'formulary', elem: <DrugsManagmentTab /> },
+]
+
+export const natDetailsTabsContent = [
+    {id: 1 , tabName: 'جزئیات و لاگ‌ها' , selectKey: 'logdetails' , elem: <LogDetailsTab/>},
+    {id: 2 , tabName: 'وظایف(BPM)' , selectKey: 'duties' , elem: <DutiesTab/>},
+    {id: 3 , tabName: 'قطعات مصرفی' , selectKey: 'suppliesparts' , elem: <SuppliesParts/>},
+    {id: 4 , tabName: 'کامنت‌ها' , selectKey: 'comments' , elem: <Comments/>},
 ]
