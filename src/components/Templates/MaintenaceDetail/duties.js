@@ -65,7 +65,7 @@ export default function DutiesTab() {
       {/* DUTIES */}
       {maintenanceTasks.map((task) => {
         return(
-          <div key={task.id} className='flex gap-6 bg-[#5c6975] rounded-xl p-5 justify-between hover:cursor-pointer transition delay-150 duration-200 ease-in-out hover:-translate-y-1'>
+          <div key={task.id} className='flex gap-6 bg-[var(--bgTab)] rounded-xl p-5 justify-between hover:cursor-pointer transition delay-150 duration-200 ease-in-out hover:-translate-y-1'>
             <div className='flex flex-col justify-center gap-1'>
               <h6 className='font-semibold'>{task.step}</h6>
               <p>{task.description}</p>
@@ -87,7 +87,7 @@ export default function DutiesTab() {
         )
       })}
       {/* SUMMARY OF PROGRESS */}
-      <div className='flex flex-col gap-3 bg-[#5c6975] rounded-xl p-5 justify-between mt-5'>
+      <div className='flex flex-col gap-3 bg-[var(--bgTab)] rounded-xl p-5 justify-between mt-5'>
         <p className='text-[15px]'>خلاصه پیشرفت وظایف</p>
         <div className='grid grid-cols-1 md:grid-cols-3 justify-between items-center text-center'>
           <div>

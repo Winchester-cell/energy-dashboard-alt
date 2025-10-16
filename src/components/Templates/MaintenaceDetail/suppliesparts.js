@@ -52,7 +52,7 @@ export default function SuppliesParts() {
         <FaPuzzlePiece />
         <p> قطعات و مواد مصرفی</p>
       </div>
-      <div className=' bg-[#5c6975] rounded-xl p-5'>
+      <div className=' bg-[var(--bgTab)] rounded-xl p-5'>
         {/* HEADER */}
         <div className='grid grid-cols-5 text-center'>
           <div>نام قطعه / ماده</div>
@@ -61,13 +61,13 @@ export default function SuppliesParts() {
           <div>قیمت واحد</div>
           <div>وضعیت</div>
         </div>
-        <span className='w-[100%] h-[1px] bg-slate-500 block mt-3'></span>
+        <span className='w-[100%] h-[0.5px] bg-[#9da8b8] block mt-3'></span>
         {/* TABLE ROWS */}
         <div className='mt-3'>
           {materials.map((material) => {
             return(
               <>
-                <div className='grid grid-cols-5 text-center items-center' key={material.id}>
+                <div className='grid grid-cols-5 text-center items-center bg-[var(--bgTab)]' key={material.id}>
                   <div className='flex flex-col text-right'>
                     <p>{material.name}</p>
                     <span className=''>  کد: {material.code}</span>
@@ -87,7 +87,7 @@ export default function SuppliesParts() {
                       {material.status}
                     </div>
                 </div>
-                <span className='w-[100%] h-[1px] bg-slate-500 block mt-3 mb-3'></span>
+                <span className='w-[100%] h-[0.5px] bg-[#9da8b8] block mt-3 mb-3'></span>
               </>
               
             )
@@ -95,7 +95,7 @@ export default function SuppliesParts() {
         </div>
       </div>
           {/* SUPPLIES PARTS NEEDED */}
-      <div className='grid md:grid-cols-3 grid-cols-1 mt-5 gap-3'>
+      <div className='grid md:grid-cols-3 grid-cols-1 mt-5 gap-3 text-white'>
         <div className='bg-gray-600 rounded-lg px-4 py-10 grid justify-center text-center border border-gray-600 shadow-[0_2px_4px_rgba(0,0,0,0.1)]'>
           <span className='font-semibold text-[20px]'>۱,۲۲۰,۰۰۰</span>
           <p>هزینه کل قطعات (تومان)</p>
