@@ -64,8 +64,8 @@ const sideBarLinksContent = {
                     text: 'تولید',
                     icon: <MdFactory />,
                     options: [
-                        { type: 'item', text: 'داشبورد تولید', href: '#', icon: <AiFillProduct /> },
-                        { type: 'item', text: 'سفارشات کار', href: '#', icon: <FaClipboardList /> },
+                        { type: 'item', text: 'داشبورد تولید', href: '/manufacturing/dashboard', icon: <AiFillProduct /> },
+                        { type: 'item', text: 'سفارشات کار', href: '/manufacturing/work-orders', icon: <FaClipboardList /> },
                         { type: 'item', text: 'گزارش تولید', href: '#', icon: <FaChartLine /> },
                     ]
                 },
@@ -145,7 +145,7 @@ const sideBarLinksContent = {
                     options: [
                         { type: 'item', text: 'داشبورد', href: '/people-count-dashboard', icon: <AiFillProduct /> },
                         { type: 'item', text: 'پیکر بندی شمارش', href: '#', icon: <MdDevices /> },
-                        { type: 'item', text: 'سایت ها', href: '#', icon: <MdLocationOn /> },
+                        { type: 'item', text: 'مرکز هوش مصنوعی', href: '/people-count/ai-center', icon: <GiBrain /> },
                     ]
                 },
 

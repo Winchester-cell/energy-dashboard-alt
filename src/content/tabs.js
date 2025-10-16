@@ -16,6 +16,11 @@ import Comments from "@/components/Templates/MaintenaceDetail/comments";
 import DutiesTab from "@/components/Templates/MaintenaceDetail/duties";
 import LogDetailsTab from "@/components/Templates/MaintenaceDetail/LogDetailsTab";
 import SuppliesParts from "@/components/Templates/MaintenaceDetail/suppliesparts";
+import ProgressTab from "@/components/Templates/WorkOrders/ProgressTab";
+import BPM from "@/components/Templates/WorkOrders/BPM";
+import Consumption from "@/components/Templates/WorkOrders/Consumption";
+import PredictTab from "@/components/Templates/PeopleCount/AiCenter/PredictTab";
+import BehaviorAnalysis from "@/components/Templates/PeopleCount/AiCenter/BehaviorAnalysis";
 
 
 export const devicesHubTabsContent = [
@@ -29,6 +34,12 @@ export const workflowSettingsTabs = [
     { id: 1, tabName: '📦 محصولات و مواد اولیه', selectKey: 'products', elem: <ProductsTab /> },
     { id: 2, tabName: '📋 فرمول ساخت (BOM)', selectKey: 'formula', elem: <BOMTab /> },
     { id: 3, tabName: '🔄 فرآیندهای تولید (Flows)', selectKey: 'flows', elem: <FlowsTab /> },
+]
+
+export const workOrdersPageTabs = [
+    { id: 1, tabName: 'خلاصه و پیشرفت', selectKey: 'progress', elem: <ProgressTab /> },
+    { id: 2, tabName: 'وظایف فرآیند', selectKey: 'BPM', elem: <BPM /> },
+    { id: 3, tabName: 'مصرف مواد', selectKey: 'consumption', elem: <Consumption /> },
 ]
 
 export const patientInfoTabsContent = [
@@ -46,8 +57,15 @@ export const pharmacyTabsContent = [
 ]
 
 export const natDetailsTabsContent = [
-    {id: 1 , tabName: 'جزئیات و لاگ‌ها' , selectKey: 'logdetails' , elem: <LogDetailsTab/>},
-    {id: 2 , tabName: 'وظایف(BPM)' , selectKey: 'duties' , elem: <DutiesTab/>},
-    {id: 3 , tabName: 'قطعات مصرفی' , selectKey: 'suppliesparts' , elem: <SuppliesParts/>},
-    {id: 4 , tabName: 'کامنت‌ها' , selectKey: 'comments' , elem: <Comments/>},
+    { id: 1, tabName: 'جزئیات و لاگ‌ها', selectKey: 'logdetails', elem: <LogDetailsTab /> },
+    { id: 2, tabName: 'وظایف(BPM)', selectKey: 'duties', elem: <DutiesTab /> },
+    { id: 3, tabName: 'قطعات مصرفی', selectKey: 'suppliesparts', elem: <SuppliesParts /> },
+    { id: 4, tabName: 'کامنت‌ها', selectKey: 'comments', elem: <Comments /> },
+]
+
+
+export const peopleCountAiCenterTabs = [
+    { id: 1, tabName: '📈 پیش‌بینی تردد', selectKey: 'predict', elem: <PredictTab /> },
+    { id: 2, tabName: '🎯 تحلیل رفتار', selectKey: 'behavanalys', elem: <BehaviorAnalysis /> },
+    { id: 3, tabName: '🔬 آزمایشگاه بهینه‌سازی', selectKey: 'optimizLab', elem: <PredictTab /> },
 ]

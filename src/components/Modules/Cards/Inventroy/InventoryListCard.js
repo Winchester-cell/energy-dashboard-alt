@@ -1,6 +1,5 @@
 import { colorVariantSelector } from '@/data/themeVariants'
 import { useThemeTypeStore } from '@/stores/useThemeTypeStore'
-import { toPersianDigits } from '@/utils/formaters/toPersianDigits'
 import { usePathname } from 'next/navigation'
 import React from 'react'
 

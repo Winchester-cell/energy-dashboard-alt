@@ -4,9 +4,15 @@ import { useTranslation } from "react-i18next";
 import { toPersianDigits } from "@/utils/formaters/toPersianDigits";
 import i18n from "@/i18n";
 
+// series format example 
+// series: [
+//   { name: 'افراد وارد شده', data: countInData },
+//   { name: 'افراد خارج شده', data: countOutData }
+// ]
+
 const ApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
-const AreaChart = ({ shadow=true, labelSize, categories, series, title, yMin, yMax, colors = ["#008ffb", "#00e396"] }) => {
+const AreaChart = ({ shadow = true, labelSize, categories, series, title, yMin, yMax, colors = ["#008ffb", "#00e396"] }) => {
 
     const { t } = useTranslation()
 

@@ -31,10 +31,12 @@
 .gradCardRedLight {
     background: linear-gradient(132deg, #ff9ca1 56%, #fecae8 100%);
 }
-.gradpinkCustom{
+
+.gradpinkCustom {
     background: linear-gradient(132deg, #f091f6 26%, #f55b75 100%);
 }
-.gradbluekCustom{
+
+.gradbluekCustom {
     background: linear-gradient(132deg, #85f8b3 26%, #8fd5f1 100%);
 }
 
@@ -97,6 +99,11 @@
     animation: dash 3s linear infinite;
 }
 
+
+.purpleGrad {
+    background: #687AE4;
+    background: linear-gradient(90deg, rgba(104, 122, 228, 1) 0%, rgba(110, 101, 198, 1) 50%, rgba(110, 100, 197, 1) 100%);
+}
 
 
 
