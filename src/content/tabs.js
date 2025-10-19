@@ -20,7 +20,8 @@ import ProgressTab from "@/components/Templates/WorkOrders/ProgressTab";
 import BPM from "@/components/Templates/WorkOrders/BPM";
 import Consumption from "@/components/Templates/WorkOrders/Consumption";
 import PredictTab from "@/components/Templates/PeopleCount/AiCenter/PredictTab";
-import BehaviorAnalysis from "@/components/Templates/PeopleCount/AiCenter/BehaviorAnalysis";
+import BehaviorAnalysisTab from "@/components/Templates/PeopleCount/AiCenter/BehaviorAnalysisTab";
+import OptLabTab from "@/components/Templates/PeopleCount/AiCenter/OptLabTab";
 
 
 export const devicesHubTabsContent = [
@@ -66,6 +67,6 @@ export const natDetailsTabsContent = [
 
 export const peopleCountAiCenterTabs = [
     { id: 1, tabName: '📈 پیش‌بینی تردد', selectKey: 'predict', elem: <PredictTab /> },
-    { id: 2, tabName: '🎯 تحلیل رفتار', selectKey: 'behavanalys', elem: <BehaviorAnalysis /> },
-    { id: 3, tabName: '🔬 آزمایشگاه بهینه‌سازی', selectKey: 'optimizLab', elem: <PredictTab /> },
+    { id: 2, tabName: '🎯 تحلیل رفتار', selectKey: 'behavanalys', elem: <BehaviorAnalysisTab /> },
+    { id: 3, tabName: '🔬 آزمایشگاه بهینه‌سازی', selectKey: 'optLab', elem: <OptLabTab /> },
 ]

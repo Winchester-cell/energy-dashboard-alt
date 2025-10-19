@@ -1,10 +1,10 @@
 'use client'
 import { useState, useCallback } from 'react';
 import { ReactFlow, applyNodeChanges, applyEdgeChanges, addEdge, Controls, MiniMap, Background } from '@xyflow/react';
-import { TextUpdaterNode } from '@/components/Flow/TextUpdaterNode';
-import DeviceImageCardNode from '@/components/Flow/DeviceImageCardNode';
-import DeviceNameCardNode from '@/components/Flow/DeviceNameCardNode';
-import DeviceSerialNode from '@/components/Flow/DeviceSerialNode';
+import { TextUpdaterNode } from '@/components/FlowNodes/TextUpdaterNode';
+import DeviceImageCardNode from '@/components/FlowNodes/DeviceImageCardNode';
+import DeviceNameCardNode from '@/components/FlowNodes/DeviceNameCardNode';
+import DeviceSerialNode from '@/components/FlowNodes/DeviceSerialNode';
 
 
 const nodeTypes = {
@@ -61,12 +61,6 @@ export default function Flow() {
         [],
     );
 
-    // const onConnect = useCallback((params) => {
-    //     // اجازه میده هر هندل به هر هندل وصل بشه
-    //     setEdges((eds) => addEdge({ ...params, type: 'default' }, eds));
-    // }, []);
-
-
     const getPose = () => {
         console.log(nodes);
         console.log(edges);
@@ -85,12 +79,6 @@ export default function Flow() {
                     nodeTypes={nodeTypes}
                     proOptions={{ hideAttribution: true }}
                     connectionMode={'Loose'}
-                    // fitView
-                    // onMoveEnd={(evt, viewport) => {
-                    //     console.log("Zoom:", viewport.zoom);
-                    //     console.log("Position:", viewport.x, viewport.y);
-                    // }}
-                    // defaultViewport={defaultViewport}
                 >
                     <Background style={{ padding: 20, borderRadius: 20 }} bgColor='var(--colCard)' className='shadow-lg' />
                     <Controls />

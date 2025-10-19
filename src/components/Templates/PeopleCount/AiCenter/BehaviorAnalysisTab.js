@@ -14,7 +14,7 @@ const cardDataA = [
 
 const delays = [0.3, 0.9, 0.5]
 
-export default function BehaviorAnalysis() {
+export default function BehaviorAnalysisTab() {
     return (
         <div className='p-5 bg-[var(--colCard)] rounded-2xl'>
             <div className='flex gap-5'>
