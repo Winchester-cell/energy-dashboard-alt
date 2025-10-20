@@ -144,7 +144,7 @@ const sideBarLinksContent = {
                     icon: <FaUsers />,
                     options: [
                         { type: 'item', text: 'داشبورد', href: '/people-count-dashboard', icon: <AiFillProduct /> },
-                        { type: 'item', text: 'پیکر بندی شمارش', href: '#', icon: <MdDevices /> },
+                        { type: 'item', text: 'پیکر بندی شمارش', href: '/people-count/configuration', icon: <MdDevices /> },
                         { type: 'item', text: 'سایت ها', href: '#', icon: <MdLocationOn /> },
                     ]
                 },

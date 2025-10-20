@@ -13,6 +13,10 @@ import Comments from "@/components/Templates/MaintenaceDetail/comments";
 import DutiesTab from "@/components/Templates/MaintenaceDetail/duties";
 import LogDetailsTab from "@/components/Templates/MaintenaceDetail/LogDetailsTab";
 import SuppliesParts from "@/components/Templates/MaintenaceDetail/suppliesparts";
+import CountingArea from "@/components/Templates/SystemConfiguration/CountingArea";
+import EventsCallender from "@/components/Templates/SystemConfiguration/EventsCallender";
+import Objects from "@/components/Templates/SystemConfiguration/Objects";
+import Warning from "@/components/Templates/SystemConfiguration/Warning";
 
 
 export const devicesHubTabsContent = [
@@ -40,4 +44,11 @@ export const natDetailsTabsContent = [
     {id: 2 , tabName: 'وظایف(BPM)' , selectKey: 'duties' , elem: <DutiesTab/>},
     {id: 3 , tabName: 'قطعات مصرفی' , selectKey: 'suppliesparts' , elem: <SuppliesParts/>},
     {id: 4 , tabName: 'کامنت‌ها' , selectKey: 'comments' , elem: <Comments/>},
+]
+
+export const systemConfigurationTabsContent = [
+    {id: 1, tabName: 'انواع اشیا', selectKey: 'objects', elem: <Objects/>},
+    {id: 2, tabName: 'نواحی شمارش', selectKey: 'countingarea', elem: <CountingArea/>},
+    {id: 3, tabName: 'تقویم رویدادها', selectKey: 'eventscallender', elem: <EventsCallender/>},
+    {id: 4, tabName: 'هشدارها', selectKey: 'warnings', elem: <Warning/>},
 ]
