@@ -144,8 +144,8 @@ const sideBarLinksContent = {
                     icon: <FaUsers />,
                     options: [
                         { type: 'item', text: 'داشبورد', href: '/people-count-dashboard', icon: <AiFillProduct /> },
-                        { type: 'item', text: 'پیکر بندی شمارش', href: '#', icon: <MdDevices /> },
                         { type: 'item', text: 'مرکز هوش مصنوعی', href: '/people-count/ai-center', icon: <GiBrain /> },
+                        { type: 'item', text: 'پیکر بندی شمارش', href: '/people-count/configuration', icon: <MdDevices /> },
                     ]
                 },
 

@@ -22,6 +22,10 @@ import Consumption from "@/components/Templates/WorkOrders/Consumption";
 import PredictTab from "@/components/Templates/PeopleCount/AiCenter/PredictTab";
 import BehaviorAnalysisTab from "@/components/Templates/PeopleCount/AiCenter/BehaviorAnalysisTab";
 import OptLabTab from "@/components/Templates/PeopleCount/AiCenter/OptLabTab";
+import CountingArea from "@/components/Templates/SystemConfiguration/CountingArea";
+import EventsCallender from "@/components/Templates/SystemConfiguration/EventsCallender";
+import Objects from "@/components/Templates/SystemConfiguration/Objects";
+import Warning from "@/components/Templates/SystemConfiguration/Warning";
 
 
 export const devicesHubTabsContent = [
@@ -69,4 +73,11 @@ export const peopleCountAiCenterTabs = [
     { id: 1, tabName: '📈 پیش‌بینی تردد', selectKey: 'predict', elem: <PredictTab /> },
     { id: 2, tabName: '🎯 تحلیل رفتار', selectKey: 'behavanalys', elem: <BehaviorAnalysisTab /> },
     { id: 3, tabName: '🔬 آزمایشگاه بهینه‌سازی', selectKey: 'optLab', elem: <OptLabTab /> },
+]
+
+export const systemConfigurationTabsContent = [
+    {id: 1, tabName: 'انواع اشیا', selectKey: 'objects', elem: <Objects/>},
+    {id: 2, tabName: 'نواحی شمارش', selectKey: 'countingarea', elem: <CountingArea/>},
+    {id: 3, tabName: 'تقویم رویدادها', selectKey: 'eventscallender', elem: <EventsCallender/>},
+    {id: 4, tabName: 'هشدارها', selectKey: 'warnings', elem: <Warning/>},
 ]
