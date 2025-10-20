@@ -76,7 +76,7 @@ const sideBarLinksContent = {
                     options: [
                         { type: 'item', text: 'داشبورد انبار', href: '/inventory/dashboard', icon: <FaWarehouse /> },
                         { type: 'item', text: 'موجودی کالا', href: '#', icon: <MdInventory /> },
-                        { type: 'item', text: 'تراکنش های انبار', href: '#', icon: <FaExchangeAlt /> },
+                        { type: 'item', text: 'تراکنش های انبار', href: '/inventory/inventory-transaction', icon: <FaExchangeAlt /> },
                     ]
                 },
                 {

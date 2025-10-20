@@ -28,7 +28,7 @@ export default function LogDetailsTab() {
   ];
   return (
     <div className=' p-5 bg-[var(--colCard)] rounded-md'> 
-      <div className='flex flex-col gap-6 bg-[#5c6975] rounded-xl p-5'>
+      <div className='flex flex-col gap-6 bg-[var(--bgTab)] rounded-xl p-5'>
         <div className='flex gap-3 items-center'>
           <LuNotepadText />
           <p className='text-lg'>شرح کار</p>
@@ -53,7 +53,7 @@ export default function LogDetailsTab() {
         </div>
       </div>
 
-      <div className='bg-[#5c6975] mt-3 rounded-lg p-3 border-dashed border-white'>
+      <div className='bg-[var(--bgTab)] mt-3 rounded-lg p-3 border-dashed border-white'>
         <p className='font-semibold text-lg mb-4'>ثبت لاگ جدید</p>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-3'>
           <div className='flex flex-col gap-2'>
@@ -86,7 +86,7 @@ export default function LogDetailsTab() {
 
         {LogsHistory.map((log) => {
           return(
-            <div className='flex flex-col gap-3 bg-[#5c6975] rounded-xl p-3 justify-between mb-3' key={log.id}>
+            <div className='flex flex-col gap-3 bg-[var(--bgTab)] rounded-xl p-3 justify-between mb-3' key={log.id}>
               <div className='flex gap-2 font-medium'>
                 <p>{log.name}</p>-
                 <p>{log.role}</p>

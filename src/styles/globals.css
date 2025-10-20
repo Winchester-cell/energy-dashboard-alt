@@ -22,6 +22,12 @@
   --textHover: #60a5fa;
   --selecMarker: #99919d;
   --textTitle: #3A3878;
+  --accordianTabs: #c0c8ef;
+  --textBoxA: #4d9db7;
+  --textBoxB: #7ec7b2;
+  --bgTab: #aebcc8;
+  --bgCard: #e7e9eb;
+  
 }
 
 .dark {
@@ -36,9 +42,11 @@
   --textHover: orange;
   --selecMarker: #eae1e1;
   --textTitle: orange;
-  --xy-minimap-background-color-default: black;
-
-
+  --accordianTabs: #64748b;
+  --textBoxA: #155e75;
+  --textBoxB: #92ffab66;
+  --bgTab: #5c6975;
+  --bgCard: #2e3e4e;
 }
 
 

@@ -44,7 +44,7 @@ export default function Comments() {
       <div>
         {comments.map((comment) => {
           return(
-            <div className='flex flex-col gap-3 bg-[#5c6975] rounded-xl p-3 justify-between mb-3' key={comment.id}>
+            <div className='flex flex-col gap-3 bg-[var(--bgTab)] rounded-xl p-3 justify-between mb-3' key={comment.id}>
               <div className='flex gap-2 font-medium'>
                 <p>{comment.name}</p>-
                 <p>{comment.role}</p>
@@ -56,13 +56,13 @@ export default function Comments() {
         })}
       </div>
       {/* ADDING COMMENTS */}
-      <div className='flex flex-col gap-3 bg-[#5c6975] rounded-xl p-3 justify-between mb-3'>
+      <div className='flex flex-col gap-3 bg-[var(--bgTab)] rounded-xl p-5 justify-between mb-3'>
         <form className='flex gap-3 flex-col'>
-          <label>افزودن کامنت فنی</label>
+          <label className='mr-[6px]'>افزودن کامنت فنی</label>
           <textarea className='w-full p-3 rounded-lg resize-none' rows={4} placeholder='نظرات فنی، پیشنهادات، یا گزارش پیشرفت کار را اینجا بنویسید...'></textarea>
           <div className='flex justify-between'>
             <p>کامنت به عنوان: مدیر نگهداری</p>
-            <button type='submit' className='bg-lime-900 px-4 py-2 rounded-lg'>افزودن کامنت</button>
+            <button type='submit' className='bg-lime-900 px-4 py-2 rounded-lg text-white'>افزودن کامنت</button>
           </div>
         </form>
       </div>
