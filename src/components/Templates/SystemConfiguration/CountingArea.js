@@ -1,4 +1,3 @@
-import { color } from 'framer-motion';
 import React from 'react'
 import { LuPlus } from "react-icons/lu";
 
@@ -108,7 +107,6 @@ const statsData = [
         color: "text-orange-600"
     },
 ]
-
   return (
     <div>
       <div className='bg-[var(--colCard)] rounded-2xl p-5'>
