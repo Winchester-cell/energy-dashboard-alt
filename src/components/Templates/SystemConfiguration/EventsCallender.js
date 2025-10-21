@@ -1,5 +1,3 @@
-import { percent } from 'framer-motion';
-import { Evented } from 'leaflet';
 import React from 'react'
 import { LuPlus } from "react-icons/lu";
 
