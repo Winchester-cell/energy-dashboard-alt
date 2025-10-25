@@ -1,9 +1,7 @@
 'use client'
 import AnimateOnScroll from '@/components/AnimateOnScrollWrapper/AnimateOnScroll'
 import DevicesControlCenterCard from '@/components/Modules/Cards/DevicesControlCenterCard'
-import Table from '@/components/Modules/Table/Table'
 import ControlCenterHeadPart from '@/components/Templates/ControlCenter/ControlCenterHeadPart'
-import { patients } from '@/data/fakeData'
 import React from 'react'
 
 export default function ControlCenter() {
@@ -261,22 +259,13 @@ export default function ControlCenter() {
         }
     ]
 
-    const headItems = [
-        { key: 'index', label: 'ردیف' },
-        { key: 'name', label: 'نام بیمار' },
-        { key: 'nationalId', label: 'کدملی' },
-        { key: 'admissionId', label: 'شماره پذیرش' },
-        { key: 'doctor', label: 'پزشک' },
-        { key: 'ward', label: 'بخش' },
-        { key: 'admissionDate', label: 'تاریخ پذیرش' },
-        { key: 'status', label: 'وضعیت' },
-    ]
-
-
     return (
         <div className='p-5 '>
+            <div className='w-full bg-[var(--colCard)] shadow-lg p-5 rounded-2xl mb-5'>
+                <h2 className='text-2xl font-bold'>مرکز کنترل تجهیزات</h2>
+                <p className='text-[var(--colTextB)] mt-3'>مدیریت و نظارت بر تجهیزات</p>
+            </div>
             <ControlCenterHeadPart />
-            {/* <Table headItems={headItems} rowItems={patients} /> */}
             <div className='w-full grid grid-cols-3 gap-5 mt-5'>
                 {
                     machines.map((device, index) => {
