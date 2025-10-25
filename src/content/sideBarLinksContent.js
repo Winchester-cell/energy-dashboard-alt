@@ -67,6 +67,7 @@ const sideBarLinksContent = {
                         { type: 'item', text: 'داشبورد تولید', href: '/manufacturing/dashboard', icon: <AiFillProduct /> },
                         { type: 'item', text: 'سفارشات کار', href: '/manufacturing/work-orders', icon: <FaClipboardList /> },
                         { type: 'item', text: 'گزارش تولید', href: '#', icon: <FaChartLine /> },
+                        { type: 'item', text: 'برنامه‌ریزی نیازمندی مواد', href: '/manufacturing/mrp', icon: <FaChartLine /> },
                     ]
                 },
                 {
