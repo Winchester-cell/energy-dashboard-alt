@@ -79,6 +79,7 @@ export default function Manufacturing() {
   return (
     <div>
       <div className='p-5'>
+        {/* TITLE OF HEADER */}
         <div className='flex flex-col bg-[var(--colCard)] rounded-2xl p-5 gap-2'>
             <div className='flex gap-2 font-bold text-xl'>
                 <span>📊</span>
@@ -87,6 +88,7 @@ export default function Manufacturing() {
             <p>اجرای موتور MRP و مشاهده نتایج کمبود مواد و پیشنهادات خرید</p>
         </div>
 
+        {/* TIME FRAME SECTION */}
         <div className='bg-[var(--colCard)] p-5 rounded-2xl flex items-center justify-between mt-5'>
             <div className='grid gap-2'>
                 <p>بازه زمانی برنامه‌ریزی :</p>
@@ -100,10 +102,11 @@ export default function Manufacturing() {
             <button className='bg-[#1D4ED8] px-5 py-3 rounded-lg text-white'>🚀 اجرای MRP </button>
         </div>
         
+        {/* STATS CARDS SECTION */}
         <div className='flex justify-between w-[100%] gap-10 mt-5'>
-            {statsCards.map((card) => {
+            {statsCards.map((card , index) => {
                 return(
-                    <div className='px-6 py-5 bg-[var(--bgCardB)] w-[33%] flex justify-between items-center rounded-2xl'>
+                    <div key={index} className='px-6 py-5 bg-[var(--bgCardB)] w-[33%] flex justify-between items-center rounded-2xl'>
                         <div className='flex flex-col gap-2'>
                             <p className='font-semibold text-base'>{card.title}</p>
                             <span className="text-2xl" style={{color: card.color}}>{card.value}</span>
@@ -113,7 +116,8 @@ export default function Manufacturing() {
                 )
             })}
         </div>
-
+        
+        {/* SHORTAGES AND SUGGESTION SECTION */}
         <div className='w-[100%] flex gap-2'>
             {/* Right Section */}
             <div className='bg-[var(--colCard)] rounded-2xl p-5 mt-5 w-[50%]'>
@@ -145,9 +149,9 @@ export default function Manufacturing() {
             <div className='bg-[var(--colCard)] rounded-2xl p-5 mt-5 w-[50%]'>
                 <p className='text-lg font-semibold'>پنل پیشنهادات</p>
                 <div className='flex flex-col gap-3 mt-4'>
-                    {suggestions.map((suggest) => {
+                    {suggestions.map((suggest , index) => {
                         return(
-                            <div className='bg-[var(--bgCardB)] p-5 rounded-2xl'>
+                            <div className='bg-[var(--bgCardB)] p-5 rounded-2xl' key={index}>
                                 <div className='flex justify-between items-center'>
                                     <p>{suggest.title}</p>
                                     <span className='p-2 rounded-full text-white w-[15%] text-center' style={{backgroundColor: suggest.color}}>{suggest.priority}</span>
